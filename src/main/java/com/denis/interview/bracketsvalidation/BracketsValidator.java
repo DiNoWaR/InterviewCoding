@@ -6,6 +6,7 @@ public class BracketsValidator {
 
     private String brackets;
 
+
     public BracketsValidator(String s) {
         brackets = s;
     }
