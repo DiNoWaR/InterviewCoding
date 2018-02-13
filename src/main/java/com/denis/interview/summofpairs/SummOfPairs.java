@@ -29,7 +29,7 @@ public class SummOfPairs {
         return count;
     }
 
-    private boolean checkSumm(int first, int second, int target) {
+    private boolean checkSum(int first, int second, int target) {
         return first + second == target;
     }
 

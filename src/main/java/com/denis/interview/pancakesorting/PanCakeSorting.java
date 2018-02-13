@@ -9,7 +9,7 @@ public class PanCakeSorting {
 
         int j = 1;
 
-        while (j < array.length - 1) {
+        while (j <= array.length - 1) {
 
             int indexOfMax = findIndexOfMaximum(array, array.length - j);
 
@@ -26,7 +26,7 @@ public class PanCakeSorting {
         int left = 0;
         int right = index;
 
-        while (left < right) {
+        while (left <= right) {
             swap(left, right, array);
             left++;
             right--;
@@ -44,7 +44,7 @@ public class PanCakeSorting {
 
         int max = 0;
 
-        for (int i = 0; i < rightIndex; i++) {
+        for (int i = 0; i <= rightIndex; i++) {
             if (array[i] > array[max]) {
                 max = i;
             }
@@ -55,7 +55,7 @@ public class PanCakeSorting {
 
     public static void main(String[] args) {
 
-        int[] arr = {99, 3, 10, 2, 34, 120, 16, 21, 2};
+        int[] arr = {99, 3, 10, 2, 34, 120, 16, 21, 28, 1};
 
         panCakeSort(arr);
 
