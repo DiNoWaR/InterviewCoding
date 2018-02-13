@@ -14,7 +14,7 @@ public class BracketsValidator {
 
         boolean result = true;
 
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
 
         char current, previous;
 

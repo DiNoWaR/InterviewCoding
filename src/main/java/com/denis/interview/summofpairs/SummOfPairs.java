@@ -23,10 +23,7 @@ public class SummOfPairs {
         }
 
         for (int i = 0; i <= targetIndex; i++) {
-
             int j = targetIndex;
-
-
         }
 
         return count;

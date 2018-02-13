@@ -20,6 +20,7 @@ class LinkedList {
 
         Node prev = null;
         Node next = null;
+
         Node current = node;
 
         while (current != null) {
