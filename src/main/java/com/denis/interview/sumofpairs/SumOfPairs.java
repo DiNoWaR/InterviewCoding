@@ -1,8 +1,8 @@
-package com.denis.interview.summofpairs;
+package com.denis.interview.sumofpairs;
 
 import java.util.Arrays;
 
-public class SummOfPairs {
+public class SumOfPairs {
 
 
     public int countPairsOfElementsInArray(int[] array, int target) {

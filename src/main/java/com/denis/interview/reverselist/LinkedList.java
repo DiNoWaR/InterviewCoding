@@ -1,5 +1,8 @@
 package com.denis.interview.reverselist;
 
+/**
+ * Reverse a single linked list with one iteration
+ */
 class LinkedList {
 
     static Node head;

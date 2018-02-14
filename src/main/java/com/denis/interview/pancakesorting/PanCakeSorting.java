@@ -1,7 +1,10 @@
 package com.denis.interview.pancakesorting;
 
-import java.util.Arrays;
-
+/**
+ * We are given an array of integers and the only allowed operation to change array is
+ * to take several elements from beginning to some index and flip them.
+ * Write implementation of pancake sorting.
+ */
 public class PanCakeSorting {
 
 
@@ -52,14 +55,5 @@ public class PanCakeSorting {
         return max;
     }
 
-
-    public static void main(String[] args) {
-
-        int[] arr = {99, 3, 10, 2, 34, 120, 16, 21, 28, 1};
-
-        panCakeSort(arr);
-
-        System.out.println(Arrays.toString(arr));
-    }
 
 }
