@@ -21,14 +21,7 @@ import java.util.Stack;
  */
 public class BracketsValidator {
 
-    private String brackets;
-
-
-    public BracketsValidator(String s) {
-        brackets = s;
-    }
-
-    public boolean validate() {
+    public static boolean validate(String brackets) {
 
         boolean result = true;
 
@@ -36,8 +29,8 @@ public class BracketsValidator {
 
         char current, previous;
 
-        for (int i = 0; i < this.brackets.length(); i++) {
-            current = this.brackets.charAt(i);
+        for (int i = 0; i < brackets.length(); i++) {
+            current = brackets.charAt(i);
 
             if (current == '(' || current == '[' || current == '{') {
                 stack.push(current);
