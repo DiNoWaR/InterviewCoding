@@ -56,7 +56,9 @@ public class PanCakeSorting {
     public static void main(String[] args) {
 
         int[] arr = {99, 3, 10, 2, 34, 120, 16, 21, 28, 1};
+
         panCakeSort(arr);
+
         System.out.println(Arrays.toString(arr));
     }
 

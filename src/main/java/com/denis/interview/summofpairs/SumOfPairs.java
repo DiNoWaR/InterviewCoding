@@ -4,13 +4,7 @@ import java.util.Arrays;
 
 public class SummOfPairs {
 
-    /**
-     * Counts how many pairs of elements can be summed in unsorted array to get target element
-     *
-     * @param array
-     * @param target
-     * @return numbers of pairs
-     */
+
     public int countPairsOfElementsInArray(int[] array, int target) {
 
         int count = 0;
