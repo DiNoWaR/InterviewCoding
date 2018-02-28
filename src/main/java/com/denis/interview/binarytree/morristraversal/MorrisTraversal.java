@@ -3,7 +3,7 @@ package com.denis.interview.binarytree.morristraversal;
 /**
  * Using Morris Traversal, we can traverse the tree without using stack and recursion.
  * The idea of Morris Traversal is based on Threaded Binary Tree.
- * In this traversal, we first create links to Inorder successor and print the data using these links,
+ * In this traversal, we first create links to InOrder successor and print the data using these links,
  * and finally revert the changes to restore original tree.
  */
 class MorrisTraversal {
@@ -24,14 +24,18 @@ class MorrisTraversal {
         current = root;
 
         while (current != null) {
+
             if (current.left == null) {
                 System.out.print(current.data + " ");
                 current = current.right;
             } else {
                 /* Find the inorder predecessor of current */
                 predecessor = current.left;
-                while (predecessor.right != null && predecessor.right != current)
+
+                while (predecessor.right != null && predecessor.right != current) {
                     predecessor = predecessor.right;
+
+                }
 
                 /* Make current as right child of its inorder predecessor */
                 if (predecessor.right == null) {
@@ -64,6 +68,7 @@ class MorrisTraversal {
         */
 
         MorrisTraversal tree = new MorrisTraversal();
+
         tree.root = new TNode(1);
         tree.root.left = new TNode(2);
         tree.root.right = new TNode(3);
