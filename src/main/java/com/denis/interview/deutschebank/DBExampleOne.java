@@ -1,5 +1,11 @@
 package com.denis.interview.deutschebank;
 
+/**
+ * This is tricky one from Deutsche bank.
+ * We got ClassCastException here in main method.
+ * Because of erasing generics to Object in runtime,
+ * we'll never catch it in foo()
+ */
 public class DBExampleOne {
 
     public static <T> T foo() {
