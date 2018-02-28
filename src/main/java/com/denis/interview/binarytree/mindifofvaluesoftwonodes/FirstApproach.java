@@ -1,4 +1,4 @@
-package com.denis.interview.binarytree;
+package com.denis.interview.binarytree.mindifofvaluesoftwonodes;
 
 import java.util.ArrayList;
 import java.util.Collections;

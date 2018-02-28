@@ -1,9 +1,8 @@
-package com.denis.interview.binarytree;
+package com.denis.interview.binarytree.mindifofvaluesoftwonodes;
 
 /**
  * Given a Binary Search Tree (TreeNode) with the root node root,
  * return the minimum difference between the values of any two different nodes in the tree.
- * <p>
  * Second approach : In-Order Traversal
  */
 public class SecondApproach {

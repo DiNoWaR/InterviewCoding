@@ -8,17 +8,21 @@ package com.denis.interview.binarytree.morristraversal;
  */
 class MorrisTraversal {
 
-    TNode root;
+    private TNode root;
 
-    /* Function to traverse binary tree without recursion and
-       without stack */
-    void MorrisTraversal(TNode root) {
+    /**
+     * Function to traverse binary tree without recursion and
+     * without stack
+     */
+    public void MorrisTraversalTraversal(TNode root) {
+
         TNode current, pre;
 
         if (root == null)
             return;
 
         current = root;
+
         while (current != null) {
             if (current.left == null) {
                 System.out.print(current.data + " ");
@@ -66,6 +70,6 @@ class MorrisTraversal {
         tree.root.left.left = new TNode(4);
         tree.root.left.right = new TNode(5);
 
-        tree.MorrisTraversal(tree.root);
+        tree.MorrisTraversalTraversal(tree.root);
     }
 }

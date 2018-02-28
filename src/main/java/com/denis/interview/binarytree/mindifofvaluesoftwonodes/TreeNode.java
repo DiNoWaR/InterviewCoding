@@ -1,4 +1,4 @@
-package com.denis.interview.binarytree;
+package com.denis.interview.binarytree.mindifofvaluesoftwonodes;
 
 public class TreeNode {
 
