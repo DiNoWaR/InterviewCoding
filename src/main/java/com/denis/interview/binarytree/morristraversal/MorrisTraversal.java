@@ -14,7 +14,7 @@ class MorrisTraversal {
      * Function to traverse binary tree without recursion and
      * without stack
      */
-    public void MorrisTraversalTraversal(TNode root) {
+    public void MorrisTraversalAlgorithm(TNode root) {
 
         TNode current, pre;
 
@@ -70,6 +70,6 @@ class MorrisTraversal {
         tree.root.left.left = new TNode(4);
         tree.root.left.right = new TNode(5);
 
-        tree.MorrisTraversalTraversal(tree.root);
+        tree.MorrisTraversalAlgorithm(tree.root);
     }
 }
