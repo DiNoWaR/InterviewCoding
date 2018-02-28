@@ -3,7 +3,7 @@ package com.denis.interview.uniqueelementsinarrays;
 import java.util.*;
 
 /**
- * Find unique items from two arrays
+ * Find unique items from two arrays (Element is only in one array)
  */
 public class ArrayWorker {
 
