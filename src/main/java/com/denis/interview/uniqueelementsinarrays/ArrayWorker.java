@@ -70,8 +70,10 @@ public class ArrayWorker {
         int[] arr2 = {6, 8, 2, 10};
 
         List<Integer> result = getUniqueElementsOfArraysWithSorting(arr1, arr2);
+        List<Integer> result2 = getUniqueElementsOfArraysWithMap(arr1, arr2);
 
         System.out.println(result);
+        System.out.println(result2);
 
     }
 }
