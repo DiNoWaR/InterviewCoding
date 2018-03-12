@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class ArrayWorker {
 
-    public List<Integer> getUniqueElementsOfArraysWithSorting(int[] first, int[] second) {
+    public static List<Integer> getUniqueElementsOfArraysWithSorting(int[] first, int[] second) {
 
         ArrayList<Integer> result = new ArrayList<>(first.length + second.length);
 
@@ -18,7 +18,17 @@ public class ArrayWorker {
 
             Integer searchingElementIndex = Arrays.binarySearch(second, item);
 
-            if (searchingElementIndex == -1) {
+            if (searchingElementIndex < 0) {
+                result.add(item);
+            }
+        }
+
+
+        for (Integer item : second) {
+
+            Integer searchingElementIndex = Arrays.binarySearch(first, item);
+
+            if (searchingElementIndex < 0) {
                 result.add(item);
             }
         }
@@ -28,7 +38,7 @@ public class ArrayWorker {
         return result;
     }
 
-    public List<Integer> getUniqueElementsOfArraysWithMap(int[] first, int[] second) {
+    public static List<Integer> getUniqueElementsOfArraysWithMap(int[] first, int[] second) {
 
         Map<Integer, Integer> values = new HashMap<>();
 
@@ -54,4 +64,14 @@ public class ArrayWorker {
         return result;
     }
 
+    public static void main(String[] args) {
+
+        int[] arr1 = {1, 4, 6, 10, 60};
+        int[] arr2 = {6, 8, 2, 10};
+
+        List<Integer> result = getUniqueElementsOfArraysWithSorting(arr1, arr2);
+
+        System.out.println(result);
+
+    }
 }
