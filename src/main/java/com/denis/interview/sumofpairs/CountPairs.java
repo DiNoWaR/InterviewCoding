@@ -32,7 +32,6 @@ public class CountPairs {
         int[] p = {2, 3, 5, 8, 6, 0};
 
         System.out.println(countPairsOfElementsInArray(p, 8));
-
     }
 
 }
