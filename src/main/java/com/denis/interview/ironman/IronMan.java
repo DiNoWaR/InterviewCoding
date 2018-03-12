@@ -7,19 +7,19 @@ public class IronMan {
 
     static int ironMan(int[] array) {
 
-        int current = 0;
+        int currentStatus = 0;
 
         int minCharge = 1;
 
         for (int item : array) {
 
             if (item >= 0) {
-                current += item;
+                currentStatus += item;
             } else {
-                current += item;
+                currentStatus += item;
 
-                if (current < 1) {
-                    minCharge = 1 - current;
+                if (currentStatus < 1) {
+                    minCharge = 1 - currentStatus;
                 }
             }
         }
