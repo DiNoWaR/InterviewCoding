@@ -1,11 +1,11 @@
-package com.denis.interview.sumofpairs;
+package com.denis.interview.countpairstosum;
 
 import java.util.Arrays;
 
 /**
  *
  */
-public class CountPairs {
+public class CountPairsToSum {
 
 
     public static int countPairsOfElementsInArray(int[] array, int target) {
