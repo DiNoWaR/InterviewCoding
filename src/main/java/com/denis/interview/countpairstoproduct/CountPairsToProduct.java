@@ -74,10 +74,15 @@ public class CountPairsToProduct {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[99];
+        int[] arr = new int[999999];
         fillArray(arr);
 
-        System.out.println(countPairsOfElementsInArray(arr));
+        long start = System.currentTimeMillis();
+        int result = countPairsOfElementsInArray(arr);
+        long end = System.currentTimeMillis();
+
+        System.out.println("Estimated Time: " + (end - start) + " ms");
+        System.out.println(result);
 
     }
 
