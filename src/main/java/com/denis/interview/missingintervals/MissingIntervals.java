@@ -28,14 +28,22 @@ public class MissingIntervals {
         int maximum = 99;
         int from = 0;
 
-        for (int item : array) {
-            String interval = buildInterval(from, item);
+        if (array[0] != 0) {
+            String interval = buildInterval(0, array[0]);
+            if (!interval.equals("")) {
+                intervals.add(interval);
+            }
+        }
+
+        for (int i = 0; i < array.length - 1; i++) {
+
+            from = array[i];
+
+            String interval = buildInterval(array[i], array[i + 1]);
 
             if (!interval.equals("")) {
                 intervals.add(interval);
             }
-
-            from = item;
         }
 
         if (from != maximum) {
@@ -49,12 +57,20 @@ public class MissingIntervals {
 
         int diff = to - from;
 
-        if (from == 0 && diff != 1) {
-            return "1" + "-" + Integer.toString(to - 1);
+        if (from == 0) {
+            if (diff == 1) {
+                return "0";
+            } else {
+                return "0" + "-" + Integer.toString(to - 1);
+            }
         }
 
         if (diff == 1) {
             return "";
+        }
+
+        if (diff == 2) {
+            return Integer.toString(to - 1);
         }
 
         return Integer.toString(from + 1) + "-" + Integer.toString(to - 1);
