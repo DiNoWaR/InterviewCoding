@@ -29,6 +29,10 @@ public class StarElements {
 
     private static int findSuperStar(int[] arr) {
 
+        if (arr.length == 1) {
+            return arr[0];
+        }
+
         int superStar = arr[0];
 
         for (int i = 0; i < arr.length - 1; i++) {
