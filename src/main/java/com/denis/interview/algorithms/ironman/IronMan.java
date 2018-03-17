@@ -37,7 +37,6 @@ public class IronMan {
         int[] p = {-5, 4, -2, 3, 1, -1, -6, -1, 0, -5};
 
         System.out.println(ironMan(p));
-
     }
 
 }

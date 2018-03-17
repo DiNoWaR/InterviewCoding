@@ -23,7 +23,6 @@ public class CountPairsToSum {
                 count++;
             }
         }
-
         return count / 2;
     }
 
