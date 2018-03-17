@@ -62,8 +62,8 @@ public class StarElements {
         System.out.println(findStar(arr));
         System.out.println(findStar(arr2));
 
-//        System.out.println(findSuperStar(arr));
-//        System.out.println(findSuperStar(arr2));
+        System.out.println(findSuperStar(arr));
+        System.out.println(findSuperStar(arr2));
     }
 }
 
