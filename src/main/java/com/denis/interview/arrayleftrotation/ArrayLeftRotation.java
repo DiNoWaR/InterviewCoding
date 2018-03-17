@@ -1,7 +1,5 @@
 package com.denis.interview.arrayleftrotation;
 
-import java.util.Scanner;
-
 /**
  * A left rotation operation on an array of size  shifts each of the array's elements  unit to the left.
  * For example, if  left rotations are performed on array , then the array would become .
