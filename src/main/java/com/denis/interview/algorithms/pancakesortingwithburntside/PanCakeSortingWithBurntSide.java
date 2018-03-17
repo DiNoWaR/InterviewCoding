@@ -1,5 +1,12 @@
 package com.denis.interview.algorithms.pancakesortingwithburntside;
 
+/**
+ * We are given an array of Pancakes.It has 2 properties:size and side which it lays down(Burnt side and Not burnt side)
+ * The only allowed operation to change array is
+ * to take several elements from beginning to some index and flip them.
+ * Write implementation of pancake sorting.As the result pancakes are sorted by size and they all
+ * lay on burnt side down.
+ */
 public class PanCakeSortingWithBurntSide {
 
 
