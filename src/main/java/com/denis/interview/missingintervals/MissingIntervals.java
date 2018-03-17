@@ -2,8 +2,6 @@ package com.denis.interview.missingintervals;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Given a sorted array A of integers  from 0 to 99 (repetition of elements allowed), output all the integer intervals missing from the given list.
