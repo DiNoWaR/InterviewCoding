@@ -1,8 +1,5 @@
 package com.denis.interview.algorithms.missingintervals;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Given a sorted array A of integers  from 0 to 99 (repetition of elements allowed), output all the integer intervals missing from the given list.
  * <p>
