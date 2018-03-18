@@ -10,13 +10,11 @@ import com.denis.interview.util.TreeNode;
  */
 class MorrisTraversal {
 
-    private TreeNode<Integer> root;
-
     /**
      * Function to traverse binary tree without recursion and
      * without stack
      */
-    public void MorrisTraversalAlgorithm(TreeNode root) {
+    public static void morrisTraversal(TreeNode root) {
 
         TreeNode<Integer> current, predecessor;
 
@@ -56,7 +54,6 @@ class MorrisTraversal {
             } /* End of if condition current->left == NULL*/
 
         } /* End of while */
-
     }
 
     public static void main(String args[]) {
@@ -69,14 +66,13 @@ class MorrisTraversal {
         4     5
         */
 
-        MorrisTraversal tree = new MorrisTraversal();
+        TreeNode<Integer> root = new TreeNode<>(1);
 
-        tree.root = new TreeNode<>(1);
-        tree.root.setLeft(new TreeNode<>(2));
-        tree.root.setRight(new TreeNode<>(3));
-        tree.root.getLeft().setLeft(new TreeNode<>(4));
-        tree.root.getLeft().setRight(new TreeNode<>(5));
+        root.setLeft(new TreeNode<>(2));
+        root.setRight(new TreeNode<>(3));
+        root.getLeft().setLeft(new TreeNode<>(4));
+        root.getLeft().setRight(new TreeNode<>(5));
 
-        tree.MorrisTraversalAlgorithm(tree.root);
+        morrisTraversal(root);
     }
 }
