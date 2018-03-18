@@ -1,4 +1,6 @@
-package com.denis.interview.algorithms.binarytrees.morristraversal;
+package com.denis.interview.algorithms.binarytrees.traversal.morristraversal;
+
+import com.denis.interview.util.TreeNode;
 
 /**
  * Using Morris Traversal, we can traverse the tree without using stack and recursion.
@@ -8,15 +10,15 @@ package com.denis.interview.algorithms.binarytrees.morristraversal;
  */
 class MorrisTraversal {
 
-    private TNode root;
+    private TreeNode<Integer> root;
 
     /**
      * Function to traverse binary tree without recursion and
      * without stack
      */
-    public void MorrisTraversalAlgorithm(TNode root) {
+    public void MorrisTraversalAlgorithm(TreeNode root) {
 
-        TNode current, predecessor;
+        TreeNode<Integer> current, predecessor;
 
         if (root == null)
             return;
@@ -25,30 +27,30 @@ class MorrisTraversal {
 
         while (current != null) {
 
-            if (current.left == null) {
-                System.out.print(current.data + " ");
-                current = current.right;
+            if (current.getLeft() == null) {
+                System.out.print(current.getValue() + " ");
+                current = current.getRight();
             } else {
                 /* Find the inorder predecessor of current */
-                predecessor = current.left;
+                predecessor = current.getLeft();
 
-                while (predecessor.right != null && predecessor.right != current) {
-                    predecessor = predecessor.right;
+                while (predecessor.getRight() != null && predecessor.getRight() != current) {
+                    predecessor = predecessor.getRight();
 
                 }
 
                 /* Make current as right child of its inorder predecessor */
-                if (predecessor.right == null) {
-                    predecessor.right = current;
-                    current = current.left;
+                if (predecessor.getRight() == null) {
+                    predecessor.setRight(current);
+                    current = current.getLeft();
                 }
 
                  /* Revert the changes made in if part to restore the
                     original tree i.e.,fix the right child of predecssor*/
                 else {
-                    predecessor.right = null;
-                    System.out.print(current.data + " ");
-                    current = current.right;
+                    predecessor.setRight(null);
+                    System.out.print(current.getValue() + " ");
+                    current = current.getRight();
                 }   /* End of if condition predecessor->right == NULL */
 
             } /* End of if condition current->left == NULL*/
@@ -69,11 +71,11 @@ class MorrisTraversal {
 
         MorrisTraversal tree = new MorrisTraversal();
 
-        tree.root = new TNode(1);
-        tree.root.left = new TNode(2);
-        tree.root.right = new TNode(3);
-        tree.root.left.left = new TNode(4);
-        tree.root.left.right = new TNode(5);
+        tree.root = new TreeNode<>(1);
+        tree.root.setLeft(new TreeNode<>(2));
+        tree.root.setRight(new TreeNode<>(3));
+        tree.root.getLeft().setLeft(new TreeNode<>(4));
+        tree.root.getLeft().setRight(new TreeNode<>(5));
 
         tree.MorrisTraversalAlgorithm(tree.root);
     }
