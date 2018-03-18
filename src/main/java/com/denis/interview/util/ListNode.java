@@ -1,5 +1,9 @@
 package com.denis.interview.util;
 
+/**
+ *
+ * Util class for linked list tasks
+ */
 public class ListNode<T> {
 
     private T value;
