@@ -29,5 +29,4 @@ public class MiddleOfList {
         System.out.println(getMiddleElement(first).getValue());
 
     }
-
 }
