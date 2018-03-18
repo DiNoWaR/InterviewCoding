@@ -1,7 +1,6 @@
 package com.denis.interview.algorithms.interviewcake.productofnumbers;
 
 import java.util.Arrays;
-import java.util.Random;
 
 /**
  * You have an array of integers, and for each index you want to find the product of every integer except the integer at that index.
