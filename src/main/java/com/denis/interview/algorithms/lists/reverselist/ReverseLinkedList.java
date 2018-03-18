@@ -28,11 +28,20 @@ class ReverseLinkedList {
 
     public static void main(String[] args) {
 
-        ListNode<Integer> head = new ListNode<>(1);
-        head.setNext(new ListNode<>(2));
-        head.getNext().setNext(new ListNode<>(3));
+        ListNode<Integer> first = new ListNode<>(1);
+        ListNode<Integer> second = new ListNode<>(2);
+        ListNode<Integer> third = new ListNode<>(3);
+        ListNode<Integer> fourth = new ListNode<>(4);
+        ListNode<Integer> fifth = new ListNode<>(5);
+        ListNode<Integer> sixth = new ListNode<>(6);
 
-        head.getLineage(head);
+        first.setNext(second);
+        second.setNext(third);
+        third.setNext(fourth);
+        fourth.setNext(fifth);
+        fifth.setNext(sixth);
+
+        first.getLineage(first);
 
     }
 }
