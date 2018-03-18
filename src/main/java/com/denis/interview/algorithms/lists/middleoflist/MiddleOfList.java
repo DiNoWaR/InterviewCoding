@@ -13,7 +13,7 @@ public class MiddleOfList {
         ListNode<Integer> slowPointer = head;
 
         if (head != null) {
-            while (fastPointer != null && fastPointer.getNext() != null) {
+            while (fastPointer != null && fastPointer.hasNext()) {
                 fastPointer = fastPointer.getNext().getNext();
                 slowPointer = slowPointer.getNext();
             }
