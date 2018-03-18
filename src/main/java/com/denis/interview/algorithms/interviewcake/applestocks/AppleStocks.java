@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.applestocks;
+package com.denis.interview.algorithms.interviewcake.applestocks;
 
 /**
  * Suppose we could access yesterday's stock prices as an array, where:
