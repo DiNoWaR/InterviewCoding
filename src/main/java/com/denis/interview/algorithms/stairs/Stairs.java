@@ -17,7 +17,7 @@ package com.denis.interview.algorithms.stairs;
  */
 public class Stairs {
 
-    public int climbStairs(int n) {
+    public static int climbStairs(int n) {
 
         if (n == 0) {
             return 0;
@@ -38,4 +38,9 @@ public class Stairs {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        System.out.println(climbStairs(4));
+    }
+
 }

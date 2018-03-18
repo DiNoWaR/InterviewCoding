@@ -10,7 +10,7 @@ package com.denis.interview.algorithms.ironman;
  */
 public class IronMan {
 
-    static int ironMan(int[] array) {
+    public static int ironMan(int[] array) {
 
         int currentCharge = 0;
 
