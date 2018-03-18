@@ -31,7 +31,7 @@ public class MiddleOfList {
         ListNode<Integer> sixth = new ListNode<>(6);
         ListNode<Integer> seventh = new ListNode<>(7);
         ListNode<Integer> eights = new ListNode<>(8);
-        ListNode<Integer> ninths = new ListNode<>(9);
+        ListNode<Integer> nineths = new ListNode<>(9);
 
         first.setNext(second);
         second.setNext(third);
@@ -40,7 +40,7 @@ public class MiddleOfList {
         fifth.setNext(sixth);
         sixth.setNext(seventh);
         seventh.setNext(eights);
-        eights.setNext(ninths);
+        eights.setNext(nineths);
 
         System.out.println(getMiddleElement(first).getValue());
 
