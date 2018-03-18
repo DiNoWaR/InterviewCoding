@@ -58,20 +58,26 @@ class MorrisTraversal {
 
     public static void main(String args[]) {
 
-        /* Constructed binary tree is
-               1
-             /   \
-            2      3
-          /  \
-        4     5
-        */
+        TreeNode<Integer> root = new TreeNode<>(8);
 
-        TreeNode<Integer> root = new TreeNode<>(1);
+        TreeNode<Integer> first = new TreeNode<>(3);
+        TreeNode<Integer> second = new TreeNode<>(10);
+        TreeNode<Integer> third = new TreeNode<>(1);
+        TreeNode<Integer> fourth = new TreeNode<>(6);
+        TreeNode<Integer> fifth = new TreeNode<>(4);
+        TreeNode<Integer> sixth = new TreeNode<>(7);
+        TreeNode<Integer> seventh = new TreeNode<>(13);
+        TreeNode<Integer> eights = new TreeNode<>(14);
 
-        root.setLeft(new TreeNode<>(2));
-        root.setRight(new TreeNode<>(3));
-        root.getLeft().setLeft(new TreeNode<>(4));
-        root.getLeft().setRight(new TreeNode<>(5));
+        root.setLeft(first);
+        root.setRight(second);
+        first.setLeft(third);
+        first.setRight(fourth);
+        fourth.setLeft(fifth);
+        fourth.setRight(sixth);
+        second.setRight(eights);
+        eights.setLeft(seventh);
+
 
         morrisTraversal(root);
     }
