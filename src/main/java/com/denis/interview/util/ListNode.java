@@ -6,9 +6,8 @@ package com.denis.interview.util;
 public class ListNode<T> {
 
     private T value;
-
     private ListNode<T> next;
-    private boolean hasNext;
+
 
     public ListNode(T value) {
         this.value = value;
