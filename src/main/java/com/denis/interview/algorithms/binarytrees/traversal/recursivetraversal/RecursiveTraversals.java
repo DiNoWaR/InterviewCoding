@@ -5,7 +5,7 @@ import com.denis.interview.util.TreeNode;
 /**
  * Implement all resursive traversals of binary tree: Pre-order Traversal, In-order Traversal, Post-order Traversal
  */
-public class RecursiveTraversal {
+public class RecursiveTraversals {
 
     public static void preOrderTraversal(TreeNode<Integer> root) {
 
