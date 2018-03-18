@@ -1,7 +1,6 @@
 package com.denis.interview.util;
 
 /**
- *
  * Util class for linked list tasks
  */
 public class ListNode<T> {
@@ -15,6 +14,16 @@ public class ListNode<T> {
         this.value = value;
     }
 
+
+    public void getLineage(ListNode<T> head) {
+
+        ListNode<T> pointer = head;
+
+        while (pointer != null) {
+            System.out.print(pointer.getValue() + " ");
+            pointer = pointer.getNext();
+        }
+    }
 
     public T getValue() {
         return value;

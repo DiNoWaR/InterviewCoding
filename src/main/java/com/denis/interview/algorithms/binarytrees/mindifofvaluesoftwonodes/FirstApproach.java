@@ -1,5 +1,7 @@
 package com.denis.interview.algorithms.binarytrees.mindifofvaluesoftwonodes;
 
+import com.denis.interview.util.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,7 +17,7 @@ public class FirstApproach {
 
     private List<Integer> values;
 
-    public int minDiffInBST(TreeNode root) {
+    public int minDiffInBST(TreeNode<Integer> root) {
         values = new ArrayList();
         depthFirstSearch(root);
         Collections.sort(values);
@@ -28,7 +30,7 @@ public class FirstApproach {
         return ans;
     }
 
-    private void depthFirstSearch(TreeNode node) {
+    private void depthFirstSearch(TreeNode<Integer> node) {
 
         if (node == null) {
             return;
