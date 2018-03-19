@@ -11,7 +11,7 @@ public class ListGenerator {
 
         Random random = null;
 
-        int firstNumber = 1;
+        int firstNumber = from;
 
         if (!sorted) {
             random = new Random();
