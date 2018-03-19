@@ -59,7 +59,7 @@ class MorrisTraversal {
 
     public static void main(String args[]) {
 
-        TreeNode<Integer> root = BinaryTreeGenerator.generateBST();
+        TreeNode<Integer> root = BinaryTreeGenerator.generateBinarySearchTree();
         morrisTraversal(root);
     }
 }

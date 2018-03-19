@@ -46,7 +46,7 @@ public class RecursiveTraversals {
 
     public static void main(String[] args) {
 
-        TreeNode<Integer> root = BinaryTreeGenerator.generateBST();
+        TreeNode<Integer> root = BinaryTreeGenerator.generateBinarySearchTree();
 
         preOrderTraversal(root);
         System.out.println();

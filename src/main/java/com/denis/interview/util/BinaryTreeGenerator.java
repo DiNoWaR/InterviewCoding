@@ -5,7 +5,7 @@ package com.denis.interview.util;
  */
 public class BinaryTreeGenerator {
 
-    public static TreeNode generateBST() {
+    public static TreeNode generateBinarySearchTree() {
 
         TreeNode<Integer> root = new TreeNode<>(8);
 
