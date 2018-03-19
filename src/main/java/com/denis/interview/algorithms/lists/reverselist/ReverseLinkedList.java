@@ -1,5 +1,6 @@
 package com.denis.interview.algorithms.lists.reverselist;
 
+import com.denis.interview.util.ListGenerator;
 import com.denis.interview.util.ListNode;
 
 /**
@@ -28,20 +29,7 @@ class ReverseLinkedList {
 
     public static void main(String[] args) {
 
-        ListNode<Integer> first = new ListNode<>(1);
-        ListNode<Integer> second = new ListNode<>(2);
-        ListNode<Integer> third = new ListNode<>(3);
-        ListNode<Integer> fourth = new ListNode<>(4);
-        ListNode<Integer> fifth = new ListNode<>(5);
-        ListNode<Integer> sixth = new ListNode<>(6);
-
-        first.setNext(second);
-        second.setNext(third);
-        third.setNext(fourth);
-        fourth.setNext(fifth);
-        fifth.setNext(sixth);
-
-        first.getLineage(first);
+        ListNode<Integer> first = ListGenerator.generateList(3, 12, true);
 
     }
 }
