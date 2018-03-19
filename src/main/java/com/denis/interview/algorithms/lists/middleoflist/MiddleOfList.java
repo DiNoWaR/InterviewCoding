@@ -24,7 +24,7 @@ public class MiddleOfList {
 
     public static void main(String[] args) {
 
-        ListNode<Integer> first = ListGenerator.generateList();
+        ListNode<Integer> first = ListGenerator.generateList(1, 10);
 
         System.out.println(getMiddleElement(first).getValue());
 

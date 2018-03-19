@@ -5,26 +5,16 @@ package com.denis.interview.util;
  */
 public class ListGenerator {
 
-    public static ListNode generateList() {
+    public static ListNode generateList(int from, int to) {
 
-        ListNode<Integer> first = new ListNode<>(1);
-        ListNode<Integer> second = new ListNode<>(2);
-        ListNode<Integer> third = new ListNode<>(3);
-        ListNode<Integer> fourth = new ListNode<>(4);
-        ListNode<Integer> fifth = new ListNode<>(5);
-        ListNode<Integer> sixth = new ListNode<>(6);
-        ListNode<Integer> seventh = new ListNode<>(7);
-        ListNode<Integer> eights = new ListNode<>(8);
-        ListNode<Integer> nineths = new ListNode<>(9);
+        ListNode<Integer> first = new ListNode<>(from);
+        ListNode<Integer> current = first;
 
-        first.setNext(second);
-        second.setNext(third);
-        third.setNext(fourth);
-        fourth.setNext(fifth);
-        fifth.setNext(sixth);
-        sixth.setNext(seventh);
-        seventh.setNext(eights);
-        eights.setNext(nineths);
+        for (int i = from + 1; i <= to; i++) {
+            ListNode<Integer> newNode = new ListNode<>(i);
+            current.setNext(newNode);
+            current = newNode;
+        }
 
         return first;
     }
