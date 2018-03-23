@@ -54,8 +54,6 @@ public class HighestProductOfThree {
             }
 
         }
-        System.out.println("max product " + maxProduct);
-        System.out.println("minProduct " + minProduct);
         System.out.println("max " + max);
         System.out.println("max2 " + max2);
         System.out.println("max3 " + max3);
@@ -79,7 +77,7 @@ public class HighestProductOfThree {
         int[] arrayOfInts = new int[]{1, 10, 5, 1, 100};
 
         System.out.println(getMaxProductOfThreeSecond(array));
-//        System.out.println(getMaxProductOfThreeSecond(arrayOfInts));
+        System.out.println(getMaxProductOfThreeSecond(arrayOfInts));
 
     }
 }
