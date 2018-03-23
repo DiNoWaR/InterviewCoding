@@ -30,8 +30,8 @@ public class HighestProductOfThree {
         int max = Integer.MIN_VALUE;
         int max2 = Integer.MIN_VALUE;
         int max3 = Integer.MIN_VALUE;
-        int min = array[0];
-        int min2 = array[0];
+        int min = Integer.MAX_VALUE;
+        int min2 = Integer.MAX_VALUE;
         for (int i = 0; i < array.length; i++) {
             if (array[i] >= max) {
                 max3 = max2;
@@ -74,7 +74,7 @@ public class HighestProductOfThree {
 
         int[] array = {-1, -1000, -1, -5, -90};
 
-        int[] arrayOfInts = new int[]{1, 10, 5, 1, 100};
+        int[] arrayOfInts = new int[]{1, 100, 5, 100, 100};
 
         System.out.println(getMaxProductOfThreeSecond(array));
         System.out.println(getMaxProductOfThreeSecond(arrayOfInts));
