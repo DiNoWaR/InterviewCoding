@@ -45,7 +45,7 @@ public class HighestProductOfThree {
             if ((array[i] < max2) && array[i] >= max3) {
                 max3 = array[i];
             }
-            if (array[i] < min) {
+            if (array[i] <= min) {
                 min2 = min;
                 min = array[i];
             }
