@@ -28,21 +28,17 @@ public class HighestProductOfThree {
             return array[array.length - 1] * array[array.length - 2] * array[array.length - 3];
         }
 
-        int max1 = array[0];
-        int max2 = array[0];
-        int max3 = array[0];
-
-        for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] > array[i + 1]) {
-            }
-        }
         return 0;
     }
 
     public static void main(String[] args) {
 
         int[] array = {0, -1000, 1, 5, -1000};
+
+        int[] arrayOfInts = new int[]{1, 10, -5, 1, -100};
+
         System.out.println(getMaxProductOfThree(array));
+        System.out.println(getMaxProductOfThree(arrayOfInts));
 
 
     }
