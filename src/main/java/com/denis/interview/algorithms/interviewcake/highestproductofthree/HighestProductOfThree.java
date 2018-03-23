@@ -27,19 +27,59 @@ public class HighestProductOfThree {
         if (array.length == 3) {
             return array[array.length - 1] * array[array.length - 2] * array[array.length - 3];
         }
+        int max = Integer.MIN_VALUE;
+        int max2 = Integer.MIN_VALUE;
+        int max3 = Integer.MIN_VALUE;
+        int min = array[0];
+        int min2 = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] >= max) {
+                max3 = max2;
+                max2 = max;
+                max = array[i];
+            }
+            if ((array[i] < max) && (array[i] >= max2)) {
+                max3 = max2;
+                max2 = array[i];
+            }
+            if ((array[i] < max2) && array[i] >= max3) {
+                max3 = array[i];
+            }
+            if (array[i] < min) {
+                min2 = min;
+                min = array[i];
+            }
+            if ((array[i] > min) && (array[i] < min2)) {
+                min2 = array[i];
+            }
 
-        return 0;
+        }
+        System.out.println("max product " + maxProduct);
+        System.out.println("minProduct " + minProduct);
+        System.out.println("max " + max);
+        System.out.println("max2 " + max2);
+        System.out.println("max3 " + max3);
+        System.out.println("min " + min);
+        System.out.println("min2 " + min2);
+        if (max < 0) {
+            return max * max2 * max3;
+        }
+
+        if ((max * max2 * max3 > max*min*min2)) {
+            return max * max2 * max3;
+        }
+
+        return max*min*min2;
     }
 
     public static void main(String[] args) {
 
-        int[] array = {0, -1000, 1, 5, -1000};
+        int[] array = {-1, -1000, -1, -5, -90};
 
-        int[] arrayOfInts = new int[]{1, 10, -5, 1, -100};
+        int[] arrayOfInts = new int[]{1, 10, 5, 1, 100};
 
-        System.out.println(getMaxProductOfThree(array));
-        System.out.println(getMaxProductOfThree(arrayOfInts));
-
+        System.out.println(getMaxProductOfThreeSecond(array));
+//        System.out.println(getMaxProductOfThreeSecond(arrayOfInts));
 
     }
 }
