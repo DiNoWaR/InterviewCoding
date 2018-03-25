@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class HighestProductOfThree {
 
-    public static int getMaxProductOfThree(int[] array) {
+    public static int getMaxProductOfThreeWithSorting(int[] array) {
 
         Arrays.sort(array);
 
@@ -22,16 +22,18 @@ public class HighestProductOfThree {
         return result;
     }
 
-    public static int getMaxProductOfThreeSecond(int[] array) {
+    public static int getMaxProductOfThree(int[] array) {
 
         if (array.length == 3) {
             return array[array.length - 1] * array[array.length - 2] * array[array.length - 3];
         }
+
         int max = Integer.MIN_VALUE;
         int max2 = Integer.MIN_VALUE;
         int max3 = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         int min2 = Integer.MAX_VALUE;
+
         for (int i = 0; i < array.length; i++) {
             if (array[i] >= max) {
                 max3 = max2;
@@ -54,30 +56,24 @@ public class HighestProductOfThree {
             }
 
         }
-        System.out.println("max " + max);
-        System.out.println("max2 " + max2);
-        System.out.println("max3 " + max3);
-        System.out.println("min " + min);
-        System.out.println("min2 " + min2);
         if (max < 0) {
             return max * max2 * max3;
         }
 
-        if ((max * max2 * max3 > max*min*min2)) {
+        if ((max * max2 * max3 > max * min * min2)) {
             return max * max2 * max3;
         }
 
-        return max*min*min2;
+        return max * min * min2;
     }
 
     public static void main(String[] args) {
 
         int[] array = {-1, -1000, -1, -5, -90};
+        int[] array2 = {1, 100, 5, 100, 100};
 
-        int[] arrayOfInts = new int[]{1, 100, 5, 100, 100};
-
-        System.out.println(getMaxProductOfThreeSecond(array));
-        System.out.println(getMaxProductOfThreeSecond(arrayOfInts));
+        System.out.println(getMaxProductOfThree(array));
+        System.out.println(getMaxProductOfThree(array2));
 
     }
 }
