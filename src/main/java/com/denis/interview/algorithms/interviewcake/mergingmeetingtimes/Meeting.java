@@ -1,6 +1,6 @@
 package com.denis.interview.algorithms.interviewcake.mergingmeetingtimes;
 
-public class Meeting implements Comparable {
+public class Meeting {
 
     private int startTime;
     private int endTime;
@@ -35,8 +35,4 @@ public class Meeting implements Comparable {
                 '}';
     }
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

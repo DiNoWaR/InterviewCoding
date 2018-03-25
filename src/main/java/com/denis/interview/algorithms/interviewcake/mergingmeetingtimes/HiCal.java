@@ -25,7 +25,6 @@ public class HiCal {
 
         }
 
-
         return sortedMeetings;
     }
 
