@@ -1,6 +1,6 @@
 package com.denis.interview.algorithms.interviewcake.mergingmeetingtimes;
 
-public class Meeting {
+public class Meeting implements Comparable {
 
     private int startTime;
     private int endTime;
@@ -27,6 +27,15 @@ public class Meeting {
         this.endTime = endTime;
     }
 
+
+    @Override
+    public int compareTo(Object object) {
+
+        Meeting meeting = (Meeting) object;
+
+        return Integer.compare(this.getStartTime(), meeting.getStartTime());
+    }
+
     @Override
     public String toString() {
         return "Meeting{" +
@@ -34,5 +43,6 @@ public class Meeting {
                 ", endTime=" + endTime +
                 '}';
     }
+
 
 }
