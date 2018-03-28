@@ -5,6 +5,18 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Your company built an in-house calendar tool called HiCal.
+ * You want to add a feature to see the times in a day when everyone is available.
+ * To do this, you’ll need to know when any team is having a meeting.
+ * In HiCal, a meeting is stored as an object of a Meeting class with integer variables startTime and endTime.
+ * These integers represent the number of 30-minute blocks past 9:00am.
+ * <p>
+ * For example, given:
+ * [Meeting(0, 1), Meeting(3, 5), Meeting(4, 8), Meeting(10, 12), Meeting(9, 10)]
+ * your method would return:
+ * [Meeting(0, 1), Meeting(3, 8), Meeting(9, 12)]
+ */
 public class HiCal {
 
     public static List<Meeting> mergeRanges(Meeting[] meetings) {

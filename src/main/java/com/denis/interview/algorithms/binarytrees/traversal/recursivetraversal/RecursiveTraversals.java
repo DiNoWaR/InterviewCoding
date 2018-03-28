@@ -4,7 +4,7 @@ import com.denis.interview.util.BinaryTreeGenerator;
 import com.denis.interview.util.TreeNode;
 
 /**
- * Implement all resursive traversals of binary tree: Pre-order Traversal, In-order Traversal, Post-order Traversal
+ * Implement all recursive traversals of binary tree: Pre-order Traversal, In-order Traversal, Post-order Traversal
  */
 public class RecursiveTraversals {
 

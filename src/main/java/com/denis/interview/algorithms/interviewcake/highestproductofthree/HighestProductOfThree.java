@@ -2,6 +2,10 @@ package com.denis.interview.algorithms.interviewcake.highestproductofthree;
 
 import java.util.Arrays;
 
+/**
+ * Given an array of integers, find the highest product you can get from three of the integers.
+ * The input arrayOfInts will always have at least three integers.
+ */
 public class HighestProductOfThree {
 
     public static int getMaxProductOf3WithSorting(int[] array) {
