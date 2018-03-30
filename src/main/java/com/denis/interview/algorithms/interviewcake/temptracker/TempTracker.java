@@ -25,10 +25,14 @@ public class TempTracker {
 
     private int mode;
     private int count;
+
     private int min;
     private int max;
+
     private double mean;
+
     private int sum;
+
     private Map<Integer, Integer> map;
 
     private List<Integer> tracker;
