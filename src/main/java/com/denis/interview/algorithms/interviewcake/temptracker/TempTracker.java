@@ -1,7 +1,9 @@
 package com.denis.interview.algorithms.interviewcake.temptracker;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * You decide to test if your oddly-mathematical heating company is fulfilling its All-Time Max, Min, Mean and Mode Temperature Guarantee™.
@@ -21,20 +23,30 @@ import java.util.List;
  */
 public class TempTracker {
 
+    private int mode;
+    private int count;
     private int min;
     private int max;
     private double mean;
     private int sum;
+    private Map<Integer, Integer> map;
 
     private List<Integer> tracker;
 
 
     public TempTracker() {
+        map = new HashMap<>();
         tracker = new ArrayList<>();
     }
 
 
     public void insert(int value) {
+        map.merge(value, 1, (a, b) -> a + b);
+
+        if (map.get(value) > count) {
+            mode = value;
+            count=map.get(value);
+        }
 
         max = Math.max(max, value);
         min = Math.min(min, value);
@@ -55,5 +67,28 @@ public class TempTracker {
 
     public double getMean() {
         return mean;
+    }
+
+    public int getMode() {
+        return mode;
+    }
+
+    public static void main(String[] args) {
+        TempTracker tempTracker = new TempTracker();
+
+        tempTracker.insert(2);
+        tempTracker.insert(1);
+        tempTracker.insert(2);
+        tempTracker.insert(1);
+        tempTracker.insert(4);
+        tempTracker.insert(1);
+        tempTracker.insert(2);
+        tempTracker.insert(6);
+        tempTracker.insert(8);
+        tempTracker.insert(3);
+        tempTracker.insert(2);
+        tempTracker.insert(1);
+
+        System.out.println(tempTracker.getMode());
     }
 }
