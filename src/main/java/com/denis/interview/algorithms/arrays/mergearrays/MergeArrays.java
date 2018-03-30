@@ -12,12 +12,12 @@ public class MergeArrays {
         int[] small = first;
         int[] big = second;
 
-        if (first.length > second.length) {
+        if (first.length >= second.length) {
             small = second;
             big = first;
         }
 
-        int[] merged = new int[first.length + second.length];
+        int[] merged = new int[small.length + big.length];
 
         int firstCurrentIndex = 0;
         int secondCurrentIndex = 0;
