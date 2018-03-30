@@ -1,5 +1,7 @@
 package com.denis.interview.algorithms.arrays.arrayleftrotation;
 
+import java.util.Arrays;
+
 /**
  * A left rotation operation on an array of size  shifts each of the array's elements  unit to the left.
  * For example, if  left rotations are performed on array , then the array would become .
@@ -16,6 +18,28 @@ package com.denis.interview.algorithms.arrays.arrayleftrotation;
  */
 public class ArrayLeftRotation {
 
+    public static int[] rotateArray(int[] array, int shift) {
 
+        int[] target = new int[array.length];
+
+        for (int i = 0; i < target.length; i++) {
+
+            int targetIndex = i - shift;
+
+            if (targetIndex < 0) {
+                targetIndex = array.length + targetIndex;
+            }
+            target[targetIndex] = array[i];
+        }
+        return target;
+    }
+
+    public static void main(String[] args) {
+
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.println(Arrays.toString(rotateArray(array, 4)));
+
+    }
 
 }
