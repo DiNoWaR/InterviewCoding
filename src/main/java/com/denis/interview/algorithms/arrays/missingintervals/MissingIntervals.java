@@ -74,7 +74,6 @@ public class MissingIntervals {
         if ((to - from) == 2) {
             return Integer.toString(from + 1);
         }
-
         return "";
     }
 
@@ -89,5 +88,4 @@ public class MissingIntervals {
         System.out.println(getIntervals(array3));
 
     }
-
 }
