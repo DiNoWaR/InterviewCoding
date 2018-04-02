@@ -13,12 +13,6 @@ public class SelectionSort implements SortingAlgorithm {
 
     @Override
     public void sort(int[] array) {
-        selectionSort(array);
-    }
-
-
-    private void selectionSort(int[] array) {
-
         int left = 0;
 
         while (left < array.length) {

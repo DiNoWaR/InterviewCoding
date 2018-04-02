@@ -7,17 +7,12 @@ import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm
 public class BubbleSort implements SortingAlgorithm {
 
     @Override
-    public void sort(int[] array) {
-        bubbleSort(array);
-    }
-
-    @Override
     public String getName() {
         return SortingAlgorithmNames.BUBBLE_SORT.getValue();
     }
 
-
-    private void bubbleSort(int[] sourceArray) {
+    @Override
+    public void sort(int[] sourceArray) {
 
         boolean changed = true;
 
@@ -32,7 +27,6 @@ public class BubbleSort implements SortingAlgorithm {
                     changed = true;
                 }
             }
-
         }
     }
 
