@@ -24,6 +24,7 @@ public class MissingIntervals {
 
     private final static int MAX = 99;
 
+
     public static List<String> getIntervals(int[] array) {
 
         List<String> intervals = new ArrayList<>();
