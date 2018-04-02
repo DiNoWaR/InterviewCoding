@@ -28,6 +28,11 @@ public class MissingIntervals {
 
         List<String> intervals = new ArrayList<>();
 
+        if (array.length == 1) {
+            buildIntervalForOneElement(array, intervals);
+            return intervals;
+        }
+
         for (int i = 0; i < array.length - 1; i++) {
             String interval;
 
@@ -89,16 +94,44 @@ public class MissingIntervals {
         }
     }
 
+    private static void buildIntervalForOneElement(int[] array, List<String> intervals) {
+
+        if (array[0] == 0) {
+            intervals.add(buildInterval(0, MAX + 1));
+        } else if (array[0] == 1) {
+            intervals.add(Integer.toString(0));
+            intervals.add(buildInterval(1, MAX + 1));
+        } else if (array[0] == MAX) {
+            intervals.add(buildInterval(-1, MAX));
+        } else if (array[0] == MAX - 1) {
+            intervals.add(buildInterval(-1, MAX - 1));
+            intervals.add(Integer.toString(MAX));
+        } else {
+            intervals.add(buildInterval(-1, array[0]));
+            intervals.add(buildInterval(array[0], MAX + 1));
+        }
+    }
+
 
     public static void main(String[] args) {
 
         int[] array1 = {1, 5, 67, 88};
         int[] array2 = {4, 55, 77, 89, 91, 99};
         int[] array3 = {0, 3, 4, 6, 80, 90, 91};
+        int[] array4 = {0};
+        int[] array5 = {1};
+        int[] array6 = {99};
+        int[] array7 = {98};
+        int[] array8 = {76};
 
         System.out.println(getIntervals(array1));
         System.out.println(getIntervals(array2));
         System.out.println(getIntervals(array3));
+        System.out.println(getIntervals(array4));
+        System.out.println(getIntervals(array5));
+        System.out.println(getIntervals(array6));
+        System.out.println(getIntervals(array7));
+        System.out.println(getIntervals(array8));
 
     }
 }
