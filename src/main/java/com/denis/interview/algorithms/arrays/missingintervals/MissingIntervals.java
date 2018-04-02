@@ -32,17 +32,7 @@ public class MissingIntervals {
             String interval;
 
             if (i == 0) {
-
-                if (array[i] > 0) {
-
-                    if (array[i] == 1) {
-                        interval = "0";
-                        intervals.add(interval);
-                    } else {
-                        interval = buildInterval(-1, array[i]);
-                        intervals.add(interval);
-                    }
-                }
+                buildHead(array, intervals);
             }
 
             interval = buildInterval(array[i], array[i + 1]);
@@ -52,14 +42,7 @@ public class MissingIntervals {
             }
 
             if (i == array.length - 2) {
-                if (array[i + 1] == MAX) {
-
-                } else if (array[i + 1] == MAX - 1) {
-                    intervals.add(Integer.toString(MAX));
-                } else {
-                    interval = buildInterval(array[i + 1], MAX + 1);
-                    intervals.add(interval);
-                }
+                buildTail(array, intervals);
             }
         }
         return intervals;
@@ -75,6 +58,35 @@ public class MissingIntervals {
             return Integer.toString(from + 1);
         }
         return "";
+    }
+
+    private static void buildHead(int[] array, List<String> intervals) {
+
+        String interval;
+
+        if (array[0] > 0) {
+
+            if (array[0] == 1) {
+                interval = "0";
+            } else {
+                interval = buildInterval(-1, array[0]);
+            }
+            intervals.add(interval);
+        }
+    }
+
+    private static void buildTail(int[] array, List<String> intervals) {
+
+        String interval;
+
+        if (array[array.length - 1] == MAX) {
+
+        } else if (array.length - 1 == MAX - 1) {
+            intervals.add(Integer.toString(MAX));
+        } else {
+            interval = buildInterval(array[array.length - 1], MAX + 1);
+            intervals.add(interval);
+        }
     }
 
     public static void main(String[] args) {
