@@ -2,5 +2,5 @@
 .idea/.name
 .idea/sbt.xml
 .idea/thriftCompiler.xml
-interview.iml
+*.iml
 target/
