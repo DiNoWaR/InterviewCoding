@@ -27,8 +27,8 @@ public class Launcher {
 
         SortingAlgorithmTester.estimateTimeOfSorting(bubble, sourceArray);
         SortingAlgorithmTester.estimateTimeOfSorting(cocktail, sourceArray);
-        SortingAlgorithmTester.estimateTimeOfSorting(selection, sourceArray);
         SortingAlgorithmTester.estimateTimeOfSorting(gnome, sourceArray);
+        SortingAlgorithmTester.estimateTimeOfSorting(selection, sourceArray);
         SortingAlgorithmTester.estimateTimeOfSorting(comb, sourceArray);
 
     }

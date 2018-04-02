@@ -22,7 +22,6 @@ public class GnomeSort implements SortingAlgorithm {
             }
             count++;
         }
-
     }
 
     private int reverse(int right, int[] array) {
