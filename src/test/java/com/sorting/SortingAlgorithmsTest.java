@@ -14,6 +14,7 @@ public class SortingAlgorithmsTest {
     private static Collection<String> data() {
         return Arrays.asList("com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort.BubbleSort"
                 , "com.denis.interview.algorithms.sorting.sortingalgorithms.cocktailsort.CocktailSort"
+                , "com.denis.interview.algorithms.sorting.sortingalgorithms.insertionsort.InsertionSort"
                 , "com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSort"
                 , "com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSort"
                 , "com.denis.interview.algorithms.sorting.sortingalgorithms.gnomesort.GnomeSort");
@@ -81,13 +82,13 @@ public class SortingAlgorithmsTest {
 
     @ParameterizedTest
     @MethodSource(value = "data")
-    public void sortingOneHundredReversedElements(String algorithmName) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+    public void sortingFiftyThousandReversedElements(String algorithmName) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
 
         Class sortingAlgorithmClass = Class.forName(algorithmName);
         Object ob = sortingAlgorithmClass.newInstance();
         SortingAlgorithm sortingAlgorithm = (SortingAlgorithm) ob;
 
-        int size = 100000;
+        int size = 50000;
 
         int[] sourceArray = new int[size];
         int[] expectedArray = new int[size];
