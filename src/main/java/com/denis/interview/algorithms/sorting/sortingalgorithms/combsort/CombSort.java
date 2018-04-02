@@ -13,11 +13,6 @@ public class CombSort implements SortingAlgorithm {
 
     @Override
     public void sort(int[] array) {
-        combSort(array);
-    }
-
-
-    private void combSort(int[] array) {
 
         boolean changed = true;
         double SHRINK_FACTOR = 1.3;
@@ -40,7 +35,6 @@ public class CombSort implements SortingAlgorithm {
             if (gap < 1) {
                 gap = 1;
             }
-
         }
     }
 
