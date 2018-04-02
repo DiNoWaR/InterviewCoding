@@ -89,6 +89,7 @@ public class MissingIntervals {
         }
     }
 
+
     public static void main(String[] args) {
 
         int[] array1 = {1, 5, 67, 88};
