@@ -9,22 +9,7 @@ import com.denis.interview.util.ListNode;
 class ReverseLinkedList {
 
     public static ListNode<Integer> reverse(ListNode<Integer> head) {
-
-        ListNode<Integer> prev = null;
-        ListNode<Integer> next = null;
-
-        ListNode<Integer> current = head;
-
-        while (current != null) {
-            next = current.getNext();
-            current.setNext(prev);
-            prev = current;
-            current = next;
-        }
-
-        head = prev;
-
-        return head;
+        return null;
     }
 
     public static void main(String[] args) {
