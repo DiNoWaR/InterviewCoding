@@ -1,11 +1,12 @@
 package com.denis.interview.algorithms.sorting.launch;
 
 
-import com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort.BubbleSortingAlgorithm;
-import com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSortingAlgorithm;
-import com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSortingAlgorithm;
+import com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort.BubbleSort;
+import com.denis.interview.algorithms.sorting.sortingalgorithms.cocktailsort.CocktailSort;
+import com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSort;
+import com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
-import com.denis.interview.algorithms.sorting.estimator.SortingAlgorithmEstimateTester;
+import com.denis.interview.algorithms.sorting.estimator.SortingAlgorithmTester;
 import com.denis.interview.algorithms.sorting.generator.Generator;
 
 public class Launcher {
@@ -17,13 +18,15 @@ public class Launcher {
 
         int[] sourceArray = Generator.generateArray(SIZE, RANGE);
 
-        SortingAlgorithm bubble = new BubbleSortingAlgorithm();
-        SortingAlgorithm selection = new SelectionSortingAlgorithm();
-        SortingAlgorithm comb = new CombSortingAlgorithm();
+        SortingAlgorithm bubble = new BubbleSort();
+        SortingAlgorithm cocktail = new CocktailSort();
+        SortingAlgorithm selection = new SelectionSort();
+        SortingAlgorithm comb = new CombSort();
 
-        SortingAlgorithmEstimateTester.estimateTimeOfSorting(bubble, sourceArray);
-        SortingAlgorithmEstimateTester.estimateTimeOfSorting(selection, sourceArray);
-        SortingAlgorithmEstimateTester.estimateTimeOfSorting(comb, sourceArray);
+        SortingAlgorithmTester.estimateTimeOfSorting(bubble, sourceArray);
+        SortingAlgorithmTester.estimateTimeOfSorting(cocktail, sourceArray);
+        SortingAlgorithmTester.estimateTimeOfSorting(selection, sourceArray);
+        SortingAlgorithmTester.estimateTimeOfSorting(comb, sourceArray);
 
     }
 }

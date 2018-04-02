@@ -2,9 +2,9 @@ package com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort;
 
 
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
-import com.denis.interview.algorithms.sorting.enums.AlgorithmNames;
+import com.denis.interview.algorithms.sorting.enums.SortingAlgorithmNames;
 
-public class BubbleSortingAlgorithm implements SortingAlgorithm {
+public class BubbleSort implements SortingAlgorithm {
 
     @Override
     public void sort(int[] array) {
@@ -13,7 +13,7 @@ public class BubbleSortingAlgorithm implements SortingAlgorithm {
 
     @Override
     public String getName() {
-        return AlgorithmNames.BUBBLE_SORT.getValue();
+        return SortingAlgorithmNames.BUBBLE_SORT.getValue();
     }
 
 

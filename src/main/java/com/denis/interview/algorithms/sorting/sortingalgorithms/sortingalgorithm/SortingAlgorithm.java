@@ -2,8 +2,8 @@ package com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorith
 
 public interface SortingAlgorithm {
 
-    void sort(int[] array);
-
     String getName();
+
+    void sort(int[] array);
 
 }

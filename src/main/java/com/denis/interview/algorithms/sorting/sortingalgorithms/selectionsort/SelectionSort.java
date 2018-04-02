@@ -2,18 +2,18 @@ package com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort;
 
 
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
-import com.denis.interview.algorithms.sorting.enums.AlgorithmNames;
+import com.denis.interview.algorithms.sorting.enums.SortingAlgorithmNames;
 
-public class SelectionSortingAlgorithm implements SortingAlgorithm {
+public class SelectionSort implements SortingAlgorithm {
+
+    @Override
+    public String getName() {
+        return SortingAlgorithmNames.SELECTION_SORT.getValue();
+    }
 
     @Override
     public void sort(int[] array) {
         selectionSort(array);
-    }
-
-    @Override
-    public String getName() {
-        return AlgorithmNames.SELECTION_SORT.getValue();
     }
 
 

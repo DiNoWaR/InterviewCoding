@@ -12,11 +12,41 @@ import java.util.Collection;
 public class SortingAlgorithmsTest {
 
     private static Collection<String> data() {
-        return Arrays.asList("com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort.BubbleSortingAlgorithm"
-                , "com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSortingAlgorithm"
-                , "com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSortingAlgorithm");
+        return Arrays.asList("com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort.BubbleSort"
+                , "com.denis.interview.algorithms.sorting.sortingalgorithms.cocktailsort.CocktailSort"
+                , "com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSort"
+                , "com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSort");
     }
 
+    @ParameterizedTest
+    @MethodSource(value = "data")
+    public void sortingTwoElements(String algorithmName) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+
+        Class sortingAlgorithmClass = Class.forName(algorithmName);
+        Object ob = sortingAlgorithmClass.newInstance();
+        SortingAlgorithm sortingAlgorithm = (SortingAlgorithm) ob;
+
+        int[] sourceArray = {12, 5};
+        int[] expectedArray = {5, 12};
+
+        sortingAlgorithm.sort(sourceArray);
+        Assertions.assertArrayEquals(sourceArray, expectedArray);
+    }
+
+    @ParameterizedTest
+    @MethodSource(value = "data")
+    public void sortingSimpleCase(String algorithmName) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+
+        Class sortingAlgorithmClass = Class.forName(algorithmName);
+        Object ob = sortingAlgorithmClass.newInstance();
+        SortingAlgorithm sortingAlgorithm = (SortingAlgorithm) ob;
+
+        int[] sourceArray = {12, 5, 0, -1, 7, 2, 3};
+        int[] expectedArray = {-1, 0, 2, 3, 5, 7, 12};
+
+        sortingAlgorithm.sort(sourceArray);
+        Assertions.assertArrayEquals(sourceArray, expectedArray);
+    }
 
     @ParameterizedTest
     @MethodSource(value = "data")
@@ -50,21 +80,6 @@ public class SortingAlgorithmsTest {
 
     @ParameterizedTest
     @MethodSource(value = "data")
-    public void sortingWithEdgeElements(String algorithmName) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
-
-        Class sortingAlgorithmClass = Class.forName(algorithmName);
-        Object ob = sortingAlgorithmClass.newInstance();
-        SortingAlgorithm sortingAlgorithm = (SortingAlgorithm) ob;
-
-        int[] sourceArray = {10, 0, 0, 0, 5, 0, 0, 0, 0, -1};
-        int[] expectedArray = {-1, 0, 0, 0, 0, 0, 0, 0, 5, 10};
-
-        sortingAlgorithm.sort(sourceArray);
-        Assertions.assertArrayEquals(sourceArray, expectedArray);
-    }
-
-    @ParameterizedTest
-    @MethodSource(value = "data")
     public void sortingOneHundredReversedElements(String algorithmName) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
 
         Class sortingAlgorithmClass = Class.forName(algorithmName);
@@ -86,6 +101,21 @@ public class SortingAlgorithmsTest {
         for (int i = 0; i < size; i++) {
             expectedArray[i] = i;
         }
+
+        sortingAlgorithm.sort(sourceArray);
+        Assertions.assertArrayEquals(sourceArray, expectedArray);
+    }
+
+    @ParameterizedTest
+    @MethodSource(value = "data")
+    public void sortingWithEdgeElements(String algorithmName) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+
+        Class sortingAlgorithmClass = Class.forName(algorithmName);
+        Object ob = sortingAlgorithmClass.newInstance();
+        SortingAlgorithm sortingAlgorithm = (SortingAlgorithm) ob;
+
+        int[] sourceArray = {10, 0, 0, 0, 5, 0, 0, 0, 0, -1};
+        int[] expectedArray = {-1, 0, 0, 0, 0, 0, 0, 0, 5, 10};
 
         sortingAlgorithm.sort(sourceArray);
         Assertions.assertArrayEquals(sourceArray, expectedArray);

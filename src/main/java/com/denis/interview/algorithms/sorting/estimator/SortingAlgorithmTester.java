@@ -2,7 +2,7 @@ package com.denis.interview.algorithms.sorting.estimator;
 
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
 
-public class SortingAlgorithmEstimateTester {
+public class SortingAlgorithmTester {
 
     public static void estimateTimeOfSorting(SortingAlgorithm algorithm, int[] sourceArray) {
 

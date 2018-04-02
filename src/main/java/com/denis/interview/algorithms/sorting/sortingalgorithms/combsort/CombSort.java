@@ -2,18 +2,18 @@ package com.denis.interview.algorithms.sorting.sortingalgorithms.combsort;
 
 
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
-import com.denis.interview.algorithms.sorting.enums.AlgorithmNames;
+import com.denis.interview.algorithms.sorting.enums.SortingAlgorithmNames;
 
-public class CombSortingAlgorithm implements SortingAlgorithm {
+public class CombSort implements SortingAlgorithm {
+
+    @Override
+    public String getName() {
+        return SortingAlgorithmNames.COMB_SORT.getValue();
+    }
 
     @Override
     public void sort(int[] array) {
         combSort(array);
-    }
-
-    @Override
-    public String getName() {
-        return AlgorithmNames.COMB_SORT.getValue();
     }
 
 
