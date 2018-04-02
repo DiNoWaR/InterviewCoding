@@ -4,6 +4,7 @@ import com.denis.interview.algorithms.sorting.enums.SortingAlgorithmNames;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
 
 public class InsertionSort implements SortingAlgorithm {
+
     @Override
     public String getName() {
         return SortingAlgorithmNames.INSERTION_SORT.getValue();
