@@ -6,7 +6,7 @@ package com.denis.interview.java.generics;
  * Because of erasing generics to Object in runtime,
  * we'll never catch it in foo()
  */
-public class DBExampleOne {
+public class GenericsException {
 
     public static <T> T foo() {
         try {
@@ -17,7 +17,7 @@ public class DBExampleOne {
     }
 
     public static void main(String[] args) {
-        System.out.println(DBExampleOne.<String>foo());
+        System.out.println(GenericsException.<String>foo());
     }
 
 }
