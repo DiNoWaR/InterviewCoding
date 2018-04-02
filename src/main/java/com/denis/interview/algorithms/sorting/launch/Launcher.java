@@ -1,6 +1,8 @@
 package com.denis.interview.algorithms.sorting.launch;
 
 
+import com.denis.interview.algorithms.sorting.estimator.SortingAlgorithmTester;
+import com.denis.interview.algorithms.sorting.generator.Generator;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort.BubbleSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.cocktailsort.CocktailSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSort;
@@ -8,8 +10,6 @@ import com.denis.interview.algorithms.sorting.sortingalgorithms.gnomesort.GnomeS
 import com.denis.interview.algorithms.sorting.sortingalgorithms.insertionsort.InsertionSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
-import com.denis.interview.algorithms.sorting.estimator.SortingAlgorithmTester;
-import com.denis.interview.algorithms.sorting.generator.Generator;
 
 public class Launcher {
 
