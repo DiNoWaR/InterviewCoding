@@ -6,7 +6,8 @@ public enum SortingAlgorithmNames {
     INSERTION_SORT("Insertion Sort Algorithm"),
     SELECTION_SORT("Selection Sort Algorithm"),
     COMB_SORT("Comb Sort Algorithm"),
-    COCKTAIL_SORT("Cocktail Sort Algorithm");
+    COCKTAIL_SORT("Cocktail Sort Algorithm"),
+    GNOME_SORT("Gnome Sort Algorithm");
 
     private String value;
 

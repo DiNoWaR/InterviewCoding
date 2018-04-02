@@ -4,6 +4,7 @@ package com.denis.interview.algorithms.sorting.launch;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort.BubbleSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.cocktailsort.CocktailSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSort;
+import com.denis.interview.algorithms.sorting.sortingalgorithms.gnomesort.GnomeSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
 import com.denis.interview.algorithms.sorting.estimator.SortingAlgorithmTester;
@@ -22,10 +23,12 @@ public class Launcher {
         SortingAlgorithm cocktail = new CocktailSort();
         SortingAlgorithm selection = new SelectionSort();
         SortingAlgorithm comb = new CombSort();
+        SortingAlgorithm gnome = new GnomeSort();
 
         SortingAlgorithmTester.estimateTimeOfSorting(bubble, sourceArray);
         SortingAlgorithmTester.estimateTimeOfSorting(cocktail, sourceArray);
         SortingAlgorithmTester.estimateTimeOfSorting(selection, sourceArray);
+        SortingAlgorithmTester.estimateTimeOfSorting(gnome, sourceArray);
         SortingAlgorithmTester.estimateTimeOfSorting(comb, sourceArray);
 
     }

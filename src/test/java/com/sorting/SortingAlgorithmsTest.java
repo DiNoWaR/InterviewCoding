@@ -15,7 +15,8 @@ public class SortingAlgorithmsTest {
         return Arrays.asList("com.denis.interview.algorithms.sorting.sortingalgorithms.bubblesort.BubbleSort"
                 , "com.denis.interview.algorithms.sorting.sortingalgorithms.cocktailsort.CocktailSort"
                 , "com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSort"
-                , "com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSort");
+                , "com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSort"
+                , "com.denis.interview.algorithms.sorting.sortingalgorithms.gnomesort.GnomeSort");
     }
 
     @ParameterizedTest
