@@ -1,7 +1,8 @@
 package com.denis.interview.algorithms.arrays.missingintervals;
 
 /**
- * Given a sorted array A of integers  from 0 to 99 (repetition of elements allowed), output all the integer intervals missing from the given list.
+ * Given a sorted array A of integers  from 0 to 99 (repetition of elements allowed),
+ * output all the integer intervals missing from the given list.
  * <p>
  * Input:  1 5 67 88
  * Output: 0,2-4,6-66,68-87,89-99
