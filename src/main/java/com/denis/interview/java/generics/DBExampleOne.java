@@ -1,4 +1,4 @@
-package com.denis.interview.theory.deutschebank;
+package com.denis.interview.java.generics;
 
 /**
  * This is tricky one from Deutsche bank.

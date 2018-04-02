@@ -1,4 +1,4 @@
-package com.denis.interview.theory.deutschebank;
+package com.denis.interview.java.complexity;
 
 public class Complexity {
 
