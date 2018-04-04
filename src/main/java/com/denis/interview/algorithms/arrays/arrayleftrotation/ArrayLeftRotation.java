@@ -21,7 +21,7 @@ public class ArrayLeftRotation {
 
         var target = new int[array.length];
 
-        for (int i = 0; i < target.length; i++) {
+        for (var i = 0; i < target.length; i++) {
 
             var targetIndex = i - shift;
 

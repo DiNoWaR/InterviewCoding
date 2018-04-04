@@ -14,7 +14,7 @@ public class ArrayWorker {
         Arrays.sort(first);
         Arrays.sort(second);
 
-        for (Integer item : first) {
+        for (var item : first) {
 
             Integer searchingElementIndex = Arrays.binarySearch(second, item);
 
@@ -24,9 +24,9 @@ public class ArrayWorker {
         }
 
 
-        for (Integer item : second) {
+        for (var item : second) {
 
-            Integer searchingElementIndex = Arrays.binarySearch(first, item);
+            var searchingElementIndex = Arrays.binarySearch(first, item);
 
             if (searchingElementIndex < 0) {
                 result.add(item);
@@ -44,11 +44,11 @@ public class ArrayWorker {
 
         var result = new ArrayList<Integer>(first.length + second.length);
 
-        for (int i = 0; i < first.length; i++) {
+        for (var i = 0; i < first.length; i++) {
             values.put(i, values.get(i) == null ? values.get(i) : values.get(i) + 1);
         }
 
-        for (int i = 0; i < second.length; i++) {
+        for (var i = 0; i < second.length; i++) {
             values.put(i, values.get(i) == null ? values.get(i) : values.get(i) + 1);
         }
 
