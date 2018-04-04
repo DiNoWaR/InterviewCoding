@@ -13,7 +13,7 @@ public class GnomeSort implements SortingAlgorithm {
     @Override
     public void sort(int[] array) {
 
-        int count = 0;
+        var count = 0;
 
         while (count < array.length - 1) {
 
@@ -26,9 +26,9 @@ public class GnomeSort implements SortingAlgorithm {
 
     private int reverse(int right, int[] array) {
 
-        int stopIndex = 0;
+        var stopIndex = 0;
 
-        for (int i = right; i >= 1; i--) {
+        for (var i = right; i >= 1; i--) {
             if (array[i] < array[i - 1]) {
                 swap(i, i - 1, array);
             } else {
@@ -40,7 +40,7 @@ public class GnomeSort implements SortingAlgorithm {
     }
 
     private void swap(int aIndex, int bIndex, int[] array) {
-        int temp = array[bIndex];
+        var temp = array[bIndex];
         array[bIndex] = array[aIndex];
         array[aIndex] = temp;
     }

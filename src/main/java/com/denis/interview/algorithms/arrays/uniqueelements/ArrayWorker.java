@@ -9,7 +9,7 @@ public class ArrayWorker {
 
     public static List<Integer> getUniqueElementsOfArraysWithSorting(int[] first, int[] second) {
 
-        ArrayList<Integer> result = new ArrayList<>(first.length + second.length);
+        var result = new ArrayList<Integer>(first.length + second.length);
 
         Arrays.sort(first);
         Arrays.sort(second);
@@ -40,9 +40,9 @@ public class ArrayWorker {
 
     public static List<Integer> getUniqueElementsOfArraysWithMap(int[] first, int[] second) {
 
-        Map<Integer, Integer> values = new HashMap<>();
+        var values = new HashMap<Integer, Integer>();
 
-        ArrayList<Integer> result = new ArrayList<>(first.length + second.length);
+        var result = new ArrayList<Integer>(first.length + second.length);
 
         for (int i = 0; i < first.length; i++) {
             values.put(i, values.get(i) == null ? values.get(i) : values.get(i) + 1);

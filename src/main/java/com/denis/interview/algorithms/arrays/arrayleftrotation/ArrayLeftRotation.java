@@ -19,11 +19,11 @@ public class ArrayLeftRotation {
 
     public static int[] rotateArray(int[] array, int shift) {
 
-        int[] target = new int[array.length];
+        var target = new int[array.length];
 
         for (int i = 0; i < target.length; i++) {
 
-            int targetIndex = i - shift;
+            var targetIndex = i - shift;
 
             if (targetIndex < 0) {
                 targetIndex = array.length + targetIndex;
@@ -35,7 +35,7 @@ public class ArrayLeftRotation {
 
     public static void main(String[] args) {
 
-        int[] array = {1, 2, 3, 4, 5};
+        var array = new int[]{1, 2, 3, 4, 5};
 
         System.out.println(Arrays.toString(rotateArray(array, 4)));
 

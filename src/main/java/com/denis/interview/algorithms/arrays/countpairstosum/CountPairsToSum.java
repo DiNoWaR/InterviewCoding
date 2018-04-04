@@ -7,17 +7,16 @@ import java.util.Arrays;
  */
 public class CountPairsToSum {
 
-
     public static int countPairsOfElementsInArray(int[] array, int target) {
 
-        int count = 0;
+        var count = 0;
 
         Arrays.sort(array);
 
-        for (int item : array) {
+        for (var item : array) {
 
-            int search = target - item;
-            int elementIndex = Arrays.binarySearch(array, search);
+            var search = target - item;
+            var elementIndex = Arrays.binarySearch(array, search);
 
             if (elementIndex >= 0) {
                 count++;

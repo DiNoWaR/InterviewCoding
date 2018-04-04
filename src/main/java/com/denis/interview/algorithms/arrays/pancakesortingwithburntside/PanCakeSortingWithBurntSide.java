@@ -12,7 +12,7 @@ public class PanCakeSortingWithBurntSide {
 
     public static void panCakeSortWithBurntSide(PanCake[] array) {
 
-        int j = 1;
+        var j = 1;
 
         while (j <= array.length - 1) {
 
@@ -35,8 +35,8 @@ public class PanCakeSortingWithBurntSide {
 
     private static void flip(PanCake[] array, int index) {
 
-        int left = 0;
-        int right = index;
+        var left = 0;
+        var right = index;
 
         while (left <= right) {
             swap(left, right, array);
@@ -62,7 +62,7 @@ public class PanCakeSortingWithBurntSide {
 
     private static int findIndexOfMaximum(PanCake[] array, int rightIndex) {
 
-        int max = 0;
+        var max = 0;
 
         for (int i = 0; i <= rightIndex; i++) {
             if (array[i].getSize() > array[max].getSize()) {
@@ -75,7 +75,7 @@ public class PanCakeSortingWithBurntSide {
 
     public static void main(String[] args) {
 
-        PanCake[] panCakes = new PanCake[13];
+        var panCakes = new PanCake[13];
 
         panCakes[0] = new PanCake(5, false);
         panCakes[1] = new PanCake(1, false);
@@ -93,7 +93,7 @@ public class PanCakeSortingWithBurntSide {
 
         panCakeSortWithBurntSide(panCakes);
 
-        for (PanCake panCake : panCakes) {
+        for (var panCake : panCakes) {
             System.out.println(panCake);
         }
     }

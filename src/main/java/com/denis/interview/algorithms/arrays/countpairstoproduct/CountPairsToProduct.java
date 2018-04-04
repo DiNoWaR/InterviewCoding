@@ -26,15 +26,15 @@ public class CountPairsToProduct {
 
     public static int countPairsOfElementsInArray(int[] array) {
 
-        int result = -1;
+        var result = -1;
 
-        int rightIndex = array.length - 1;
+        var rightIndex = array.length - 1;
 
         Arrays.sort(array);
 
         for (int i = array.length - 1; i > 0; i--) {
 
-            int current = array[i];
+            var current = array[i];
 
             if (testNumber(current, array, rightIndex)) {
                 result = current;
@@ -49,7 +49,7 @@ public class CountPairsToProduct {
 
     private static boolean testNumber(int number, int[] array, int rightIndex) {
 
-        for (int i = 0; i < rightIndex; i++) {
+        for (var i = 0; i < rightIndex; i++) {
 
             if (number % array[i] == 0) {
                 int search = number / array[i];
@@ -64,7 +64,7 @@ public class CountPairsToProduct {
     }
 
     private static void fillArray(int[] array) {
-        Random rand = new Random();
+        var rand = new Random();
 
         for (int i = 0; i < array.length; i++) {
             array[i] = rand.nextInt(array.length - 9) + 2;
@@ -74,12 +74,12 @@ public class CountPairsToProduct {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[999999];
+        var arr = new int[999999];
         fillArray(arr);
 
-        long start = System.currentTimeMillis();
-        int result = countPairsOfElementsInArray(arr);
-        long end = System.currentTimeMillis();
+        var start = System.currentTimeMillis();
+        var result = countPairsOfElementsInArray(arr);
+        var end = System.currentTimeMillis();
 
         System.out.println("Estimated Time: " + (end - start) + " ms");
         System.out.println(result);

@@ -13,7 +13,7 @@ public class StarElements {
 
     private static List<Integer> findStar(int[] arr) {
 
-        List<Integer> starList = new ArrayList<>();
+        var starList = new ArrayList<Integer>();
 
         int star = arr[arr.length - 1];
 
@@ -60,8 +60,8 @@ public class StarElements {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 9, 3, 5, 11, 4334, 545, 4334, 1};
-        int[] arr2 = {1, 9, 3, 5, 11, 4334, 545, 1};
+        var arr = new int[]{1, 9, 3, 5, 11, 4334, 545, 4334, 1};
+        var arr2 = new int[]{1, 9, 3, 5, 11, 4334, 545, 1};
 
         System.out.println(findStar(arr));
         System.out.println(findStar(arr2));

@@ -27,7 +27,7 @@ public class MissingIntervals {
 
     public static List<String> getIntervals(int[] array) {
 
-        List<String> intervals = new ArrayList<>();
+        var intervals = new ArrayList<String>();
 
         if (array.length == 1) {
             buildIntervalForOneElement(array, intervals);
@@ -35,7 +35,7 @@ public class MissingIntervals {
         }
 
         for (int i = 0; i < array.length - 1; i++) {
-            String interval;
+            var interval = "";
 
             if (i == 0) {
                 buildHead(array, intervals);
@@ -68,7 +68,7 @@ public class MissingIntervals {
 
     private static void buildHead(int[] array, List<String> intervals) {
 
-        String interval;
+        var interval = "";
 
         if (array[0] > 0) {
 
@@ -83,7 +83,7 @@ public class MissingIntervals {
 
     private static void buildTail(int[] array, List<String> intervals) {
 
-        String interval;
+        var interval = "";
 
         if (array[array.length - 1] == MAX) {
 
@@ -116,14 +116,14 @@ public class MissingIntervals {
 
     public static void main(String[] args) {
 
-        int[] array1 = {1, 5, 67, 88};
-        int[] array2 = {4, 55, 77, 89, 91, 99};
-        int[] array3 = {0, 3, 4, 6, 80, 90, 91};
-        int[] array4 = {0};
-        int[] array5 = {1};
-        int[] array6 = {99};
-        int[] array7 = {98};
-        int[] array8 = {76};
+        var array1 = new int[]{1, 5, 67, 88};
+        var array2 = new int[]{4, 55, 77, 89, 91, 99};
+        var array3 = new int[]{0, 3, 4, 6, 80, 90, 91};
+        var array4 = new int[]{0};
+        var array5 = new int[]{1};
+        var array6 = new int[]{99};
+        var array7 = new int[]{98};
+        var array8 = new int[]{76};
 
         System.out.println(getIntervals(array1));
         System.out.println(getIntervals(array2));
