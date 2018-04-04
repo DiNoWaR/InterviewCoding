@@ -23,17 +23,17 @@ public class HiCal {
 
         // make a copy so we don't destroy the input
         // sort by start time
-        List<Meeting> sortedMeetings = Arrays.stream(meetings)
+        var sortedMeetings = Arrays.stream(meetings)
                 .sorted(Meeting::compareTo)
                 .collect(Collectors.toList());
 
         // initialize mergedMeetings with the earliest meeting
-        List<Meeting> mergedMeetings = new ArrayList<>();
+        var mergedMeetings = new ArrayList<Meeting>();
         mergedMeetings.add(sortedMeetings.get(0));
 
-        for (Meeting currentMeeting : sortedMeetings) {
+        for (var currentMeeting : sortedMeetings) {
 
-            Meeting lastMergedMeeting = mergedMeetings.get(mergedMeetings.size() - 1);
+            var lastMergedMeeting = mergedMeetings.get(mergedMeetings.size() - 1);
 
             // if the current meeting overlaps with the last merged meeting, use the
             // later end time of the two
@@ -51,9 +51,9 @@ public class HiCal {
 
     public static void main(String[] args) {
 
-        Meeting[] meetings = {new Meeting(0, 1), new Meeting(3, 5), new Meeting(4, 8), new Meeting(10, 12), new Meeting(9, 10)};
+        var meetings = new Meeting[]{new Meeting(0, 1), new Meeting(3, 5), new Meeting(4, 8), new Meeting(10, 12), new Meeting(9, 10)};
 
-        List<Meeting> mergedMeetings = mergeRanges(meetings);
+        var mergedMeetings = mergeRanges(meetings);
 
         System.out.println(mergedMeetings);
     }
