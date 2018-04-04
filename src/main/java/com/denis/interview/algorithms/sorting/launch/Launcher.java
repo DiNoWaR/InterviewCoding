@@ -13,8 +13,8 @@ import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm
 
 public class Launcher {
 
-    private static final int SIZE = 50000;
-    private static final int RANGE = 50000;
+    private static final int SIZE = 100000;
+    private static final int RANGE = 100000;
 
     public static void main(String[] args) {
 
