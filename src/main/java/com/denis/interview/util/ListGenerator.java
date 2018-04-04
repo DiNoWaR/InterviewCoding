@@ -11,7 +11,7 @@ public class ListGenerator {
 
         Random random = null;
 
-        int firstNumber = from;
+        var firstNumber = from;
 
         if (!sorted) {
             random = new Random();
@@ -21,9 +21,9 @@ public class ListGenerator {
         ListNode<Integer> first = new ListNode<>(firstNumber);
         ListNode<Integer> current = first;
 
-        for (int i = from + 1; i <= lenght; i++) {
+        for (var i = from + 1; i <= lenght; i++) {
 
-            int number = 0;
+            var number = 0;
 
             if (sorted) {
                 number = i;
