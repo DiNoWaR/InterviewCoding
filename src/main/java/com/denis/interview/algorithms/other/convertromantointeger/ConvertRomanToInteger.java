@@ -31,11 +31,11 @@ public class ConvertRomanToInteger {
 
     private static boolean validateRoman(String roman) {
 
-        int count = 0;
+        var count = 0;
 
-        char[] array = roman.toCharArray();
+        var array = roman.toCharArray();
 
-        for (int i = 0; i < array.length - 1; i++) {
+        for (var i = 0; i < array.length - 1; i++) {
 
             if (array[i] == array[i + 1]) {
                 count++;
@@ -57,9 +57,9 @@ public class ConvertRomanToInteger {
             return -1;
         }
 
-        int result = 0;
+        var result = 0;
 
-        for (int i = 0; i < str.length(); i++) {
+        for (var i = 0; i < str.length(); i++) {
 
             int s1 = value(str.charAt(i));
 
@@ -82,7 +82,7 @@ public class ConvertRomanToInteger {
 
     public static void main(String[] args) {
 
-        String romanInteger = "XIV";
+        var romanInteger = "XIV";
         System.out.println(convertRomanToInteger(romanInteger));
     }
 

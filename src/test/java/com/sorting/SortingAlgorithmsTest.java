@@ -88,19 +88,19 @@ public class SortingAlgorithmsTest {
         Object ob = sortingAlgorithmClass.newInstance();
         SortingAlgorithm sortingAlgorithm = (SortingAlgorithm) ob;
 
-        int size = 50000;
+        var size = 50000;
 
-        int[] sourceArray = new int[size];
-        int[] expectedArray = new int[size];
+        var sourceArray = new int[size];
+        var expectedArray = new int[size];
 
-        int j = 0;
+        var j = 0;
 
-        for (int i = size - 1; i >= 0; i--) {
+        for (var i = size - 1; i >= 0; i--) {
             sourceArray[j] = i;
             j++;
         }
 
-        for (int i = 0; i < size; i++) {
+        for (var i = 0; i < size; i++) {
             expectedArray[i] = i;
         }
 
@@ -116,8 +116,8 @@ public class SortingAlgorithmsTest {
         Object ob = sortingAlgorithmClass.newInstance();
         SortingAlgorithm sortingAlgorithm = (SortingAlgorithm) ob;
 
-        int[] sourceArray = {10, 0, 0, 0, 5, 0, 0, 0, 0, -1};
-        int[] expectedArray = {-1, 0, 0, 0, 0, 0, 0, 0, 5, 10};
+        var sourceArray = new int[]{10, 0, 0, 0, 5, 0, 0, 0, 0, -1};
+        var expectedArray = new int[]{-1, 0, 0, 0, 0, 0, 0, 0, 5, 10};
 
         sortingAlgorithm.sort(sourceArray);
         Assertions.assertArrayEquals(sourceArray, expectedArray);

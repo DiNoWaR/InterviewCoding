@@ -22,9 +22,9 @@ public class ClosestPalindrom {
 
     private static boolean isPalindrom(long number) {
 
-        long remainder;
-        long sum = 0;
-        long temp = number;
+        var remainder = 0L;
+        var sum = 0L;
+        var temp = number;
 
         while (number > 0) {
             remainder = number % 10;
@@ -39,7 +39,7 @@ public class ClosestPalindrom {
     }
 
     public static void main(String[] args) {
-        System.out.println(findClosestPalindrom(11));
+        System.out.println(findClosestPalindrom(111));
     }
 
 }
