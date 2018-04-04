@@ -9,12 +9,28 @@ import com.denis.interview.util.ListNode;
 class ReverseLinkedList {
 
     public static ListNode<Integer> reverse(ListNode<Integer> head) {
-        return null;
+
+        ListNode<Integer> current = head;
+        ListNode<Integer> previous = null;
+        ListNode<Integer> prePrevious = null;
+
+        while (current.hasNext()) {
+            prePrevious = previous;
+            previous = current;
+            current = current.getNext();
+            previous.setNext(prePrevious);
+        }
+
+        current.setNext(previous);
+        return current;
     }
 
     public static void main(String[] args) {
 
-        ListNode<Integer> first = ListGenerator.generateList(3, 12, true);
+        var myList = ListGenerator.generateList(1, 16, true);
+        myList.getLineage(myList);
 
+        ListNode<Integer> newHead = reverse(myList);
+        myList.getLineage(newHead);
     }
 }

@@ -43,7 +43,6 @@ public class CountPairsToProduct {
                 rightIndex--;
             }
         }
-
         return result;
     }
 

@@ -22,6 +22,7 @@ public class ListNode<T> {
             System.out.print(pointer.getValue() + " ");
             pointer = pointer.getNext();
         }
+        System.out.println();
     }
 
     public T getValue() {
@@ -37,9 +38,6 @@ public class ListNode<T> {
     }
 
     public boolean hasNext() {
-        if (next == null) {
-            return false;
-        }
-        return true;
+        return next != null;
     }
 }
