@@ -15,9 +15,9 @@ public class StarElements {
 
         var starList = new ArrayList<Integer>();
 
-        int star = arr[arr.length - 1];
+        var star = arr[arr.length - 1];
 
-        for (int i = arr.length - 1; i >= 1; i--) {
+        for (var i = arr.length - 1; i >= 1; i--) {
 
             if (star < arr[i - 1]) {
                 starList.add(arr[i - 1]);
@@ -33,9 +33,9 @@ public class StarElements {
             return arr[0];
         }
 
-        int superStar = arr[0];
+        var superStar = arr[0];
 
-        for (int i = 0; i < arr.length - 1; i++) {
+        for (var i = 0; i < arr.length - 1; i++) {
             if (arr[i] <= arr[i + 1]) {
                 superStar = arr[i + 1];
             }
@@ -48,7 +48,7 @@ public class StarElements {
 
     private static boolean isSuperStarUnique(int[] arr, int superStar) {
 
-        int[] arr2 = new int[arr.length];
+        var arr2 = new int[arr.length];
 
         System.arraycopy(arr, 0, arr2, 0, arr.length);
         Arrays.sort(arr2);
@@ -60,6 +60,7 @@ public class StarElements {
     }
 
     public static void main(String[] args) {
+
         var arr = new int[]{1, 9, 3, 5, 11, 4334, 545, 4334, 1};
         var arr2 = new int[]{1, 9, 3, 5, 11, 4334, 545, 1};
 
