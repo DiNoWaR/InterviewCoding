@@ -20,12 +20,12 @@ public class Launcher {
 
         int[] sourceArray = Generator.generateArray(SIZE, RANGE);
 
-        SortingAlgorithm bubble = new BubbleSort();
-        SortingAlgorithm cocktail = new CocktailSort();
-        SortingAlgorithm gnome = new GnomeSort();
-        SortingAlgorithm insertion = new InsertionSort();
-        SortingAlgorithm selection = new SelectionSort();
-        SortingAlgorithm comb = new CombSort();
+        var bubble = new BubbleSort();
+        var cocktail = new CocktailSort();
+        var gnome = new GnomeSort();
+        var insertion = new InsertionSort();
+        var selection = new SelectionSort();
+        var comb = new CombSort();
 
         SortingAlgorithmTester.estimateTimeOfSorting(bubble, sourceArray);
         SortingAlgorithmTester.estimateTimeOfSorting(cocktail, sourceArray);
