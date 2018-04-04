@@ -10,13 +10,13 @@ public class MementoDemo {
 
     public static void main(String[] args) {
 
-        Originator originator = new Originator();
-        CareTaker careTaker = new CareTaker();
+        var originator = new Originator();
+        var careTaker = new CareTaker();
 
-        Coordinates first = new Coordinates(1, 3, 4);
-        Coordinates second = new Coordinates(3, 13, 6);
-        Coordinates third = new Coordinates(5, 6, 9);
-        Coordinates fourth = new Coordinates(10, 14, 418);
+        var first = new Coordinates(1, 3, 4);
+        var second = new Coordinates(3, 13, 6);
+        var var = new Coordinates(5, 6, 9);
+        var fourth = new Coordinates(10, 14, 418);
 
         originator.setCoordinates(first);
         careTaker.addToMementos(originator.saveCoordinatesToMemo());
@@ -24,7 +24,7 @@ public class MementoDemo {
         originator.setCoordinates(fourth);
         careTaker.addToMementos(originator.saveCoordinatesToMemo());
 
-        for (Memento memento : careTaker.getMementos()) {
+        for (var memento : careTaker.getMementos()) {
             System.out.println(memento.getCoordinates().toString());
         }
 
