@@ -26,12 +26,12 @@ public class Stairs {
             return 1;
         }
 
-        int one = 1;
-        int two = 0;
+        var one = 1;
+        var two = 0;
 
-        int result = 0;
+        var result = 0;
 
-        for (int i = 1; i <= n; i++) {
+        for (var i = 1; i <= n; i++) {
             result = one + two;
             two = one;
             one = result;

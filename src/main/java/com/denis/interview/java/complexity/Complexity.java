@@ -7,7 +7,7 @@ public class Complexity {
         if (n <= 0) {
             int m = 0;
 
-            for (int i = 0; i < n; i++) {
+            for (var i = 0; i < n; i++) {
                 m = (int) (3.14 + 2 * m);
             }
 

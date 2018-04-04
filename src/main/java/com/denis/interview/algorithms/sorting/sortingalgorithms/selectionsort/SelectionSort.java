@@ -1,6 +1,5 @@
 package com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort;
 
-
 import com.denis.interview.algorithms.sorting.enums.SortingAlgorithmNames;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
 
