@@ -41,10 +41,10 @@ public class MergeArrays {
 
     public static void main(String[] args) {
 
-        int[] first = {1, 5, 5, 56, 72, 96, 100, 300};
-        int[] second = {5, 7, 30, 200, 300, 332, 600, 800};
+        var first = new int[]{1, 5, 5, 56, 72, 96, 100, 300};
+        var second = new int[]{5, 7, 30, 200, 300, 332, 600, 800};
 
-        int[] merged = merge(first, second);
+        var merged = merge(first, second);
 
         System.out.println(Arrays.toString(merged));
     }
