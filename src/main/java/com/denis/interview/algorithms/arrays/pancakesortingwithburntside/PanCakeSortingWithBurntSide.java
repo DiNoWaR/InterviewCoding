@@ -44,7 +44,7 @@ public class PanCakeSortingWithBurntSide {
             right--;
         }
 
-        for (int i = 0; i <= index; i++) {
+        for (var i = 0; i <= index; i++) {
             if (array[i].isBurntSideDown()) {
                 array[i].setBurntSideDown(false);
             } else {
