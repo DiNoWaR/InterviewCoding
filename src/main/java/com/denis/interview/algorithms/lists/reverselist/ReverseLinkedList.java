@@ -11,23 +11,28 @@ class ReverseLinkedList {
     public static ListNode<Integer> reverse(ListNode<Integer> head) {
 
         ListNode<Integer> current = head;
+        ListNode<Integer> nextNode = null;
         ListNode<Integer> previous = null;
-        ListNode<Integer> prePrevious = null;
 
-        while (current.hasNext()) {
-            prePrevious = previous;
+        while (current != null) {
+
+            // copy a pointer to the next element
+            // before we overwrite currentNode.next
+            nextNode = current.getNext();
+
+            // reverse the 'next' pointer
+            current.setNext(previous);
+
+            // step forward in the list
             previous = current;
-            current = current.getNext();
-            previous.setNext(prePrevious);
+            current = nextNode;
         }
-
-        current.setNext(previous);
-        return current;
+        return previous;
     }
 
     public static void main(String[] args) {
 
-        var myList = ListGenerator.generateList(1, 16, true);
+        var myList = ListGenerator.generateList(1, 4, true);
         myList.getLineage(myList);
 
         ListNode<Integer> newHead = reverse(myList);
