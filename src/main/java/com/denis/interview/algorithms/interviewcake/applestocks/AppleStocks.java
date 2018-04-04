@@ -24,10 +24,10 @@ public class AppleStocks {
             throw new IllegalArgumentException("Getting a profit requires at least 2 prices");
         }
 
-        int min = stocks[0];
-        int profit = 0;
+        var min = stocks[0];
+        var profit = 0;
 
-        for (int i = 1; i < stocks.length; i++) {
+        for (var i = 1; i < stocks.length; i++) {
 
             if (profit == 0) {
                 profit = stocks[1] - stocks[0];
@@ -60,8 +60,8 @@ public class AppleStocks {
 
         // we'll greedily update minPrice and maxProfit, so we initialize
         // them to the first price and the first possible profit
-        int minPrice = stockPricesYesterday[0];
-        int maxProfit = stockPricesYesterday[1] - stockPricesYesterday[0];
+        var minPrice = stockPricesYesterday[0];
+        var maxProfit = stockPricesYesterday[1] - stockPricesYesterday[0];
 
         // start at the second (index 1) time
         // we can't sell at the first time, since we must buy first,
@@ -69,12 +69,12 @@ public class AppleStocks {
         // if we started at index 0, we'd try to buy *and* sell at time 0.
         // this would give a profit of 0, which is a problem if our
         // maxProfit is supposed to be *negative*--we'd return 0.
-        for (int i = 1; i < stockPricesYesterday.length; i++) {
-            int currentPrice = stockPricesYesterday[i];
+        for (var i = 1; i < stockPricesYesterday.length; i++) {
+            var currentPrice = stockPricesYesterday[i];
 
             // see what our profit would be if we bought at the
             // min price and sold at the current price
-            int potentialProfit = currentPrice - minPrice;
+            var potentialProfit = currentPrice - minPrice;
 
             // update maxProfit if we can do better
             maxProfit = Math.max(maxProfit, potentialProfit);
@@ -89,8 +89,8 @@ public class AppleStocks {
 
     public static void main(String[] args) {
 
-        int[] stockPricesYesterday = {10, 7, 5, 8, 11, 9};
-        int[] stockPricesYesterday2 = {10, 8, 5, 4, 2, 1};
+        var stockPricesYesterday = new int[]{10, 7, 5, 8, 11, 9};
+        var stockPricesYesterday2 = new int[]{10, 8, 5, 4, 2, 1};
 
         System.out.println(getMaxProfitFirstApproach(stockPricesYesterday));
         System.out.println(getMaxProfitFirstApproach(stockPricesYesterday2));
