@@ -13,15 +13,15 @@ public class CombSort implements SortingAlgorithm {
     @Override
     public void sort(int[] array) {
 
-        boolean changed = true;
-        double SHRINK_FACTOR = 1.3;
-        int gap = (int) (array.length / SHRINK_FACTOR);
+        var changed = true;
+        var SHRINK_FACTOR = 1.3;
+        var gap = (int) (array.length / SHRINK_FACTOR);
 
         while (changed || gap > 1) {
 
             changed = false;
 
-            for (int i = 0; i < array.length - gap; i++) {
+            for (var i = 0; i < array.length - gap; i++) {
 
                 if (array[i] > array[i + gap]) {
                     swap(i, i + gap, array);
@@ -38,7 +38,7 @@ public class CombSort implements SortingAlgorithm {
     }
 
     private void swap(int aIndex, int bIndex, int[] array) {
-        int temp = array[bIndex];
+        var temp = array[bIndex];
         array[bIndex] = array[aIndex];
         array[aIndex] = temp;
     }

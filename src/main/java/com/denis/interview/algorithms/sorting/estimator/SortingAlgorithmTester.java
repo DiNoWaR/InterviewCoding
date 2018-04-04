@@ -6,11 +6,11 @@ public class SortingAlgorithmTester {
 
     public static void estimateTimeOfSorting(SortingAlgorithm algorithm, int[] sourceArray) {
 
-        int[] copiedArray = copyArray(sourceArray);
+        var copiedArray = copyArray(sourceArray);
 
-        long start = System.currentTimeMillis();
+        var start = System.currentTimeMillis();
         algorithm.sort(copiedArray);
-        long end = System.currentTimeMillis();
+        var end = System.currentTimeMillis();
 
         System.out.println("Estimated time sorting of |" + sourceArray.length + "| elements by " + algorithm.getName() + " :|" + (end - start) + "| ms");
         System.out.println("-----------------------------------------------------------------------------------------");
@@ -19,7 +19,7 @@ public class SortingAlgorithmTester {
 
     private static int[] copyArray(int[] sourceArray) {
 
-        int[] resultArray = new int[sourceArray.length];
+        var resultArray = new int[sourceArray.length];
         System.arraycopy(sourceArray, 0, resultArray, 0, sourceArray.length);
         return resultArray;
     }

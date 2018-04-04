@@ -32,7 +32,7 @@ public class CountPairsToProduct {
 
         Arrays.sort(array);
 
-        for (int i = array.length - 1; i > 0; i--) {
+        for (var i = array.length - 1; i > 0; i--) {
 
             var current = array[i];
 
@@ -51,8 +51,8 @@ public class CountPairsToProduct {
         for (var i = 0; i < rightIndex; i++) {
 
             if (number % array[i] == 0) {
-                int search = number / array[i];
-                int index = Arrays.binarySearch(array, search);
+                var search = number / array[i];
+                var index = Arrays.binarySearch(array, search);
 
                 if (index > 0) {
                     return true;
@@ -65,7 +65,7 @@ public class CountPairsToProduct {
     private static void fillArray(int[] array) {
         var rand = new Random();
 
-        for (int i = 0; i < array.length; i++) {
+        for (var i = 0; i < array.length; i++) {
             array[i] = rand.nextInt(array.length - 9) + 2;
         }
 

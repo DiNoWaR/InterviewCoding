@@ -17,10 +17,10 @@ public class PerfectSquare {
             return true;
         }
 
-        int k = 1;
-        int i = 3;
+        var k = 1;
+        var i = 3;
 
-        int s = k + i;
+        var s = k + i;
 
         while (s <= number) {
 

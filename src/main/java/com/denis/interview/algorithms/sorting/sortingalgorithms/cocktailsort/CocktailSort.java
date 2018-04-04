@@ -13,8 +13,8 @@ public class CocktailSort implements SortingAlgorithm {
     @Override
     public void sort(int[] array) {
 
-        int left = 0;
-        int right = array.length - 1;
+        var left = 0;
+        var right = array.length - 1;
 
         while (left < right) {
 
@@ -28,7 +28,7 @@ public class CocktailSort implements SortingAlgorithm {
     }
 
     private void forward(int start, int end, int[] array) {
-        for (int i = start; i <= end - 1; i++) {
+        for (var i = start; i <= end - 1; i++) {
             if (array[i] > array[i + 1]) {
                 swap(i, i + 1, array);
             }
@@ -36,7 +36,7 @@ public class CocktailSort implements SortingAlgorithm {
     }
 
     private void backward(int start, int end, int[] array) {
-        for (int i = end; i >= start + 1; i--) {
+        for (var i = end; i >= start + 1; i--) {
             if (array[i] < array[i - 1]) {
                 swap(i, i - 1, array);
             }
@@ -44,7 +44,7 @@ public class CocktailSort implements SortingAlgorithm {
     }
 
     private void swap(int aIndex, int bIndex, int[] array) {
-        int temp = array[bIndex];
+        var temp = array[bIndex];
         array[bIndex] = array[aIndex];
         array[aIndex] = temp;
     }

@@ -18,7 +18,7 @@ public class Launcher {
 
     public static void main(String[] args) {
 
-        int[] sourceArray = Generator.generateArray(SIZE, RANGE);
+        var sourceArray = Generator.generateArray(SIZE, RANGE);
 
         var bubble = new BubbleSort();
         var cocktail = new CocktailSort();

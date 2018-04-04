@@ -13,11 +13,11 @@ public class SelectionSort implements SortingAlgorithm {
 
     @Override
     public void sort(int[] array) {
-        int left = 0;
+        var left = 0;
 
         while (left < array.length) {
 
-            int indexOfMinElement = findIndexOfMinElement(array, left);
+            var indexOfMinElement = findIndexOfMinElement(array, left);
             swap(left, indexOfMinElement, array);
             left++;
         }
@@ -25,11 +25,11 @@ public class SelectionSort implements SortingAlgorithm {
 
     private int findIndexOfMinElement(int[] array, int startIndex) {
 
-        int indexOfMinElement = startIndex;
+        var indexOfMinElement = startIndex;
 
-        int min = array[startIndex];
+        var min = array[startIndex];
 
-        for (int i = startIndex; i < array.length; i++) {
+        for (var i = startIndex; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
                 indexOfMinElement = i;
@@ -39,7 +39,7 @@ public class SelectionSort implements SortingAlgorithm {
     }
 
     private void swap(int aIndex, int bIndex, int[] array) {
-        int temp = array[bIndex];
+        var temp = array[bIndex];
         array[bIndex] = array[aIndex];
         array[aIndex] = temp;
     }
