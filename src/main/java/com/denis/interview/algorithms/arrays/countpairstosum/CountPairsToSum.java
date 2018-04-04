@@ -27,7 +27,7 @@ public class CountPairsToSum {
 
     public static void main(String[] args) {
 
-        int[] p = {2, 3, 5, 8, 6, 0};
+        var p = new int[]{2, 3, 5, 8, 6, 0};
 
         System.out.println(countPairsOfElementsInArray(p, 8));
     }

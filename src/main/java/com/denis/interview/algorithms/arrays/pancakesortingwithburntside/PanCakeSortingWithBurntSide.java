@@ -64,7 +64,7 @@ public class PanCakeSortingWithBurntSide {
 
         var max = 0;
 
-        for (int i = 0; i <= rightIndex; i++) {
+        for (var i = 0; i <= rightIndex; i++) {
             if (array[i].getSize() > array[max].getSize()) {
                 max = i;
             }
