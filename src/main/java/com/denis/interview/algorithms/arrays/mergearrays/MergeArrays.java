@@ -9,31 +9,30 @@ public class MergeArrays {
 
     public static int[] merge(int[] first, int[] second) {
 
-        int[] small = first;
-        int[] big = second;
+        var merged = new int[first.length + second.length];
 
-        if (first.length >= second.length) {
-            small = second;
-            big = first;
-        }
+        var indexFirst = 0;
+        var indexSecond = 0;
 
-        int[] merged = new int[small.length + big.length];
+        for (var i = 0; i < merged.length; i++) {
 
-        int firstCurrentIndex = 0;
-        int secondCurrentIndex = 0;
+            if (indexFirst < first.length & indexSecond < second.length) {
 
-        for (int i = 0; i < merged.length; i++) {
-
-            if (firstCurrentIndex < small.length && small[firstCurrentIndex] < big[secondCurrentIndex]) {
-                merged[i] = small[firstCurrentIndex];
-                firstCurrentIndex++;
-            } else {
-
-                if (secondCurrentIndex < big.length) {
-                    merged[i] = big[secondCurrentIndex];
-                    secondCurrentIndex++;
+                if (first[indexFirst] < second[indexSecond]) {
+                    merged[i] = first[indexFirst];
+                    indexFirst++;
+                } else {
+                    merged[i] = second[indexSecond];
+                    indexSecond++;
                 }
+            } else if (indexFirst == first.length) {
+                merged[i] = second[indexSecond];
+                indexSecond++;
+            } else if (indexSecond == second.length) {
+                merged[i] = first[indexFirst];
+                indexFirst++;
             }
+
         }
         return merged;
     }
