@@ -37,7 +37,6 @@ public class MergeArrays {
         return merged;
     }
 
-
     public static void main(String[] args) {
 
         var first = new int[]{1, 5, 5, 56, 72, 96, 100, 300};
