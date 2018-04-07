@@ -26,11 +26,11 @@ public class MergeArrays {
                     indexSecond++;
                 }
             } else if (indexFirst == first.length) {
-                merged[i] = second[indexSecond];
-                indexSecond++;
+                System.arraycopy(second, indexSecond, merged, i, second.length - indexSecond);
+                break;
             } else if (indexSecond == second.length) {
-                merged[i] = first[indexFirst];
-                indexFirst++;
+                System.arraycopy(first, indexFirst, merged, i, first.length - indexFirst);
+                break;
             }
 
         }
@@ -39,10 +39,10 @@ public class MergeArrays {
 
     public static void main(String[] args) {
 
-        var first = new int[]{1, 5, 5, 56, 72, 96, 100, 300};
+        var first = new int[]{1, 5, 5, 56, 72};
         var second = new int[]{5, 7, 30, 200, 300, 332, 600, 800};
 
-        var merged = merge(first, second);
+        var merged = merge(second, first);
 
         System.out.println(Arrays.toString(merged));
     }
