@@ -14,14 +14,11 @@ public class MergeLists {
 
     public static ListNode<Integer> merge(ListNode<Integer> first, ListNode<Integer> second) {
 
-        ListNode<Integer> head = null;
-        ListNode<Integer> current = null;
-
         ListNode<Integer> firstPointer = first;
         ListNode<Integer> secondPointer = second;
 
-        head = firstPointer.getValue() <= secondPointer.getValue() ? firstPointer : secondPointer;
-        current = head;
+        ListNode<Integer> head = firstPointer.getValue() <= secondPointer.getValue() ? firstPointer : secondPointer;
+        ListNode<Integer> current = head;
 
         while (current.hasNext()) {
 
