@@ -9,7 +9,6 @@ import com.denis.interview.algorithms.sorting.sortingalgorithms.combsort.CombSor
 import com.denis.interview.algorithms.sorting.sortingalgorithms.gnomesort.GnomeSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.insertionsort.InsertionSort;
 import com.denis.interview.algorithms.sorting.sortingalgorithms.selectionsort.SelectionSort;
-import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm.SortingAlgorithm;
 
 public class Launcher {
 

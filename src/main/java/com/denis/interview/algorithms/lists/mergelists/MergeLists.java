@@ -1,6 +1,5 @@
 package com.denis.interview.algorithms.lists.mergelists;
 
-import com.denis.interview.algorithms.sorting.generator.Generator;
 import com.denis.interview.util.ListGenerator;
 import com.denis.interview.util.ListNode;
 
