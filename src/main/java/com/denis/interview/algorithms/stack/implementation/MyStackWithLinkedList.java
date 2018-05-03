@@ -2,6 +2,11 @@ package com.denis.interview.algorithms.stack.implementation;
 
 import com.denis.interview.util.ListNode;
 
+/**
+ * Implement Stack with standard operations(push, pop, peek, isEmpty) and with O(1) runtime
+ *
+ * @param <T> is a type of data in stack
+ */
 public class MyStackWithLinkedList<T> {
 
     private ListNode<T> head;
@@ -38,6 +43,12 @@ public class MyStackWithLinkedList<T> {
         return head == null;
     }
 
+    public void clear() {
+        while (!isEmpty()) {
+            pop();
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -46,6 +57,16 @@ public class MyStackWithLinkedList<T> {
         stack.push(4);
         stack.push(6);
         stack.push(12);
+
+        System.out.println(stack.isEmpty());
+        stack.clear();
+        System.out.println(stack.isEmpty());
+
+        stack.push(4);
+        stack.push(6);
+        stack.push(12);
+
+        System.out.println("-----------------");
 
         while (!stack.isEmpty()) {
             System.out.println(stack.pop());
