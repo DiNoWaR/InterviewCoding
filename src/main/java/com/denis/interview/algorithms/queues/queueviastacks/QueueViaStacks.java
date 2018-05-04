@@ -18,9 +18,9 @@ public class QueueViaStacks<T> {
     }
 
     public void add(T item) {
-        copy(result, buffer);
+        move(result, buffer);
         buffer.push(item);
-        copy(buffer, result);
+        move(buffer, result);
     }
 
     public T peek() {
@@ -35,7 +35,7 @@ public class QueueViaStacks<T> {
         return result.isEmpty();
     }
 
-    private void copy(MyStackWithLinkedList<T> src, MyStackWithLinkedList<T> dest) {
+    private void move(MyStackWithLinkedList<T> src, MyStackWithLinkedList<T> dest) {
         while (!src.isEmpty()) {
             dest.push(src.pop());
         }
