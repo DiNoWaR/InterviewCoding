@@ -2,6 +2,9 @@ package com.denis.interview.algorithms.stacks.stackswitharray;
 
 import com.denis.interview.algorithms.stacks.mystack.EmptyStackException;
 
+/**
+ *
+ */
 public class StacksWithArray {
 
     private int topOne = 0;
@@ -15,11 +18,7 @@ public class StacksWithArray {
         array = new Integer[length];
     }
 
-    public void push(int stack, int item) throws RuntimeException {
-
-        if (stack > 2 || stack < 0) {
-            throw new RuntimeException();
-        }
+    public void push(StacksID staksID, int item) {
 
         if (topOne + 3 >= array.length
                 || topTwo + 3 >= array.length
@@ -27,19 +26,22 @@ public class StacksWithArray {
             extendArray();
         }
 
-        if (stack == 0) {
-            array[topOne] = item;
-            topOne += 3;
-        }
+        switch (staksID) {
 
-        if (stack == 1) {
-            array[topTwo] = item;
-            topTwo += 3;
-        }
-
-        if (stack == 2) {
-            array[topThree] = item;
-            topThree += 3;
+            case FIRST:
+                array[topOne] = item;
+                topOne += 3;
+                break;
+            case SECOND:
+                array[topTwo] = item;
+                topTwo += 3;
+                break;
+            case THIRD:
+                array[topThree] = item;
+                topThree += 3;
+                break;
+            default:
+                throw new WrongStackIdException();
         }
 
     }
@@ -146,17 +148,17 @@ public class StacksWithArray {
 
         StacksWithArray stacks = new StacksWithArray(5);
 
-        stacks.push(0, 1);
-        stacks.push(0, 3);
+        stacks.push(StacksID.FIRST, 1);
+        stacks.push(StacksID.FIRST, 3);
 
-        stacks.push(1, 6);
-        stacks.push(2, 5);
+        stacks.push(StacksID.SECOND, 6);
+        stacks.push(StacksID.SECOND, 5);
 
-        stacks.push(1, 10);
-        stacks.push(2, 5);
+        stacks.push(StacksID.SECOND, 10);
+        stacks.push(StacksID.THIRD, 5);
 
-        stacks.push(0, 100);
-        stacks.push(2, 200);
+        stacks.push(StacksID.FIRST, 100);
+        stacks.push(StacksID.THIRD, 200);
 
 
         stacks.pop(0);
