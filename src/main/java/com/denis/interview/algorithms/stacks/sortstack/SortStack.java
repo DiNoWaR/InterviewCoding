@@ -7,7 +7,7 @@ import java.util.Stack;
  */
 public class SortStack {
 
-    public static Stack<Integer> sortstack(Stack<Integer> input) {
+    public static Stack<Integer> sortStack(Stack<Integer> input) {
 
         Stack<Integer> tmpStack = new Stack<Integer>();
 
