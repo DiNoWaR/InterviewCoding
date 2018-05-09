@@ -8,7 +8,8 @@ public class StacksWithArray {
     private int topTwo = 1;
     private int topThree = 2;
 
-    Integer[] array;
+    private Integer[] array;
+
 
     public StacksWithArray(int length) {
         array = new Integer[length];
