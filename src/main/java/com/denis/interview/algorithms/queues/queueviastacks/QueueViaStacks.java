@@ -4,26 +4,24 @@ import com.denis.interview.algorithms.stacks.mystack.MyStackWithLinkedList;
 
 /**
  * Implement Queue using 2 stacks.
- *
- * @param <T> is a type of data in Queue
  */
-public class QueueViaStacks<T> {
+public class QueueViaStacks {
 
-    private MyStackWithLinkedList<T> buffer;
-    private MyStackWithLinkedList<T> result;
+    private MyStackWithLinkedList buffer;
+    private MyStackWithLinkedList result;
 
     public QueueViaStacks() {
-        buffer = new MyStackWithLinkedList<>();
-        result = new MyStackWithLinkedList<>();
+        buffer = new MyStackWithLinkedList();
+        result = new MyStackWithLinkedList();
     }
 
-    public void add(T item) {
+    public void add(Integer item) {
         move(result, buffer);
         buffer.push(item);
         move(buffer, result);
     }
 
-    public T peek() {
+    public Integer peek() {
         return result.peek();
     }
 
@@ -35,7 +33,7 @@ public class QueueViaStacks<T> {
         return result.isEmpty();
     }
 
-    private void move(MyStackWithLinkedList<T> src, MyStackWithLinkedList<T> dest) {
+    private void move(MyStackWithLinkedList src, MyStackWithLinkedList dest) {
         while (!src.isEmpty()) {
             dest.push(src.pop());
         }
@@ -44,7 +42,7 @@ public class QueueViaStacks<T> {
 
     public static void main(String[] args) {
 
-        QueueViaStacks<Integer> queue = new QueueViaStacks<>();
+        QueueViaStacks queue = new QueueViaStacks();
 
         queue.add(5);
         queue.add(3);

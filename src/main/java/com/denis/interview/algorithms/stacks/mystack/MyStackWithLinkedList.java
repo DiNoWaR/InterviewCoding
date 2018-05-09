@@ -2,36 +2,57 @@ package com.denis.interview.algorithms.stacks.mystack;
 
 import com.denis.interview.util.ListNode;
 
+import java.util.Stack;
+
 /**
  * Implement Stack with standard operations(push, pop, peek, isEmpty) and with O(1) runtime
- *
- * @param <T> is a type of data in stack
  */
-public class MyStackWithLinkedList<T> {
+public class MyStackWithLinkedList {
 
-    private ListNode<T> head;
+    private ListNode<Integer> head;
+    private Stack<Integer> minStack;
 
 
-    public void push(T item) {
+    public MyStackWithLinkedList() {
+        minStack = new Stack<>();
+    }
+
+
+    public void push(Integer item) {
 
         if (item != null) {
-            ListNode<T> node = new ListNode<>(item);
+            ListNode<Integer> node = new ListNode<>(item);
+
+            if (minStack.isEmpty()) {
+                minStack.push(item);
+            } else {
+
+                if (item <= minStack.peek()) {
+                    minStack.push(item);
+                }
+            }
+
             node.setNext(head);
             head = node;
         }
     }
 
-    public T pop() {
+    public Integer pop() {
 
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        T value = head.getValue();
+
+        if (peek().equals(minStack.peek())) {
+            minStack.pop();
+        }
+
+        Integer value = head.getValue();
         head = head.getNext();
         return value;
     }
 
-    public T peek() {
+    public Integer peek() {
 
         if (isEmpty()) {
             throw new EmptyStackException();
@@ -43,6 +64,10 @@ public class MyStackWithLinkedList<T> {
         return head == null;
     }
 
+    public Integer getMin() {
+        return minStack.peek();
+    }
+
     public void clear() {
         while (!isEmpty()) {
             pop();
@@ -52,25 +77,23 @@ public class MyStackWithLinkedList<T> {
 
     public static void main(String[] args) {
 
-        MyStackWithLinkedList<Integer> stack = new MyStackWithLinkedList<>();
+        MyStackWithLinkedList stack = new MyStackWithLinkedList();
 
         stack.push(4);
         stack.push(6);
         stack.push(12);
-
-        System.out.println(stack.isEmpty());
-        stack.clear();
-        System.out.println(stack.isEmpty());
-
+        stack.push(42);
+        stack.push(1);
+        stack.push(1);
         stack.push(4);
-        stack.push(6);
-        stack.push(12);
+        stack.push(4);
+
+        stack.pop();
+        stack.pop();
+        stack.pop();
 
         System.out.println("-----------------");
-
-        while (!stack.isEmpty()) {
-            System.out.println(stack.pop());
-        }
+        System.out.println(stack.getMin());
 
     }
 

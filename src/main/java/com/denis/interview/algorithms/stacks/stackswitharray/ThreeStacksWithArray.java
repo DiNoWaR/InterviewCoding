@@ -5,7 +5,7 @@ import com.denis.interview.algorithms.stacks.mystack.EmptyStackException;
 /**
  *
  */
-public class StacksWithArray {
+public class ThreeStacksWithArray {
 
     private int topOne = 0;
     private int topTwo = 1;
@@ -14,7 +14,7 @@ public class StacksWithArray {
     private Integer[] array;
 
 
-    public StacksWithArray(int length) {
+    public ThreeStacksWithArray(int length) {
         array = new Integer[length];
     }
 
@@ -143,10 +143,9 @@ public class StacksWithArray {
         array = newArray;
     }
 
-
     public static void main(String[] args) {
 
-        StacksWithArray stacks = new StacksWithArray(5);
+        ThreeStacksWithArray stacks = new ThreeStacksWithArray(5);
 
         stacks.push(StacksID.FIRST, 1);
         stacks.push(StacksID.FIRST, 3);
