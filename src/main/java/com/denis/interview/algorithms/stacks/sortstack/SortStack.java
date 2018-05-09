@@ -2,6 +2,9 @@ package com.denis.interview.algorithms.stacks.sortstack;
 
 import java.util.Stack;
 
+/**
+ * Given a stack of integers, sort it in ascending order using another temporary stack.
+ */
 public class SortStack {
 
     public static Stack<Integer> sortstack(Stack<Integer> input) {
