@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.stacks.implementation;
+package com.denis.interview.algorithms.stacks.mystack;
 
 import com.denis.interview.util.ListNode;
 
