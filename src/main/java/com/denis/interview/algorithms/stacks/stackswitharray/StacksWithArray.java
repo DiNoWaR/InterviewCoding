@@ -4,9 +4,9 @@ import com.denis.interview.algorithms.stacks.mystack.EmptyStackException;
 
 public class StacksWithArray {
 
-    int topOne = 0;
-    int topTwo = 1;
-    int topThree = 2;
+    private int topOne = 0;
+    private int topTwo = 1;
+    private int topThree = 2;
 
     Integer[] array;
 
