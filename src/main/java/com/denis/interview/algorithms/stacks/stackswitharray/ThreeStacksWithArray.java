@@ -1,7 +1,7 @@
 package com.denis.interview.algorithms.stacks.stackswitharray;
 
 /**
- *
+ * Implement 3 stacks using 1 array.
  */
 public class ThreeStacksWithArray {
 
@@ -15,6 +15,7 @@ public class ThreeStacksWithArray {
     public ThreeStacksWithArray(int length) {
         array = new Integer[length];
     }
+
 
     public void push(StacksID staksID, int item) {
 
@@ -44,94 +45,76 @@ public class ThreeStacksWithArray {
 
     }
 
-    public int pop(int stack) {
+    public Integer pop(StacksID stack) {
 
+        Integer result = null;
 
-        if (stack > 2 || stack < 0) {
-            throw new RuntimeException();
+        switch (stack) {
+            case FIRST:
+                if (!isEmpty(StacksID.FIRST)) {
+                    topOne -= 3;
+                    result = array[topOne];
+                    array[topOne] = null;
+                }
+                break;
+            case SECOND:
+                if (!isEmpty(StacksID.SECOND)) {
+                    topTwo -= 3;
+                    result = array[topTwo];
+                    array[topTwo] = null;
+                }
+                break;
+            case THIRD:
+                if (!isEmpty(StacksID.THIRD)) {
+                    topThree -= 3;
+                    result = array[topThree];
+                    array[topThree] = null;
+                }
+                break;
         }
-
-        Integer result;
-
-        if (stack == 0) {
-
-            if (!isEmpty(0)) {
-                topOne -= 3;
-                result = array[topOne];
-                array[topOne] = null;
-                return result;
-            }
-        }
-
-        if (stack == 1) {
-
-            if (!isEmpty(1)) {
-                topTwo -= 3;
-                result = array[topTwo];
-                array[topTwo] = null;
-                return result;
-            }
-        }
-
-        if (stack == 2) {
-
-            if (!isEmpty(2)) {
-                topThree -= 3;
-                result = array[topThree];
-                array[topThree] = null;
-                return result;
-            }
-        }
-
-        throw new EmptyStackException();
-
+        return result;
     }
 
-    public int peek(int stack) throws RuntimeException {
+    public Integer peek(StacksID stack) {
 
-        if (stack > 2 || stack < 0) {
-            throw new RuntimeException();
+        Integer result = null;
+
+        switch (stack) {
+            case FIRST:
+                if (!isEmpty(StacksID.FIRST)) {
+                    result = array[topOne - 3];
+                }
+                break;
+            case SECOND:
+                if (!isEmpty(StacksID.SECOND)) {
+                    result = array[topTwo - 3];
+                }
+                break;
+            case THIRD:
+                if (!isEmpty(StacksID.THIRD)) {
+                    result = array[topThree - 3];
+                }
+                break;
         }
-
-        if (stack == 0) {
-
-            if (!isEmpty(0)) {
-                return array[topOne - 3];
-            }
-        }
-
-        if (stack == 1) {
-
-            if (!isEmpty(1)) {
-                return array[topTwo - 3];
-            }
-        }
-
-        if (stack == 2) {
-
-            if (!isEmpty(2)) {
-                return array[topThree - 3];
-            }
-        }
-
-        throw new EmptyStackException();
+        return result;
     }
 
-    public boolean isEmpty(int stack) throws RuntimeException {
+    public boolean isEmpty(StacksID stack) {
 
-        if (stack > 2 || stack < 0) {
-            throw new RuntimeException();
+        boolean result = false;
+
+        switch (stack) {
+            case FIRST:
+                result = topOne <= 0;
+                break;
+            case SECOND:
+                result = topTwo <= 1;
+                break;
+            case THIRD:
+                result = topThree <= 2;
+                break;
         }
-
-        if (stack == 0) {
-            return topOne <= 0;
-        }
-
-        if (stack == 1) {
-            return topTwo <= 1;
-        }
-
-        return topThree <= 2;
+        return result;
     }
 
 
@@ -157,14 +140,13 @@ public class ThreeStacksWithArray {
         stacks.push(StacksID.FIRST, 100);
         stacks.push(StacksID.THIRD, 200);
 
+        stacks.pop(StacksID.FIRST);
+        stacks.pop(StacksID.SECOND);
+        stacks.pop(StacksID.THIRD);
 
-        stacks.pop(0);
-        stacks.pop(1);
-        stacks.pop(2);
-
-        System.out.println(stacks.peek(0));
-        System.out.println(stacks.peek(1));
-        System.out.println(stacks.peek(2));
+        System.out.println(stacks.peek(StacksID.FIRST));
+        System.out.println(stacks.peek(StacksID.SECOND));
+        System.out.println(stacks.peek(StacksID.THIRD));
 
     }
 
