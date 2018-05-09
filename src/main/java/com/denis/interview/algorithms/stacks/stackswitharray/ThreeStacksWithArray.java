@@ -1,7 +1,5 @@
 package com.denis.interview.algorithms.stacks.stackswitharray;
 
-import com.denis.interview.algorithms.stacks.mystack.EmptyStackException;
-
 /**
  *
  */

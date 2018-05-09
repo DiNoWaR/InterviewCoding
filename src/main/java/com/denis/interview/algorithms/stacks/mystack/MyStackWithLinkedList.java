@@ -2,6 +2,7 @@ package com.denis.interview.algorithms.stacks.mystack;
 
 import com.denis.interview.util.ListNode;
 
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 /**
