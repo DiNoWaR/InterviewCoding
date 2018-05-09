@@ -6,7 +6,7 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 /**
- * Implement Stack with standard operations(push, pop, peek, isEmpty) and with O(1) runtime
+ * Implement Stack with standard operations(push, pop, peek, isEmpty, getMin) and with O(1) runtime
  */
 public class MyStackWithLinkedList {
 
