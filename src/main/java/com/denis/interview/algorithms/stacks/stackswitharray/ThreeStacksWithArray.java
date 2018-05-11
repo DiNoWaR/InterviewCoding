@@ -39,8 +39,6 @@ public class ThreeStacksWithArray {
                 array[topThree] = item;
                 topThree += 3;
                 break;
-            default:
-                throw new WrongStackIdException();
         }
 
     }
