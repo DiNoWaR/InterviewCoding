@@ -12,20 +12,18 @@ public class OneWay {
             return true;
         }
 
-
         if (src.length() == target.length()) {
+
             int counter = 0;
+
             for (int i = 0; i < src.length(); i++) {
                 if (src.charAt(i) != target.charAt(i)) {
                     counter++;
                 }
             }
-            if (counter == 1) {
-                return true;
-            } else {
-                return false;
-            }
+            return counter == 1;
         }
+
         String longString = src;
         String shortString = target;
 
@@ -35,6 +33,7 @@ public class OneWay {
         }
         int k = 0;
         int counter = 0;
+
         for (int i = 0; i < longString.length(); i++) {
             if (counter == 0 && i == longString.length() - 1) {
                 return true;
