@@ -4,7 +4,7 @@ public class OneWay {
 
     public boolean checkString(String src, String target) {
 
-        if (Math.abs(src.length() - target.length()) > 2) {
+        if (Math.abs(src.length() - target.length()) >= 2) {
             return false;
         }
 
@@ -68,5 +68,6 @@ public class OneWay {
         System.out.println(oneWay.checkString("bugaga", "bugggg"));
         System.out.println(oneWay.checkString("bugaga", "jkgfdslgj"));
         System.out.println(oneWay.checkString("bugaga", "abugag"));
+        System.out.println(oneWay.checkString("32", ""));
     }
 }
