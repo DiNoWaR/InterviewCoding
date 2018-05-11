@@ -2,7 +2,6 @@ package com.denis.interview.patterns.behavioral.memento.demo;
 
 
 import com.denis.interview.patterns.behavioral.memento.Coordinates;
-import com.denis.interview.patterns.behavioral.memento.Memento;
 import com.denis.interview.patterns.behavioral.memento.caretaker.CareTaker;
 import com.denis.interview.patterns.behavioral.memento.originator.Originator;
 
