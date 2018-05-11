@@ -69,12 +69,6 @@ public class MyStackWithLinkedList {
         return minStack.peek();
     }
 
-    public void clear() {
-        while (!isEmpty()) {
-            pop();
-        }
-    }
-
 
     public static void main(String[] args) {
 
