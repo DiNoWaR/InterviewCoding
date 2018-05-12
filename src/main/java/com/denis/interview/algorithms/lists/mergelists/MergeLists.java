@@ -19,10 +19,13 @@ public class MergeLists {
         ListNode<Integer> head = firstPointer.getValue() <= secondPointer.getValue() ? firstPointer : secondPointer;
         ListNode<Integer> firstPointerConstant = firstPointer;
         ListNode<Integer> current = head;
+
         boolean fbool = false;
         boolean sbool = false;
+
         ListNode<Integer> firstNext = firstPointer.getNext();
         ListNode<Integer> secondNext = secondPointer.getNext();
+
         if (head == firstPointerConstant) {
             firstPointer = firstPointer.getNext();
             fbool = true;
