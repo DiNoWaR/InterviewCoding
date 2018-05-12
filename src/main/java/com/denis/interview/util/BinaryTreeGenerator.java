@@ -7,16 +7,16 @@ public class BinaryTreeGenerator {
 
     public static TreeNode generateBinarySearchTree() {
 
-        TreeNode<Integer> root = new TreeNode<>(8);
+        var root = new TreeNode<>(8);
 
-        TreeNode<Integer> first = new TreeNode<>(3);
-        TreeNode<Integer> second = new TreeNode<>(10);
-        TreeNode<Integer> third = new TreeNode<>(1);
-        TreeNode<Integer> fourth = new TreeNode<>(6);
-        TreeNode<Integer> fifth = new TreeNode<>(4);
-        TreeNode<Integer> sixth = new TreeNode<>(7);
-        TreeNode<Integer> seventh = new TreeNode<>(13);
-        TreeNode<Integer> eights = new TreeNode<>(14);
+        var first = new TreeNode<>(3);
+        var second = new TreeNode<>(10);
+        var third = new TreeNode<>(1);
+        var fourth = new TreeNode<>(6);
+        var fifth = new TreeNode<>(4);
+        var sixth = new TreeNode<>(7);
+        var seventh = new TreeNode<>(13);
+        var eights = new TreeNode<>(14);
 
         root.setLeft(first);
         root.setRight(second);

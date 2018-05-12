@@ -12,7 +12,7 @@ public class ClosestPalindrom {
             return number - 1;
         }
 
-        for (long i = number - 1; i > 0; i--) {
+        for (var i = number - 1; i > 0; i--) {
             if (isPalindrom(i)) {
                 return i;
             }
