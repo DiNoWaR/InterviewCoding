@@ -117,14 +117,14 @@ public class ThreeStacksWithArray {
 
 
     private void extendArray() {
-        Integer[] newArray = new Integer[array.length * 2];
+        var newArray = new Integer[array.length * 2];
         System.arraycopy(array, 0, newArray, 0, array.length);
         array = newArray;
     }
 
     public static void main(String[] args) {
 
-        ThreeStacksWithArray stacks = new ThreeStacksWithArray(5);
+        var stacks = new ThreeStacksWithArray(5);
 
         stacks.push(StacksID.FIRST, 1);
         stacks.push(StacksID.FIRST, 3);
