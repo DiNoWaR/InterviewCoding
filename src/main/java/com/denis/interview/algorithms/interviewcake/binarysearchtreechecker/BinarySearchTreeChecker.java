@@ -3,43 +3,43 @@ package com.denis.interview.algorithms.interviewcake.binarysearchtreechecker;
 import com.denis.interview.util.BinaryTreeGenerator;
 import com.denis.interview.util.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Write a method to check that a binary tree ↴ is a valid binary search tree.
  */
 public class BinarySearchTreeChecker {
 
-    private boolean valid = true;
+    private List<Integer> array = new ArrayList<>();
 
 
     public boolean BSTChecker(TreeNode<Integer> root) {
-        validateBST(root);
-        return valid;
+        inOrderTraversal(root);
+
+        for (int i = 0; i < array.size() - 1; i++) {
+
+            if (array.get(i) > array.get(i + 1)) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    private void validateBST(TreeNode<Integer> root) {
+
+    private void inOrderTraversal(TreeNode<Integer> root) {
 
         if (root == null) {
             return;
         }
 
-        if (root.getLeft() == null && root.getRight() == null) {
-            return;
-        }
-
         if (root.getLeft() != null) {
-            if (root.getLeft().getValue() > root.getValue()) {
-                valid = false;
-            }
+            inOrderTraversal(root.getLeft());
         }
-
+        array.add(root.getValue());
         if (root.getRight() != null) {
-            if (root.getRight().getValue() < root.getValue()) {
-                valid = false;
-            }
+            inOrderTraversal(root.getRight());
         }
-
-        validateBST(root.getLeft());
-        validateBST(root.getRight());
     }
 
     public static void main(String[] args) {
