@@ -1,7 +1,6 @@
 package com.denis.interview.algorithms.hashtable.myhashtable;
 
 import java.util.LinkedList;
-import java.util.Objects;
 
 public class MyHashTable<K, V> {
 
