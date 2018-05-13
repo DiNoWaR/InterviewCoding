@@ -1,12 +1,12 @@
 package com.denis.interview.algorithms.hashtable.myhashtable;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Objects;
 
 public class MyHashTable<K, V> {
 
     private LinkedList<Entry<K, V>>[] keyArray;
+
     private double loadFactor = 0.7;
     private int initialCapacity = 16;
     private int size = 0;
@@ -19,9 +19,11 @@ public class MyHashTable<K, V> {
     public void put(K key, V value) {
 
         int index = hashFunction(key);
+
         if (keyArray.length * loadFactor < size) {
             rehash();
         }
+
         if (keyArray[index] == null) {
             LinkedList<Entry<K, V>> list = new LinkedList<>();
             list.add(new Entry<>(key, value));
@@ -29,6 +31,7 @@ public class MyHashTable<K, V> {
             size++;
         } else {
             boolean exist = false;
+
             for (Entry<K, V> entry : keyArray[index]) {
                 if (entry.key.equals(key)) {
                     entry.value = value;
@@ -57,9 +60,13 @@ public class MyHashTable<K, V> {
         }
         return null;
     }
+
     public void remove(K key){
+
         int index = hashFunction(key);
+
         if(keyArray[index]!=null){
+
             for(Entry<K,V> entry:keyArray[index]){
                 if(entry.key.equals(key)){
                     keyArray[index].remove(entry);
@@ -94,7 +101,9 @@ public class MyHashTable<K, V> {
     }
 
     public static void main(String[] args) {
+
         MyHashTable<String, Integer> myHashTable = new MyHashTable<>();
+
         myHashTable.put("bgg", 1);
         myHashTable.put("bgg2", 2);
         myHashTable.put("bgg3", 3);
@@ -105,7 +114,9 @@ public class MyHashTable<K, V> {
         myHashTable.put("bgg8", 8);
         myHashTable.put("bgg9", 9);
         myHashTable.put("bgg10", 10);
+
         myHashTable.remove("bgg4");
+
         System.out.println(myHashTable.get("bgg"));
         System.out.println(myHashTable.get("bgg2"));
         System.out.println(myHashTable.get("bgg3"));
@@ -128,18 +139,6 @@ public class MyHashTable<K, V> {
             this.value = value;
         }
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Entry<?, ?> entry = (Entry<?, ?>) o;
-            return Objects.equals(key, entry.key);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(key);
-        }
     }
 
 }
