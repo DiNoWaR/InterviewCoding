@@ -84,7 +84,9 @@ public class MyHashTable<K, V> {
         for (int i = 0; i < keyArray.length; i++) {
             if (keyArray[i] != null) {
                 for (Entry<K, V> entry : keyArray[i]) {
+
                     int index = hashFunction(entry.key);
+
                     if (newArray[index] == null) {
                         LinkedList<Entry<K, V>> list = new LinkedList<>();
                         list.add(entry);
