@@ -35,7 +35,13 @@ public class Anagrams {
         for (char item : result.toCharArray()) {
 
             if (map.containsKey(item)) {
+
                 map.put(item, map.get(item) - 1);
+
+                if (map.get(item) < 0) {
+                    return false;
+                }
+
             } else {
                 return false;
             }
@@ -68,6 +74,7 @@ public class Anagrams {
 
         System.out.println(anagrams.checkString("DOG", "GOD"));
         System.out.println(anagrams.checkString("LBABL", "BBAMM"));
+        System.out.println(anagrams.checkString("LBABL", "LLLLL"));
 
         System.out.println(anagrams.checkStringWithSorting("DOG", "GOD"));
         System.out.println(anagrams.checkStringWithSorting("LBABL", "LLLLL"));
