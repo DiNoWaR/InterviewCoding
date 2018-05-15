@@ -5,6 +5,7 @@ import com.denis.interview.algorithms.sorting.generator.Generator;
 public class CountNonZero {
 
     public int countNonZeroElements(int[] array) {
+
         int indexFirst = 0;
         int indexSecond = array.length - 1;
         int numberOfZeros = 0;
