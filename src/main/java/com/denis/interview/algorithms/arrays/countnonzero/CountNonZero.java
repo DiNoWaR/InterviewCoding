@@ -17,6 +17,7 @@ public class CountNonZero {
 
         while (indexFirst < array.length) {
             if (array[indexFirst] == 0) {
+
                 while (indexSecond >= 0) {
                     if (array[indexSecond] != 0 && indexSecond > indexFirst) {
                         array[indexFirst] = array[indexSecond];
