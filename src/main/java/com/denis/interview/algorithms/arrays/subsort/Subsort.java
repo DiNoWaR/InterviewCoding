@@ -3,6 +3,7 @@ package com.denis.interview.algorithms.arrays.subsort;
 public class Subsort {
 
     public static int findEndOfLeftSubsequence(int[] array) {
+
         for (int i = 1; i < array.length; i++) {
             if (array[i] < array[i - 1]) {
                 return i - 1;
@@ -12,6 +13,7 @@ public class Subsort {
     }
 
     public static int findStartOfRightSubsequence(int[] array) {
+
         for (int i = array.length - 2; i >= 0; i--) {
             if (array[i] > array[i + 1]) {
                 return i + 1;
@@ -21,7 +23,9 @@ public class Subsort {
     }
 
     public static int shrinkLeft(int[] array, int min_index, int start) {
+
         int comp = array[min_index];
+
         for (int i = start - 1; i >= 0; i--) {
             if (array[i] <= comp) {
                 return i + 1;
@@ -31,7 +35,9 @@ public class Subsort {
     }
 
     public static int shrinkRight(int[] array, int max_index, int start) {
+
         int comp = array[max_index];
+
         for (int i = start; i < array.length; i++) {
             if (array[i] >= comp) {
                 return i - 1;
@@ -81,13 +87,16 @@ public class Subsort {
      */
     public static boolean validate(int[] array, int left_index, int right_index) {
         int[] middle = new int[right_index - left_index + 1];
+
         for (int i = left_index; i <= right_index; i++) {
             middle[i - left_index] = array[i];
         }
         java.util.Arrays.sort(middle);
+
         for (int i = left_index; i <= right_index; i++) {
             array[i] = middle[i - left_index];
         }
+
         for (int i = 1; i < array.length; i++) {
             if (array[i - 1] > array[i]) {
                 return false;

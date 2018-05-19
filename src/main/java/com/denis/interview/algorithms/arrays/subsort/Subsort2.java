@@ -3,6 +3,7 @@ package com.denis.interview.algorithms.arrays.subsort;
 import java.util.Arrays;
 
 public class Subsort2 {
+
     public int[] subSorting(int[] array) {
 
         int max = Integer.MIN_VALUE;
@@ -21,28 +22,33 @@ public class Subsort2 {
         if (notSortedIndex1 == 0) {
             return null;
         }
+
         for (int i = array.length - 1; i >=0; i--) {
             if (array[i] < array[i - 1]) {
                 notSortedIndex2 = i - 1;
                 break;
             }
         }
+
         for (int i = notSortedIndex1; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
             }
         }
+
         for (int i = notSortedIndex2; i >= 0; i--) {
             if (array[i] > max) {
                 max = array[i];
             }
         }
+
         for (int i = 0; i < notSortedIndex1; i++) {
             if (array[i] > min) {
                 result1 = i;
                 break;
             }
         }
+
         for (int i = array.length - 1; i > notSortedIndex2; i--) {
             if (array[i] < max) {
                 result2 = i;
