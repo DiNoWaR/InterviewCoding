@@ -63,7 +63,9 @@ public class Subsort2 {
         int[] array = {1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19};
         int[] array2 = {111, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19};
         int[] array3 = {1, 5, 4, 7, 10, 11, 7, 12, 6, 19, 16, 18, 19};
+
         Subsort2 subsort2 = new Subsort2();
+
         System.out.println(Arrays.toString(subsort2.subSorting(array)));
         System.out.println(Arrays.toString(subsort2.subSorting(array2)));
         System.out.println(Arrays.toString(subsort2.subSorting(array3)));
