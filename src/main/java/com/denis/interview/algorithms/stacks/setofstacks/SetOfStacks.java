@@ -16,6 +16,7 @@ public class SetOfStacks {
 
     private Stack<Integer> buffer;
 
+
     public SetOfStacks(int maxSize) {
         list = new ArrayList<>();
         buffer = new Stack<>();
