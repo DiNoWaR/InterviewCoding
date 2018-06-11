@@ -50,11 +50,8 @@ public class HiCal {
     }
 
     public static void main(String[] args) {
-
         var meetings = new Meeting[]{new Meeting(0, 1), new Meeting(3, 5), new Meeting(4, 8), new Meeting(10, 12), new Meeting(9, 10)};
-
         var mergedMeetings = mergeRanges(meetings);
-
         System.out.println(mergedMeetings);
     }
 
