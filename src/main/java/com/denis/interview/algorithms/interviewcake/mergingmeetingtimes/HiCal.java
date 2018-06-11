@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 /**
  * Your company built an in-house calendar tool called HiCal.
- * You want to add a feature to see the times in a day when everyone is available.
+ * You want to put a feature to see the times in a day when everyone is available.
  * To do this, you’ll need to know when any team is having a meeting.
  * In HiCal, a meeting is stored as an object of a Meeting class with integer variables startTime and endTime.
  * These integers represent the number of 30-minute blocks past 9:00am.
@@ -40,7 +40,7 @@ public class HiCal {
             if (currentMeeting.getStartTime() <= lastMergedMeeting.getEndTime()) {
                 lastMergedMeeting.setEndTime(Math.max(lastMergedMeeting.getEndTime(), currentMeeting.getEndTime()));
 
-                // add the current meeting since it doesn't overlap
+                // put the current meeting since it doesn't overlap
             } else {
                 mergedMeetings.add(currentMeeting);
             }

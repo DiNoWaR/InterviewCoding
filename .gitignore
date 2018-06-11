@@ -1,6 +1,4 @@
 .gitignore
-.idea/.name
-.idea/sbt.xml
-.idea/thriftCompiler.xml
+/idea
 *.iml
 target/
