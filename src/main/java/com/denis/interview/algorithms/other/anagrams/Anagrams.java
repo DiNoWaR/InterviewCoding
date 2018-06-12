@@ -59,12 +59,12 @@ public class Anagrams {
     public boolean checkStringWithSorting(String source, String result) {
 
         char[] sourceArray = source.toCharArray();
-        char[] resulttArray = result.toCharArray();
+        char[] resultArray = result.toCharArray();
 
         Arrays.sort(sourceArray);
-        Arrays.sort(resulttArray);
+        Arrays.sort(resultArray);
 
-        return Arrays.equals(sourceArray, resulttArray);
+        return Arrays.equals(sourceArray, resultArray);
     }
 
 
