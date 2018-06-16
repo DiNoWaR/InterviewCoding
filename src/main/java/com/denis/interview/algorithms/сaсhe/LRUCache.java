@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.lrucashe;
+package com.denis.interview.algorithms.сaсhe;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -109,8 +109,6 @@ public class LRUCache {
         cache.get("4");
 
         cache.put("5", 126);
-
-        System.out.println(cache);
 
     }
 }
