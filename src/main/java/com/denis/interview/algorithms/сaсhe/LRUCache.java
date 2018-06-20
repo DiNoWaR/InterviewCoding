@@ -5,8 +5,8 @@ import java.util.Map;
 
 /**
  * Design and implement a data structure for Least Recently Used (LRU) cache.
- * It should support the following operations: get and put. If cache is full, then it when adding new element, it should
- * evict recently sed element. All operations must have O(1) complexity.
+ * It should support the following operations: get and put. If cache is full,then it should
+ * evict least used element and add current element. All operations must have O(1) complexity.
  */
 public class LRUCache {
 
