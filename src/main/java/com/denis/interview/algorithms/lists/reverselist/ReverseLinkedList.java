@@ -8,7 +8,7 @@ import com.denis.interview.util.ListNode;
  */
 class ReverseLinkedList {
 
-    public static ListNode<Integer> reverse(ListNode<Integer> head) {
+    public static ListNode<Integer> reverseWithLoop(ListNode<Integer> head) {
 
         ListNode<Integer> current = head;
         ListNode<Integer> nextNode = null;
@@ -20,7 +20,7 @@ class ReverseLinkedList {
             // before we overwrite currentNode.next
             nextNode = current.getNext();
 
-            // reverse the 'next' pointer
+            // reverseWithLoop the 'next' pointer
             current.setNext(previous);
 
             // step forward in the list
@@ -30,12 +30,27 @@ class ReverseLinkedList {
         return previous;
     }
 
+
+    public static ListNode<Integer> reverseRecursive(ListNode<Integer> head) {
+
+        if ((head == null) || (head.getNext() == null)) {
+            return head;
+        }
+
+        ListNode<Integer> reverse = reverseRecursive(head.getNext());
+
+        head.getNext().setNext(head);
+        head.setNext(null);
+        return reverse;
+    }
+
+
     public static void main(String[] args) {
 
         var myList = ListGenerator.generateList(1, 4, true);
         myList.getLineage(myList);
 
-        ListNode<Integer> newHead = reverse(myList);
+        ListNode<Integer> newHead = reverseRecursive(myList);
         myList.getLineage(newHead);
     }
 }

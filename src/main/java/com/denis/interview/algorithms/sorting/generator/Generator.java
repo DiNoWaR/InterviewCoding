@@ -2,7 +2,9 @@ package com.denis.interview.algorithms.sorting.generator;
 
 import java.util.Random;
 
+
 public class Generator {
+
 
     public static int[] generateArray(int size, int range) {
 

@@ -2,6 +2,7 @@ package com.denis.interview.algorithms.arrays.countnonzero;
 
 import com.denis.interview.algorithms.sorting.generator.Generator;
 
+
 public class CountNonZero {
 
     public int countNonZeroElements(int[] array) {
