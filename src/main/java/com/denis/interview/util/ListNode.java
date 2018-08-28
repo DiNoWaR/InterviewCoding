@@ -13,6 +13,9 @@ public class ListNode<T> {
         this.value = value;
     }
 
+    public ListNode() {
+
+    }
 
     public void getLineage(ListNode<T> head) {
 
@@ -27,6 +30,10 @@ public class ListNode<T> {
 
     public T getValue() {
         return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
     }
 
     public ListNode<T> getNext() {

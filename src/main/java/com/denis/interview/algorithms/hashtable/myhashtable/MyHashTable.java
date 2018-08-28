@@ -79,6 +79,7 @@ public class MyHashTable<K, V> {
     }
 
     private void rehash() {
+
         LinkedList<Entry<K, V>>[] newArray = new LinkedList[keyArray.length * 2];
 
         for (int i = 0; i < keyArray.length; i++) {
@@ -130,6 +131,7 @@ public class MyHashTable<K, V> {
         System.out.println(myHashTable.get("bgg9"));
         System.out.println(myHashTable.get("bgg10"));
     }
+
 
     static class Entry<K, V> {
 
