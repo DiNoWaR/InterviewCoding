@@ -96,5 +96,4 @@ public class AppleStocks {
         System.out.println(getMaxProfitFirstApproach(stockPricesYesterday2));
 
     }
-
 }

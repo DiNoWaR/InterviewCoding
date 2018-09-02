@@ -58,7 +58,6 @@ public class AddTwoNumbers {
 
     public static void main(String[] args) {
 
-
         ListNode<Integer> first = new ListNode<>(2);
         ListNode<Integer> second = new ListNode<>(4);
         ListNode<Integer> third = new ListNode<>(3);
@@ -78,5 +77,4 @@ public class AddTwoNumbers {
         head.getLineage(head);
 
     }
-
 }

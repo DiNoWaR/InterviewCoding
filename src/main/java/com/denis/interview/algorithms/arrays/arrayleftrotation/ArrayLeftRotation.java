@@ -40,5 +40,4 @@ public class ArrayLeftRotation {
         System.out.println(Arrays.toString(rotateArray(array, 4)));
 
     }
-
 }

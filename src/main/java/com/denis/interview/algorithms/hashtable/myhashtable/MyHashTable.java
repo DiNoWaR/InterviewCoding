@@ -2,6 +2,7 @@ package com.denis.interview.algorithms.hashtable.myhashtable;
 
 import java.util.LinkedList;
 
+
 public class MyHashTable<K, V> {
 
     private LinkedList<Entry<K, V>>[] keyArray;
@@ -60,14 +61,14 @@ public class MyHashTable<K, V> {
         return null;
     }
 
-    public void remove(K key){
+    public void remove(K key) {
 
         int index = hashFunction(key);
 
-        if(keyArray[index]!=null){
+        if (keyArray[index] != null) {
 
-            for(Entry<K,V> entry:keyArray[index]){
-                if(entry.key.equals(key)){
+            for (Entry<K, V> entry : keyArray[index]) {
+                if (entry.key.equals(key)) {
                     keyArray[index].remove(entry);
                 }
             }
