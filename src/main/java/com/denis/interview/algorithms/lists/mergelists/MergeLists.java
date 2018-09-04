@@ -111,6 +111,20 @@ public class MergeLists {
         return head;
     }
 
+    public static ListNode<Integer> mergeRecursively(ListNode<Integer> first, ListNode<Integer> second) {
+
+        if (first == null) return second;
+        if (second == null) return first;
+
+        if (first.getValue() < second.getValue()) {
+            first.setNext(mergeRecursively(first.getNext(), second));
+            return first;
+        } else {
+            second.setNext(mergeRecursively(second.getNext(), first));
+            return second;
+        }
+    }
+
     public static void main(String[] args) {
 
         ListNode<Integer> first = ListGenerator.generateList(3, 10, true);
