@@ -22,8 +22,8 @@ public class ShortestSubSequence {
         Set<Integer> inputSet = new HashSet<>(Arrays.asList(input));
         Set<Integer> tempSet = new HashSet<>();
 
-        int left = 0;
-        int right = 0;
+        var left = 0;
+        var right = 0;
 
         List<Integer[]> sequences = new ArrayList<>();
 
