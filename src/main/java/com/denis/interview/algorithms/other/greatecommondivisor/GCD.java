@@ -9,5 +9,4 @@ public class GCD {
         if (b == 0) return a;
         return findGCD(b, a % b);
     }
-
 }
