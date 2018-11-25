@@ -50,10 +50,10 @@ public class CountPairsToSum {
 
     public static void main(String[] args) {
 
-        var p = new int[]{2, 3, 5, 8, 6, 0};
+        var p = new int[]{2, 3, 5, 8, 6, 0, 10, 1, 9};
 
-        System.out.println(countPairsOfElementsInArray(p, 8));
-        System.out.println(countPairsOfElementsWithHash(p, 8));
+        System.out.println(countPairsOfElementsInArray(p, 11));
+        System.out.println(countPairsOfElementsWithHash(p, 11));
     }
 
 }
