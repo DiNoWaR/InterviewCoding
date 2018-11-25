@@ -5,7 +5,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
+ * Given an array of non-negative integers, and a value sum,
+ * find how many pairs from array can we find to get value equal to given sum.
  */
 public class CountPairsToSum {
 
