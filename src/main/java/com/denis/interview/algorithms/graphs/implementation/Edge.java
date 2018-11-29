@@ -1,5 +1,6 @@
 package com.denis.interview.algorithms.graphs.implementation;
 
+
 public class Edge<T> {
 
     private Node<T> node1;
