@@ -193,10 +193,14 @@ public class Graph<T> {
 
         // explore the graph
         while (!queue.isEmpty()) {
+
             Node<T> first = queue.remove();
+
             first.setVisited(true);
+
             first.edges().forEach(edge -> {
                 Node<T> neighbour = edge.toNode();
+
                 if (!neighbour.isVisited()) {
                     neighbour.setParent(first);
                     queue.add(neighbour);
@@ -210,6 +214,7 @@ public class Graph<T> {
     }
 
     private void resetGraph() {
+
         adjacencyList.keySet().forEach(key -> {
             Node<T> node = getNode(key);
             node.setParent(null);
