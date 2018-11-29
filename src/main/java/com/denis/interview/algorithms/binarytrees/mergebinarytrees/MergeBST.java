@@ -129,5 +129,4 @@ public class MergeBST {
         createBSTFromSortedArray(array, head);
 
     }
-
 }

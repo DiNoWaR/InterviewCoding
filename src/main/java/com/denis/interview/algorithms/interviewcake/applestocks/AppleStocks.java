@@ -93,6 +93,9 @@ public class AppleStocks {
         var stockPricesYesterday2 = new int[]{10, 8, 5, 4, 2, 1};
 
         System.out.println(getMaxProfitFirstApproach(stockPricesYesterday));
+        System.out.println(getMaxProfitFirstApproach(stockPricesYesterday));
+
+        System.out.println(getMaxProfitFirstApproach(stockPricesYesterday2));
         System.out.println(getMaxProfitFirstApproach(stockPricesYesterday2));
 
     }

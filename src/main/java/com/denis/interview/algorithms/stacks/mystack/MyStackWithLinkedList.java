@@ -88,6 +88,7 @@ public class MyStackWithLinkedList {
         stack.pop();
 
         System.out.println("-----------------");
+        System.out.println(stack.peek());
         System.out.println(stack.getMin());
 
     }
