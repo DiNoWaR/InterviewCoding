@@ -1,5 +1,6 @@
 package com.denis.interview.algorithms.graphs.wave;
 
+
 public class Node {
 
     public int x;
@@ -14,6 +15,5 @@ public class Node {
         this.wall = wall;
         this.visited = visited;
     }
-
 
 }

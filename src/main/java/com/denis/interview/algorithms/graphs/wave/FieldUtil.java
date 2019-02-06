@@ -1,7 +1,9 @@
 package com.denis.interview.algorithms.graphs.wave;
 
-
-public class FieldGenerator {
+/**
+ *
+ */
+public class FieldUtil {
 
     public static Node[][] generateField(int size) {
 
@@ -17,7 +19,7 @@ public class FieldGenerator {
         return result;
     }
 
-    public static void refreshField(Node[][] field) {
+    public static void resetField(Node[][] field) {
 
         for (int i = 0; i < field.length; i++) {
 

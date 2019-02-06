@@ -53,16 +53,21 @@ public class LivingPeople {
         Integer[] deaths = Arrays.stream(people).map(People::getDeath).sorted().toArray(Integer[]::new);
 
 
-
         return interval;
     }
 
+
+    static void bgg(Integer[] array) {
+        return;
+    }
 
     public static void main(String[] args) {
 
         People[] people = {new People(1814, 1842), new People(1799, 1852), new People(1815, 1840)};
 
         System.out.println(getMaxAliveIntervalBruteForce(people, 1800, 1840));
+
+        bgg(new Integer[]{3, 4, 5});
 
     }
 }
