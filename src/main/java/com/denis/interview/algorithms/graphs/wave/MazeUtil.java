@@ -24,24 +24,24 @@ public class MazeUtil {
     }
 
 
-    public static void resetMaze(MazeNode[][] field) {
+    public static void resetMaze(MazeNode[][] maze) {
 
-        for (int i = 0; i < field.length; i++) {
+        for (int i = 0; i < maze.length; i++) {
 
-            for (int j = 0; j < field.length; j++) {
-                field[i][j].mark = 0;
-                field[i][j].wall = false;
-                field[i][j].visited = false;
+            for (int j = 0; j < maze.length; j++) {
+                maze[i][j].mark = 0;
+                maze[i][j].wall = false;
+                maze[i][j].visited = false;
             }
         }
 
     }
 
 
-    public static void setWall(MazeNode[][] field, int coordX, int coordY) {
+    public static void setWall(MazeNode[][] maze, int coordX, int coordY) {
 
-        if (coordX < field.length && coordY < field.length) {
-            field[coordX][coordY].wall = true;
+        if (coordX < maze.length && coordY < maze.length) {
+            maze[coordX][coordY].wall = true;
         }
     }
 

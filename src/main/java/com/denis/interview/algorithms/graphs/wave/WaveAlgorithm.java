@@ -14,20 +14,20 @@ public class WaveAlgorithm {
 
         Stack<MazeNode> path = new Stack<>();
 
-        LinkedList<MazeNode> queue = new LinkedList<>();
-
-        start.mark = 0;
-        start.visited = true;
-        queue.add(start);
-
-        if (propagateWave(maze, queue, end)) {
+        if (propagateWave(maze, start, end)) {
             recoverPath(maze, start, end, path);
         }
 
         return path;
     }
 
-    private static boolean propagateWave(MazeNode[][] maze, LinkedList<MazeNode> queue, MazeNode end) {
+    private static boolean propagateWave(MazeNode[][] maze, MazeNode start, MazeNode end) {
+
+        LinkedList<MazeNode> queue = new LinkedList<>();
+
+        start.mark = 0;
+        start.visited = true;
+        queue.add(start);
 
         boolean pathExists = false;
 
