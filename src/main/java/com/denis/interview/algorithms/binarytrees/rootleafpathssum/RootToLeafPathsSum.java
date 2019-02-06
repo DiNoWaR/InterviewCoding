@@ -1,5 +1,9 @@
 package com.denis.interview.algorithms.binarytrees.rootleafpathssum;
 
+import com.denis.interview.util.TreeNode;
+
+import java.util.*;
+
 /**
  * Given a binary tree, where every node value is a number.
  * Find the sum of all the numbers which are formed from root to leaf paths.
@@ -27,6 +31,52 @@ package com.denis.interview.algorithms.binarytrees.rootleafpathssum;
 public class RootToLeafPathsSum {
 
 
+    private static List<Stack<Integer>> stacks = new ArrayList<>();
 
+
+    public static void traverseTree(TreeNode<Integer> root, LinkedList<Integer> list) {
+
+        if (root == null) {
+            return;
+        }
+
+        if (root.getRight() == null && root.getLeft() == null) {
+            list.add(root.getValue());
+            Stack<Integer> result = new Stack<>();
+
+            for (Integer item : list) {
+                result.push(item);
+            }
+            stacks.add(result);
+            list.removeLast();
+        } else {
+
+            list.add(root.getValue());
+
+            traverseTree(root.getLeft(), list);
+            traverseTree(root.getRight(), list);
+        }
+    }
+
+
+    public static void main(String[] args) {
+
+        TreeNode<Integer> root = new TreeNode<>(6);
+
+        root.setLeft(new TreeNode<>(3));
+        root.setRight(new TreeNode<>(5));
+
+        root.getLeft().setLeft(new TreeNode<>(2));
+        root.getLeft().setRight(new TreeNode<>(5));
+
+        root.getLeft().getRight().setRight(new TreeNode<>(4));
+        root.getLeft().getRight().setLeft(new TreeNode<>(7));
+
+        root.getRight().setRight(new TreeNode<>(4));
+
+        traverseTree(root, new LinkedList<>());
+
+
+    }
 
 }

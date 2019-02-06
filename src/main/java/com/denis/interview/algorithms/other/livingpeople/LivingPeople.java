@@ -1,7 +1,6 @@
 package com.denis.interview.algorithms.other.livingpeople;
 
 import java.util.Arrays;
-import java.util.stream.Collector;
 
 /**
  *
