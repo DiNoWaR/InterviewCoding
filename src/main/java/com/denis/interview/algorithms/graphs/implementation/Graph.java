@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class Graph<T> {
 
-    private Map<T, Node<T>> adjacencyList;
+    private Map<T, GraphNode<T>> adjacencyList;
 
 
     public Graph() {
@@ -26,7 +26,7 @@ public class Graph<T> {
         if (adjacencyList.containsKey(vertex)) {
             return false;
         }
-        adjacencyList.put(vertex, new Node<>(vertex));
+        adjacencyList.put(vertex, new GraphNode<>(vertex));
         return true;
     }
 
@@ -53,8 +53,9 @@ public class Graph<T> {
         }
 
         // add the edge
-        Node<T> node1 = getNode(vertex1);
-        Node<T> node2 = getNode(vertex2);
+        GraphNode<T> node1 = getNode(vertex1);
+        GraphNode<T> node2 = getNode(vertex2);
+
         return node1.addEdge(node2, weight);
     }
 
@@ -70,7 +71,7 @@ public class Graph<T> {
         }
 
         // get node to be removed
-        final Node<T> toRemove = getNode(vertex);
+        final GraphNode<T> toRemove = getNode(vertex);
 
         // remove all incoming edges to node
         adjacencyList.values().forEach(node -> node.removeEdge(toRemove));
@@ -111,7 +112,7 @@ public class Graph<T> {
     public int edgeCount() {
         return adjacencyList.values()
                 .stream()
-                .mapToInt(Node::getEdgeCount)
+                .mapToInt(GraphNode::getEdgeCount)
                 .sum();
     }
 
@@ -160,7 +161,7 @@ public class Graph<T> {
         List<T> path = new ArrayList<>();
 
         // trace path back from end vertex to start
-        Node<T> end = getNode(endVertex);
+        GraphNode<T> end = getNode(endVertex);
 
         while (end != null && end != getNode(startVertex)) {
             path.add(end.vertex());
@@ -187,19 +188,19 @@ public class Graph<T> {
         resetGraph();
 
         // init the queue
-        Queue<Node<T>> queue = new LinkedList<>();
-        Node<T> start = getNode(startVertex);
+        Queue<GraphNode<T>> queue = new LinkedList<>();
+        GraphNode<T> start = getNode(startVertex);
         queue.add(start);
 
         // explore the graph
         while (!queue.isEmpty()) {
 
-            Node<T> first = queue.remove();
+            GraphNode<T> first = queue.remove();
 
             first.setVisited(true);
 
             first.edges().forEach(edge -> {
-                Node<T> neighbour = edge.toNode();
+                GraphNode<T> neighbour = edge.toNode();
 
                 if (!neighbour.isVisited()) {
                     neighbour.setParent(first);
@@ -209,14 +210,14 @@ public class Graph<T> {
         }
     }
 
-    private Node<T> getNode(T value) {
+    private GraphNode<T> getNode(T value) {
         return adjacencyList.get(value);
     }
 
     private void resetGraph() {
 
         adjacencyList.keySet().forEach(key -> {
-            Node<T> node = getNode(key);
+            GraphNode<T> node = getNode(key);
             node.setParent(null);
             node.setVisited(false);
         });

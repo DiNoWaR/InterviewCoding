@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class Node<T> {
+public class GraphNode<T> {
 
     private T vertex;
     private List<Edge<T>> edges;
-    private Node<T> parent;
+    private GraphNode<T> parent;
     private boolean isVisited;
 
 
-    public Node(T vertex) {
+    public GraphNode(T vertex) {
         this.vertex = vertex;
         this.edges = new ArrayList<>();
     }
@@ -23,7 +23,8 @@ public class Node<T> {
         return vertex;
     }
 
-    public boolean addEdge(Node<T> node, int weight) {
+
+    public boolean addEdge(GraphNode<T> node, int weight) {
         if (hasEdge(node)) {
             return false;
         }
@@ -31,7 +32,7 @@ public class Node<T> {
         return edges.add(newEdge);
     }
 
-    public boolean removeEdge(Node<T> node) {
+    public boolean removeEdge(GraphNode<T> node) {
         Optional<Edge<T>> optional = findEdge(node);
         if (optional.isPresent()) {
             return edges.remove(optional.get());
@@ -39,11 +40,11 @@ public class Node<T> {
         return false;
     }
 
-    public boolean hasEdge(Node<T> node) {
+    public boolean hasEdge(GraphNode<T> node) {
         return findEdge(node).isPresent();
     }
 
-    private Optional<Edge<T>> findEdge(Node<T> node) {
+    private Optional<Edge<T>> findEdge(GraphNode<T> node) {
         return edges.stream()
                 .filter(edge -> edge.isBetween(this, node))
                 .findFirst();
@@ -57,7 +58,7 @@ public class Node<T> {
         return edges.size();
     }
 
-    public Node<T> parent() {
+    public GraphNode<T> parent() {
         return parent;
     }
 
@@ -69,7 +70,7 @@ public class Node<T> {
         this.isVisited = isVisited;
     }
 
-    public void setParent(Node<T> parent) {
+    public void setParent(GraphNode<T> parent) {
         this.parent = parent;
     }
 }

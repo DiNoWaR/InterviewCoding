@@ -103,7 +103,7 @@ public class WaveAlgorithm {
         while (!path.isEmpty()) {
 
             MazeNode node = path.pop();
-            System.out.println("Node X = " + node.x + " Y = " + node.y);
+            System.out.println("GraphNode X = " + node.x + " Y = " + node.y);
         }
     }
 }
