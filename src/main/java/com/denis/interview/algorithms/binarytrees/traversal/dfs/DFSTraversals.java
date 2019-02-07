@@ -1,12 +1,12 @@
-package com.denis.interview.algorithms.binarytrees.traversal.recursivetraversal;
+package com.denis.interview.algorithms.binarytrees.traversal.dfs;
 
 import com.denis.interview.util.BinaryTreeGenerator;
 import com.denis.interview.util.TreeNode;
 
 /**
- * Implement all recursive traversals of binary tree: Pre-order Traversal, In-order Traversal, Post-order Traversal
+ * Implement all dfs traversals of binary tree: Pre-order Traversal, In-order Traversal, Post-order Traversal
  */
-public class RecursiveTraversals {
+public class DFSTraversals {
 
     public static void preOrderTraversal(TreeNode<Integer> root) {
 

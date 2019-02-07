@@ -155,7 +155,7 @@ public class Graph<T> {
         if (!containsVertex(startVertex) || !containsVertex(endVertex)) {
             return null;
         }
-        // run bfs on the graph
+        // run BFSTraversal on the graph
         runBFS(startVertex);
 
         List<T> path = new ArrayList<>();
