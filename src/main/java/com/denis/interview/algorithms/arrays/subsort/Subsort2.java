@@ -10,7 +10,7 @@ public class Subsort2 {
         int min = Integer.MAX_VALUE;
         int notSortedIndex1 = 0;
         int notSortedIndex2 = array.length - 1;
-        int result1 = array.length-1;
+        int result1 = array.length - 1;
         int result2 = 0;
 
         for (int i = 0; i < array.length - 1; i++) {
@@ -23,7 +23,7 @@ public class Subsort2 {
             return null;
         }
 
-        for (int i = array.length - 1; i >=0; i--) {
+        for (int i = array.length - 1; i >= 0; i--) {
             if (array[i] < array[i - 1]) {
                 notSortedIndex2 = i - 1;
                 break;
