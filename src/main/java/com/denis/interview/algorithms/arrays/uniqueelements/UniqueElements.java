@@ -2,7 +2,10 @@ package com.denis.interview.algorithms.arrays.uniqueelements;
 
 import com.denis.interview.util.ArrayGenerator;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * Find unique items from two arrays (Element is only in one array)
