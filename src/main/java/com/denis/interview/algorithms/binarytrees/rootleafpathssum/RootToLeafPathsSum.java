@@ -46,10 +46,10 @@ public class RootToLeafPathsSum {
 
     }
 
-
     public static int treePathSum(TreeNode<Integer> root) {
         return treePathSumUtil(root, 0);
     }
+
 
     public static void main(String[] args) {
 
