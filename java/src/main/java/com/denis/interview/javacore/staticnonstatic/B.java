@@ -1,4 +1,4 @@
-package com.denis.interview.java.staticnonstatic;
+package com.denis.interview.javacore.staticnonstatic;
 
 public class B extends A {
 

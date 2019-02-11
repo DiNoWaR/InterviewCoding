@@ -1,4 +1,4 @@
-package com.denis.interview.java.cloneable;
+package com.denis.interview.javacore.cloneable;
 
 import java.util.Date;
 

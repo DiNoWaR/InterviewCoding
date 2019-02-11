@@ -1,4 +1,4 @@
-package com.denis.interview.java.complexity;
+package com.denis.interview.javacore.complexity;
 
 public class Complexity {
 
