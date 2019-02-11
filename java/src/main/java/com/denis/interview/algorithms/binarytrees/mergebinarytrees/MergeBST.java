@@ -1,4 +1,4 @@
-//package com.denis.interview.algorithms.binarytrees.mergebinarytrees;
+package com.denis.interview.algorithms.binarytrees.mergebinarytrees;//package com.denis.interview.algorithms.binarytrees.mergebinarytrees;
 //
 //import com.denis.interview.util.TreeNode;
 //
