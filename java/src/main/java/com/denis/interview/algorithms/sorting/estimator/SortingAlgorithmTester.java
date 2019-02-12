@@ -4,7 +4,7 @@ import com.denis.interview.algorithms.sorting.sortingalgorithms.sortingalgorithm
 
 public class SortingAlgorithmTester {
 
-    public static void estimateTimeOfSorting(SortingAlgorithm algorithm, int[] sourceArray) {
+    public static void estimateTime(SortingAlgorithm algorithm, int[] sourceArray) {
 
         var copiedArray = copyArray(sourceArray);
 

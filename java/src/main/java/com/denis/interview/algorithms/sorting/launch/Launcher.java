@@ -26,12 +26,12 @@ public class Launcher {
         var selection = new SelectionSort();
         var comb = new CombSort();
 
-        SortingAlgorithmTester.estimateTimeOfSorting(bubble, sourceArray);
-        SortingAlgorithmTester.estimateTimeOfSorting(cocktail, sourceArray);
-        SortingAlgorithmTester.estimateTimeOfSorting(gnome, sourceArray);
-        SortingAlgorithmTester.estimateTimeOfSorting(insertion, sourceArray);
-        SortingAlgorithmTester.estimateTimeOfSorting(selection, sourceArray);
-        SortingAlgorithmTester.estimateTimeOfSorting(comb, sourceArray);
+        SortingAlgorithmTester.estimateTime(bubble, sourceArray);
+        SortingAlgorithmTester.estimateTime(cocktail, sourceArray);
+        SortingAlgorithmTester.estimateTime(gnome, sourceArray);
+        SortingAlgorithmTester.estimateTime(insertion, sourceArray);
+        SortingAlgorithmTester.estimateTime(selection, sourceArray);
+        SortingAlgorithmTester.estimateTime(comb, sourceArray);
 
     }
 }
