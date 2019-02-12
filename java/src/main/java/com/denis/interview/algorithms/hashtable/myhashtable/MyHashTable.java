@@ -18,11 +18,12 @@ public class MyHashTable<K, V> {
 
     public void put(K key, V value) {
 
-        int index = hashFunction(key);
-
         if (keyArray.length * loadFactor < size) {
             rehash();
         }
+
+        int index = hashFunction(key);
+
 
         if (keyArray[index] == null) {
             LinkedList<Entry<K, V>> list = new LinkedList<>();
@@ -84,6 +85,7 @@ public class MyHashTable<K, V> {
         LinkedList<Entry<K, V>>[] newArray = new LinkedList[keyArray.length * 2];
 
         for (int i = 0; i < keyArray.length; i++) {
+
             if (keyArray[i] != null) {
                 for (Entry<K, V> entry : keyArray[i]) {
 
@@ -99,6 +101,7 @@ public class MyHashTable<K, V> {
                 }
             }
         }
+
         keyArray = newArray;
 
     }

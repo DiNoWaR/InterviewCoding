@@ -1,5 +1,6 @@
 package com.denis.interview.javacore.complexity;
 
+
 public class Complexity {
 
     public static int foo(int n) {

@@ -3,6 +3,7 @@ package com.denis.sort.countsort
 import scala.collection.mutable
 import scala.util.Random
 
+
 object CountSort {
 
   def countSort(array: Array[Int]): Array[Int] = {
