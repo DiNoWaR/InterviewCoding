@@ -7,6 +7,7 @@ public class DisjointSetNode {
 
     private String name;
     private Integer frequency;
+
     private Integer rank;
 
     private DisjointSetNode parent;
