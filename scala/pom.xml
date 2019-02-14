@@ -17,6 +17,13 @@
             <artifactId>scala-library</artifactId>
             <version>2.12.7</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.epam</groupId>
+            <artifactId>java</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
 </project>
