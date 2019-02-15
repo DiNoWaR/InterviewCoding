@@ -19,7 +19,7 @@ object MergeSort {
     }
   }
 
-  def merge(first: List[Int], second: List[Int], result: ListBuffer[Int]): ListBuffer[Int] = {
+  private def merge(first: List[Int], second: List[Int], result: ListBuffer[Int]): ListBuffer[Int] = {
 
     (first, second) match {
 
