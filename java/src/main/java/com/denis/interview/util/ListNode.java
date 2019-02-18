@@ -1,8 +1,13 @@
 package com.denis.interview.util;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Util class for linked list tasks
  */
+@Getter
+@Setter
 public class ListNode<T> {
 
     private T value;
@@ -26,22 +31,6 @@ public class ListNode<T> {
             pointer = pointer.getNext();
         }
         System.out.println();
-    }
-
-    public T getValue() {
-        return value;
-    }
-
-    public void setValue(T value) {
-        this.value = value;
-    }
-
-    public ListNode<T> getNext() {
-        return next;
-    }
-
-    public void setNext(ListNode<T> next) {
-        this.next = next;
     }
 
     public boolean hasNext() {

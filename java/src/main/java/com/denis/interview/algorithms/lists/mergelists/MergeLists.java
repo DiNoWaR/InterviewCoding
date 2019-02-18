@@ -131,7 +131,7 @@ public class MergeLists {
         ListNode<Integer> second = ListGenerator.generateList(5, 15, true);
         second.getLineage(second);
         first.getLineage(first);
-        ListNode<Integer> merged = merge(first, second);
+        ListNode<Integer> merged = mergeRecursively(first, second);
         merged.getLineage(merged);
 
     }
