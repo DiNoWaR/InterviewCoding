@@ -28,6 +28,7 @@ public class DFSTraversals {
             inOrderTraversal(root.getLeft());
         }
         System.out.print(root.getValue() + " ");
+
         if (root.getRight() != null) {
             inOrderTraversal(root.getRight());
         }

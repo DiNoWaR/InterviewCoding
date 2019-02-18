@@ -22,6 +22,7 @@ public class ListNode<T> {
 
     }
 
+
     public void printLineage() {
 
         ListNode<T> pointer = this;
