@@ -32,7 +32,7 @@ public class HighestProductOfThree {
         return result;
     }
 
-    public static int getMaxProductOf3EtalonSolution(int[] array) {
+    public static int getMaxProductOf3(int[] array) {
 
         if (array.length < 3) {
             throw new IllegalArgumentException("Less than 3 items!");
@@ -84,8 +84,8 @@ public class HighestProductOfThree {
         int[] array = {-1, -1000, -1, -5, -90};
         int[] array2 = {1, 100, 5, 100, 100};
 
-        System.out.println(getMaxProductOf3EtalonSolution(array));
-        System.out.println(getMaxProductOf3EtalonSolution(array2));
+        System.out.println(getMaxProductOf3(array));
+        System.out.println(getMaxProductOf3(array2));
 
     }
 }
