@@ -10,6 +10,7 @@ public class QueueViaStacks {
     private MyStackWithLinkedList buffer;
     private MyStackWithLinkedList result;
 
+
     public QueueViaStacks() {
         buffer = new MyStackWithLinkedList();
         result = new MyStackWithLinkedList();

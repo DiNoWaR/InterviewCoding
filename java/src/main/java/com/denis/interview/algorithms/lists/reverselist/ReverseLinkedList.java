@@ -48,9 +48,9 @@ class ReverseLinkedList {
     public static void main(String[] args) {
 
         var myList = ListGenerator.generateList(1, 4, true);
-        myList.getLineage(myList);
+        myList.printLineage();
 
         ListNode<Integer> newHead = reverseRecursive(myList);
-        myList.getLineage(newHead);
+        myList.printLineage();
     }
 }

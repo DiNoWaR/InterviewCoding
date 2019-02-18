@@ -22,9 +22,9 @@ public class ListNode<T> {
 
     }
 
-    public void getLineage(ListNode<T> head) {
+    public void printLineage() {
 
-        ListNode<T> pointer = head;
+        ListNode<T> pointer = this;
 
         while (pointer != null) {
             System.out.print(pointer.getValue() + " ");

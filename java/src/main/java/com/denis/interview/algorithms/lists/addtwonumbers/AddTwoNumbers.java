@@ -74,7 +74,7 @@ public class AddTwoNumbers {
 
         ListNode<Integer> head = addTwoNumbers(first, fourth);
 
-        head.getLineage(head);
+        head.printLineage();
 
     }
 }

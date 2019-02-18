@@ -129,10 +129,10 @@ public class MergeLists {
 
         ListNode<Integer> first = ListGenerator.generateList(3, 10, true);
         ListNode<Integer> second = ListGenerator.generateList(5, 15, true);
-        second.getLineage(second);
-        first.getLineage(first);
+        second.printLineage();
+        first.printLineage();
         ListNode<Integer> merged = mergeRecursively(first, second);
-        merged.getLineage(merged);
+        merged.printLineage();
 
     }
 
