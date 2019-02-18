@@ -1,5 +1,10 @@
 package com.denis.interview.algorithms.interviewcake.rectangularlove;
 
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
 public class Rectangle {
 
     // coordinates of bottom left corner
@@ -17,29 +22,4 @@ public class Rectangle {
         this.height = height;
     }
 
-    public int getLeftX() {
-        return leftX;
-    }
-
-    public int getBottomY() {
-        return bottomY;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    @Override
-    public String toString() {
-        return "Rectangle{" +
-                "leftX=" + leftX +
-                ", bottomY=" + bottomY +
-                ", width=" + width +
-                ", height=" + height +
-                '}';
-    }
 }

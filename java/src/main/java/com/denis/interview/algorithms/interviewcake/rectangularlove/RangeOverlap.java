@@ -1,5 +1,8 @@
 package com.denis.interview.algorithms.interviewcake.rectangularlove;
 
+import lombok.Getter;
+
+@Getter
 public class RangeOverlap {
 
     private int startPoint;
@@ -10,11 +13,4 @@ public class RangeOverlap {
         this.length = length;
     }
 
-    public int getStartPoint() {
-        return startPoint;
-    }
-
-    public int getLength() {
-        return length;
-    }
 }
