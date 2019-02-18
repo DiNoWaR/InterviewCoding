@@ -1,6 +1,5 @@
 package com.denis.interview.algorithms.graphs.wave;
 
-
 public class MazeNode {
 
     public int x;

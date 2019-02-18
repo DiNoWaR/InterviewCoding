@@ -71,6 +71,7 @@ public class CountPairsToProduct {
 
     }
 
+
     public static void main(String[] args) {
 
         var arr = new int[999999];

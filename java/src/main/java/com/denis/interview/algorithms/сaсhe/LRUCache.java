@@ -10,13 +10,13 @@ import java.util.Map;
  */
 public class LRUCache {
 
-    private Map<String, Node> map;
+    private Map<String, CacheNode> map;
 
     private final int MAX_SIZE;
     private int currentSize;
 
-    private Node head;
-    private Node tail;
+    private CacheNode head;
+    private CacheNode tail;
 
 
     public LRUCache(int maxSize) {
@@ -33,7 +33,7 @@ public class LRUCache {
             currentSize--;
         }
 
-        Node node = new Node(key, value);
+        CacheNode node = new CacheNode(key, value);
         map.put(node.getKey(), node);
 
         if (head == null) {
@@ -51,7 +51,7 @@ public class LRUCache {
     public Integer get(String key) {
 
         if (head != null) {
-            Node node = deleteEntry(map.get(key));
+            CacheNode node = deleteEntry(map.get(key));
             head.setPrevious(node);
             node.setNext(head);
             head = node;
@@ -62,29 +62,29 @@ public class LRUCache {
 
 
     private void evict() {
-        Node previous = tail.getPrevious();
+        CacheNode previous = tail.getPrevious();
         map.remove(tail.getKey());
         previous.setNext(null);
         tail.setPrevious(null);
         tail = previous;
     }
 
-    private Node deleteEntry(Node node) {
+    private CacheNode deleteEntry(CacheNode node) {
 
         if (node == head) {
             return node;
         }
 
         if (node == tail) {
-            Node previous = node.getPrevious();
+            CacheNode previous = node.getPrevious();
             node.setPrevious(null);
             previous.setNext(null);
             tail = previous;
             return node;
         }
 
-        Node next = node.getNext();
-        Node previous = node.getPrevious();
+        CacheNode next = node.getNext();
+        CacheNode previous = node.getPrevious();
 
         node.setNext(null);
         node.setPrevious(null);
