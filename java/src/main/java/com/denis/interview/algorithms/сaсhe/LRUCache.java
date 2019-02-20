@@ -30,7 +30,6 @@ public class LRUCache {
 
         if (currentSize == MAX_SIZE) {
             evict();
-            currentSize--;
         }
 
         CacheNode node = new CacheNode(key, value);
@@ -67,6 +66,7 @@ public class LRUCache {
         previous.setNext(null);
         tail.setPrevious(null);
         tail = previous;
+        currentSize--;
     }
 
     private CacheNode deleteEntry(CacheNode node) {

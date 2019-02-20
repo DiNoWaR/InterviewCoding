@@ -34,7 +34,7 @@ public class PerfectSquare {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPerfectSquare(2500));
+        System.out.println(isPerfectSquare(2501));
     }
 
 }
