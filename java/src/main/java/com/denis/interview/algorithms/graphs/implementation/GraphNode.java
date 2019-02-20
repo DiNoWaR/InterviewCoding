@@ -9,6 +9,7 @@ public class GraphNode<T> {
 
     private T vertex;
     private List<Edge<T>> edges;
+
     private GraphNode<T> parent;
     private boolean isVisited;
 
