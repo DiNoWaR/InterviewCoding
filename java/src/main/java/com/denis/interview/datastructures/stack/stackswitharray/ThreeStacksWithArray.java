@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.stacks.stackswitharray;
+package com.denis.interview.datastructures.stack.stackswitharray;
 
 /**
  * Implement 3 stacks using 1 array.

@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.hashtable.myhashtable;
+package com.denis.interview.datastructures.hashtable;
 
 import java.util.LinkedList;
 

@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.graphs.wave;
+package com.denis.interview.algorithms.graph.wavealgorithm;
 
 public class MazeNode {
 

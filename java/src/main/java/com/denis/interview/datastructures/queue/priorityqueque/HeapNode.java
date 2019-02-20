@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.queues.priorityqueque;
+package com.denis.interview.datastructures.queue.priorityqueque;
 
 import lombok.Getter;
 import lombok.Setter;

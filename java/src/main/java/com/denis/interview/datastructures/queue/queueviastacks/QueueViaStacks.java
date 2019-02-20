@@ -1,6 +1,6 @@
-package com.denis.interview.algorithms.queues.queueviastacks;
+package com.denis.interview.datastructures.queue.queueviastacks;
 
-import com.denis.interview.algorithms.stacks.mystack.MyStackWithLinkedList;
+import com.denis.interview.datastructures.stack.stackwithlinkedlist.MyStackWithLinkedList;
 
 /**
  * Implement Queue using 2 stacks.

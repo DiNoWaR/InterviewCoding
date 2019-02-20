@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.arrays.dividearray;
+package com.denis.interview.algorithms.arrays.threewaypartition;
 
 /**
  * Given an array and a range [lowVal, highVal], partition the array around the range such that array is divided in three parts.

@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.сaсhe;
+package com.denis.interview.datastructures.lruсaсhe;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

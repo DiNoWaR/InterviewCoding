@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.graphs.implementation;
+package com.denis.interview.datastructures.graph;
 
 import javax.annotation.Nullable;
 import java.util.*;

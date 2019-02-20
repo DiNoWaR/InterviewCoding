@@ -1,4 +1,4 @@
-package com.denis.interview.algorithms.stacks.mystack;
+package com.denis.interview.datastructures.stack.stackwithlinkedlist;
 
 import com.denis.interview.util.ListNode;
 
