@@ -2,7 +2,10 @@ package com.denis.interview.datastructures.queue.priorityqueque;
 
 import java.util.Comparator;
 
-//
+/**
+ *
+ * @param <T>
+ */
 public class MyPriorityQueue<T> {
 
     private HeapNode<T> root;
@@ -29,8 +32,6 @@ public class MyPriorityQueue<T> {
 
 
     private void sieveDown(T item) {
-
-
 
     }
 
