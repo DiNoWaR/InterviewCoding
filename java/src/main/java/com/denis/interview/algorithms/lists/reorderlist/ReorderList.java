@@ -39,6 +39,7 @@ public class ReorderList<T> {
 
         ListNode<T> result = new ListNode<>(null);
         ListNode<T> current = result;
+
         merge(current, head, rightHead, 0);
 
         return result.getNext();
