@@ -10,16 +10,16 @@ public class MiddleOfList {
 
     public static ListNode<Integer> getMiddleElement(ListNode<Integer> head) {
 
-        var fastPointer = head;
-        var slowPointer = head;
+        var fast = head;
+        var slow = head;
 
         if (head != null) {
-            while (fastPointer != null && fastPointer.hasNext()) {
-                fastPointer = fastPointer.getNext().getNext();
-                slowPointer = slowPointer.getNext();
+            while (fast != null && fast.hasNext()) {
+                fast = fast.getNext().getNext();
+                slow = slow.getNext();
             }
         }
-        return slowPointer;
+        return slow;
     }
 
     public static void main(String[] args) {

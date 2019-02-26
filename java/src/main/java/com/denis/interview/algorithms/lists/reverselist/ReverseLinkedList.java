@@ -50,7 +50,7 @@ class ReverseLinkedList {
         var myList = ListGenerator.generateList(1, 4, true);
         myList.printLineage();
 
-        ListNode<Integer> newHead = reverseRecursive(myList);
-        myList.printLineage();
+        reverseRecursive(myList).printLineage();
+
     }
 }
