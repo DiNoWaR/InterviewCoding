@@ -11,7 +11,9 @@ import lombok.Setter;
 public class ListNode<T> {
 
     private T value;
+
     private ListNode<T> next;
+    private ListNode<T> previous;
 
 
     public ListNode(T value) {
@@ -19,7 +21,6 @@ public class ListNode<T> {
     }
 
     public ListNode() {
-
     }
 
 
