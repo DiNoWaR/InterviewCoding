@@ -8,15 +8,15 @@ import java.util.Map;
  * It should support the following operations: get and put. If cache is full,then it should
  * evict least used element and add current element. All operations must have O(1) complexity.
  */
-public class LRUCache {
+public class LRUCache<K, V> {
 
-    private Map<String, CacheNode> map;
+    private Map<K, CacheNode<K, V>> map;
 
     private final int MAX_SIZE;
     private int currentSize;
 
-    private CacheNode head;
-    private CacheNode tail;
+    private CacheNode<K, V> head;
+    private CacheNode<K, V> tail;
 
 
     public LRUCache(int maxSize) {
@@ -26,13 +26,13 @@ public class LRUCache {
     }
 
 
-    public void put(String key, Integer value) {
+    public void put(K key, V value) {
 
         if (currentSize == MAX_SIZE) {
             evict();
         }
 
-        CacheNode node = new CacheNode(key, value);
+        CacheNode<K, V> node = new CacheNode<>(key, value);
         map.put(node.getKey(), node);
 
         if (head == null) {
@@ -47,10 +47,10 @@ public class LRUCache {
         }
     }
 
-    public Integer get(String key) {
+    public V get(K key) {
 
         if (head != null) {
-            CacheNode node = deleteEntry(map.get(key));
+            CacheNode<K, V> node = deleteNode(map.get(key));
             head.setPrevious(node);
             node.setNext(head);
             head = node;
@@ -61,7 +61,7 @@ public class LRUCache {
 
 
     private void evict() {
-        CacheNode previous = tail.getPrevious();
+        CacheNode<K, V> previous = tail.getPrevious();
         map.remove(tail.getKey());
         previous.setNext(null);
         tail.setPrevious(null);
@@ -69,22 +69,22 @@ public class LRUCache {
         currentSize--;
     }
 
-    private CacheNode deleteEntry(CacheNode node) {
+    private CacheNode<K, V> deleteNode(CacheNode<K, V> node) {
 
         if (node == head) {
             return node;
         }
 
         if (node == tail) {
-            CacheNode previous = node.getPrevious();
+            CacheNode<K, V> previous = node.getPrevious();
             node.setPrevious(null);
             previous.setNext(null);
             tail = previous;
             return node;
         }
 
-        CacheNode next = node.getNext();
-        CacheNode previous = node.getPrevious();
+        CacheNode<K, V> next = node.getNext();
+        CacheNode<K, V> previous = node.getPrevious();
 
         node.setNext(null);
         node.setPrevious(null);
@@ -98,7 +98,7 @@ public class LRUCache {
 
     public static void main(String[] args) {
 
-        LRUCache cache = new LRUCache(4);
+        LRUCache<String, Integer> cache = new LRUCache<>(4);
 
         cache.put("1", 10);
         cache.put("2", 30);

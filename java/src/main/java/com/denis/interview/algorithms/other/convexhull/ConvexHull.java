@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class ConvexHull {
 
-    private static enum Turn {CLOCKWISE, COUNTER_CLOCKWISE, COLLINEAR}
+    private enum Turn {CLOCKWISE, COUNTER_CLOCKWISE, COLLINEAR}
 
 
     public static List<Point2D> getConvexHull(List<Point2D> points) throws IllegalArgumentException {

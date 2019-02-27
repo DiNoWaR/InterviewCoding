@@ -7,17 +7,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class CacheNode {
+public class CacheNode<K, V> {
 
-    private String key;
-    private Integer value;
+    private K key;
+    private V value;
 
-    public CacheNode(String key, Integer value) {
+    public CacheNode(K key, V value) {
         this.key = key;
         this.value = value;
     }
 
-    private CacheNode next;
-    private CacheNode previous;
+    private CacheNode<K, V> next;
+    private CacheNode<K, V> previous;
 
 }
