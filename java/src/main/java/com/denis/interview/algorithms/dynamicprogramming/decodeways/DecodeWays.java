@@ -24,27 +24,7 @@ public class DecodeWays {
 
 
     public static int numDecodings(String s) {
-
-        if (("0".equals(s)) || "".equals(s)) {
-            return 0;
-        }
-
-        if (s.length() == 1) {
-            return 1;
-        } else {
-
-            if (s.length() >= 2) {
-
-                if (Integer.valueOf(s.substring(0, 2)) > 26) {
-                    return 1 + numDecodings(s.substring(2));
-                } else {
-                    return numDecodings(s.substring(0, 1)) + numDecodings(s.substring(1));
-                }
-
-            } else {
-                return numDecodings(s.substring(0, 1)) + numDecodings(s.substring(1));
-            }
-        }
+        return 0;
     }
 
 
