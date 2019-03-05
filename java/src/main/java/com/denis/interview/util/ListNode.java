@@ -37,12 +37,15 @@ public class ListNode<T> {
 
     public void printLineageOfCircularList() {
 
-        var slow = this;
-        var fast = slow.next;
+        ListNode<T> slow = null;
+        ListNode<T> fast = null;
 
         if (this != null) {
 
-            while (fast != slow) {
+            slow = this;
+            fast = slow.next;
+
+            while (fast != slow && fast != null) {
                 System.out.print(slow.value + " ");
                 fast = fast.getNext().getNext();
                 slow = slow.getNext();
