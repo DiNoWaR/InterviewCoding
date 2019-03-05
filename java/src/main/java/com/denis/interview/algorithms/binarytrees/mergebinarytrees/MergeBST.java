@@ -17,11 +17,11 @@ package com.denis.interview.algorithms.binarytrees.mergebinarytrees;//package co
 //
 //    public TreeNode<Integer> mergeTrees(TreeNode<Integer> first, TreeNode<Integer> second) {
 //
-//        inOrderTraversal(first);
+//        convertTreeToListRecursive(first);
 //        Integer[] firstArray = integers.toArray(new Integer[integers.size()]);
 //        integers.clear();
 //
-//        inOrderTraversal(second);
+//        convertTreeToListRecursive(second);
 //        Integer[] secondArray = integers.toArray(new Integer[integers.size()]);
 //        integers.clear();
 //
@@ -56,20 +56,20 @@ package com.denis.interview.algorithms.binarytrees.mergebinarytrees;//package co
 //        }
 //    }
 //
-//    private void inOrderTraversal(TreeNode<Integer> root) {
+//    private void convertTreeToListRecursive(TreeNode<Integer> root) {
 //
 //        if (root == null) {
 //            return;
 //        }
 //
 //        if (root.getLeft() != null) {
-//            inOrderTraversal(root.getLeft());
+//            convertTreeToListRecursive(root.getLeft());
 //        }
 //
 //        integers.add(root.getValue());
 //
 //        if (root.getRight() != null) {
-//            inOrderTraversal(root.getRight());
+//            convertTreeToListRecursive(root.getRight());
 //        }
 //
 //    }

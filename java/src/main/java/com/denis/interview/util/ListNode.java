@@ -35,6 +35,22 @@ public class ListNode<T> {
         System.out.println();
     }
 
+    public void printLineageOfCircularList() {
+
+        var slow = this;
+        var fast = slow.next;
+
+        if (this != null) {
+
+            while (fast != slow) {
+                System.out.print(slow.value + " ");
+                fast = fast.getNext().getNext();
+                slow = slow.getNext();
+            }
+            System.out.print(slow.value);
+        }
+    }
+
     public boolean hasNext() {
         return next != null;
     }
