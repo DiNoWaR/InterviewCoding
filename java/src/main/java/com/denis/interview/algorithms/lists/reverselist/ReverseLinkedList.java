@@ -8,6 +8,7 @@ import com.denis.interview.util.ListNode;
  */
 class ReverseLinkedList {
 
+
     public static ListNode<Integer> reverseWithLoop(ListNode<Integer> head) {
 
         ListNode<Integer> current = head;
@@ -29,7 +30,6 @@ class ReverseLinkedList {
         }
         return previous;
     }
-
 
     public static ListNode<Integer> reverseRecursive(ListNode<Integer> head) {
 
