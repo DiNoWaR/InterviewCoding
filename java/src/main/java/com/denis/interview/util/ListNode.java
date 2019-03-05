@@ -42,10 +42,15 @@ public class ListNode<T> {
 
         if (this != null) {
 
+            if (!this.hasNext()) {
+                System.out.println(this.value);
+                return;
+            }
+
             slow = this;
             fast = slow.next;
 
-            while (fast != slow && fast != null) {
+            while (fast != slow && fast != null && fast.hasNext()) {
                 System.out.print(slow.value + " ");
                 fast = fast.getNext().getNext();
                 slow = slow.getNext();
