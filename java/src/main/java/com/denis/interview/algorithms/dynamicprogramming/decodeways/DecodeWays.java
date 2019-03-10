@@ -1,5 +1,7 @@
 package com.denis.interview.algorithms.dynamicprogramming.decodeways;
 
+import java.util.LinkedList;
+
 /**
  * A message containing letters from A-Z is being encoded to numbers using the following mapping:
  * <p>
@@ -29,6 +31,9 @@ public class DecodeWays {
 
 
     public static void main(String[] args) {
+
+        LinkedList<Integer> list = new LinkedList<>();
+        list.set(0, 1);
 
         System.out.println(numDecodings("101"));
 
