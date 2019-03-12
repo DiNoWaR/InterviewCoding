@@ -5,7 +5,7 @@ package com.denis.interview.javacore.hashcodelong;
  */
 public class HashcodeLong {
 
-    public int hashCode(long value) {
+    public int hashcode(long value) {
         return (int) (value ^ (value >>> 32));
     }
 
