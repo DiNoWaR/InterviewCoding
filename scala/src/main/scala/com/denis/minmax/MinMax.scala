@@ -5,7 +5,6 @@ import scala.collection.mutable.ArrayBuffer
 
 object MinMax {
 
-
   def getMinMax(size: Int, list: ArrayBuffer[Int]): Int = {
 
     if (size == 1) {
