@@ -1,6 +1,7 @@
 package com.denis.minmax
 
 import org.scalatest.FunSuite
+
 import scala.collection.mutable.ArrayBuffer
 
 

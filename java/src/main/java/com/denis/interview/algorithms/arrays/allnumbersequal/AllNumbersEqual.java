@@ -18,7 +18,7 @@ package com.denis.interview.algorithms.arrays.allnumbersequal;
 public class AllNumbersEqual {
 
 
-    public static boolean EqualNumbers(int[] array) {
+    public static boolean equalNumbers(int[] array) {
 
         for (int i = 0; i < array.length; i++) {
 
@@ -48,7 +48,7 @@ public class AllNumbersEqual {
 
         int a[] = {50, 75, 150};
 
-        if (EqualNumbers(a)) {
+        if (equalNumbers(a)) {
             System.out.println("Yes");
         } else {
             System.out.println("No");

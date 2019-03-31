@@ -47,11 +47,7 @@ public class UniqueElements {
 
         var result = new ArrayList<Integer>();
 
-        var bufferSet = new HashSet<Integer>();
-
-        for (int item : first) {
-            bufferSet.add(item);
-        }
+        var bufferSet = new HashSet<>(Arrays.asList(first));
 
         for (int item : second) {
             if (!bufferSet.contains(item)) {
@@ -61,9 +57,8 @@ public class UniqueElements {
 
         bufferSet.clear();
 
-        for (int item : second) {
-            bufferSet.add(item);
-        }
+
+        bufferSet.addAll(Arrays.asList(second));
 
         for (int item : first) {
             if (!bufferSet.contains(item)) {
@@ -72,8 +67,8 @@ public class UniqueElements {
         }
 
         return result;
-
     }
+
 
     public static void main(String[] args) {
 

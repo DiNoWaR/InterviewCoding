@@ -1,6 +1,9 @@
 package com.denis.interview.algorithms.other.duplicatecontacts;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Given a list of Contacts, where each contact consists of a contact ID and a list of email IDs.

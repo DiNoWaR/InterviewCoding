@@ -1,7 +1,7 @@
 package com.denis.interview.algorithms.arrays.countnonzero;
 
 /**
- * Implement function that counts none zerp elements in array and shifts all zeroes to the right
+ * Implement function that counts none zero elements in array and shifts all zeroes to the right
  */
 public class CountNoneZero {
 
