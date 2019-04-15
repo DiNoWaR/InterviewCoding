@@ -1,4 +1,4 @@
-package com.denis.sort.mergesort
+package com.denis.algorithms.sort.mergesort
 
 import scala.collection.mutable.ListBuffer
 

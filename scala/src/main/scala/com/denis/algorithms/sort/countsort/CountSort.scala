@@ -1,4 +1,4 @@
-package com.denis.sort.countsort
+package com.denis.algorithms.sort.countsort
 
 import scala.collection.mutable
 import scala.util.Random

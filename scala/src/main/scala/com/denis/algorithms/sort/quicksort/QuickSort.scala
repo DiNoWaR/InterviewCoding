@@ -1,4 +1,4 @@
-package com.denis.sort.quicksort
+package com.denis.algorithms.sort.quicksort
 
 object QuickSort {
 

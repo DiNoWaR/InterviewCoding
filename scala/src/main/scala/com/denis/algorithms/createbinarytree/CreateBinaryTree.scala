@@ -1,4 +1,4 @@
-package com.denis.createbinarytree
+package com.denis.algorithms.createbinarytree
 
 import com.denis.interview.algorithms.binarytrees.traversal.dfs.DFSTraversals
 import com.denis.interview.util.TreeNode
