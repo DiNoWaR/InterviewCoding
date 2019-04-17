@@ -1,7 +1,5 @@
 package com.denis.arraypartition
 
-import scala.util.control.Breaks._
-
 object ArrayPartition {
 
 

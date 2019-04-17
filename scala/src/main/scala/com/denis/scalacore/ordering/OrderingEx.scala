@@ -13,16 +13,26 @@ object OrderingEx {
     val artem3 = Student("Artem", "Ivanov", 27)
     val denis = Student("Denis", "Vasilyev", 32)
 
-    val set: TreeSet[Student] = new TreeSet[Student]()(StudentOrderings)
+    val firstSet: TreeSet[Student] = new TreeSet[Student]()(StudentAgeOrdering)
+    val secondSet: TreeSet[Student] = new TreeSet[Student]()(StudentNameOrdering)
 
-    set += petr
-    set += artem
-    set += artem2
-    set += artem22
-    set += artem3
-    set += denis
+    firstSet += petr
+    firstSet += artem
+    firstSet += artem2
+    firstSet += artem22
+    firstSet += artem3
+    firstSet += denis
 
-    set.foreach(student => println(student))
+    secondSet += petr
+    secondSet += artem
+    secondSet += artem2
+    secondSet += artem22
+    secondSet += artem3
+    secondSet += denis
+
+    firstSet.foreach(student => println(student))
+    println("----------------------------------")
+    secondSet.foreach(student => println(student))
 
   }
 }
