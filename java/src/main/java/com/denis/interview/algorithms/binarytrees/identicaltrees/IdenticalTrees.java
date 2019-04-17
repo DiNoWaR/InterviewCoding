@@ -10,7 +10,6 @@ import java.util.LinkedList;
  */
 public class IdenticalTrees {
 
-
     public static boolean treesIdentical(TreeNode<Integer> first, TreeNode<Integer> second) {
 
         if (first == null || second == null) {

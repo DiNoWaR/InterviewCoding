@@ -11,24 +11,21 @@ object ArrayPartition {
     var right = array.length - 1
 
 
-    while (left < right) {
+    while (left <= right) {
 
       if (array(left) >= value) {
 
-        if (array(right) < value) {
+        if (array(right) <= value) {
           swap(left, right, array)
-          left += 1
           right -= 1
         }
         else {
           right -= 1
         }
+      } else {
+        left += 1
       }
-      left += 1
     }
-
-    val index = getIndexOfValue(array, value)
-    swap(left + 1, index, array)
 
   }
 
@@ -38,27 +35,12 @@ object ArrayPartition {
     array(fromIndex) = temp
   }
 
-  private def getIndexOfValue(array: Array[Int], value: Int): Int = {
-
-    var index = 0
-
-    breakable {
-      for (i <- 0 to array.length) {
-        if (array(i) == value) {
-          index = i
-          break
-        }
-      }
-    }
-    index
-  }
-
 
   def main(args: Array[String]): Unit = {
 
-    var array = Array(10, 45, 332, 12, 34, 23, 1, 55)
+    val array = Array(10, 45, 332, 12, 34, 23, 1, 55, 37)
 
-    partition(array, 45)
+    partition(array, 12)
     array.foreach(item => print(item + " "))
 
   }
