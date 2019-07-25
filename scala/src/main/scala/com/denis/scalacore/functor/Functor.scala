@@ -1,4 +1,4 @@
-package com.denis
+package com.denis.scalacore.functor
 
 case class Functor[A](content: A) {
 

@@ -12,7 +12,6 @@ class NoneEmpty(value: Int, left: IntSet, right: IntSet) extends IntSet {
       new NoneEmpty(value, left, right.include(x))
     }
     else this
-
   }
 
   override def contains(x: Int): Boolean = {

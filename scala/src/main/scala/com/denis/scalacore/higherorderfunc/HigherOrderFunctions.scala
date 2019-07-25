@@ -83,10 +83,10 @@ sealed trait HigherOrderFunctions {
     * Concrete summation functions using
     * -------------------------------------------------
     */
-  def sumInts(a: Int, b: Int): Int = sumTailRec(id, a, b)
+  def sumInts(a: Int, b: Int): Int = sum(id, a, b)
 
-  def sumCubes(a: Int, b: Int): Int = sumTailRec(cube, a, b)
+  def sumCubes(a: Int, b: Int): Int = sum(cube, a, b)
 
-  def sumFactorials(a: Int, b: Int): Int = sumTailRec(factorial, a, b)
+  def sumFactorials(a: Int, b: Int): Int = sum(factorial, a, b)
 
 }

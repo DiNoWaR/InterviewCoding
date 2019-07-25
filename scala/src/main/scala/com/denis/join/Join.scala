@@ -2,6 +2,9 @@ package com.denis.join
 
 import scala.collection.mutable.ArrayBuffer
 
+/**
+  * Implement function which returns common elements in 2 lists
+  */
 object Join {
 
   def sortedMergeJoin(first: List[Int], second: List[Int]): List[Int] = {
